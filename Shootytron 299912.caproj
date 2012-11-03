@@ -6,8 +6,15 @@
     <author></author>
     <unique-id>2853xhfleqhg2</unique-id>
     <saved-with-version>10802</saved-with-version>
-    <used-plugins />
-    <used-behaviors />
+    <used-plugins>
+        <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+    </used-behaviors>
     <used-effects />
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -28,7 +35,81 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use iOS retina display">iPhone only</prop>
     </configuration-settings>
-    <object-folder expanded="1" />
+    <object-folder expanded="1">
+        <object-type name="Player">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="8Direction">
+                    <behavior id="EightDir" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Gamepad">
+            <plugin id="gamepad" />
+        </object-type>
+        <object-type name="Shot">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.666667">
+                        <collision-poly>
+                            <point x="0.1" y="0.333333" />
+                            <point x="0.9" y="0.333333" />
+                            <point x="1" y="0.5" />
+                            <point x="0.9" y="0.666667" />
+                            <point x="0.5" y="1" />
+                            <point x="0.1" y="0.666667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.666667">
+                        <collision-poly>
+                            <point x="0.1" y="0.333333" />
+                            <point x="0.9" y="0.333333" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.666667">
+                        <collision-poly>
+                            <point x="0.1" y="0.333333" />
+                            <point x="0.5" y="0" />
+                            <point x="0.9" y="0.333333" />
+                            <point x="1" y="0.5" />
+                            <point x="0.9" y="0.666667" />
+                            <point x="0.1" y="0.666667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.666667">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.5" />
+                            <point x="0.9" y="0.666667" />
+                            <point x="0.1" y="0.666667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Keyboard">
+            <plugin id="Keyboard" />
+        </object-type>
+    </object-folder>
     <families />
     <layout-folder expanded="1">
         <layout>Layout 1.xml</layout>
@@ -36,7 +117,14 @@
     <event-folder expanded="1">
         <event-sheet>Event sheet 1.xml</event-sheet>
     </event-folder>
-    <global-instances />
+    <global-instances>
+        <global-instance type="Gamepad">
+            <properties>
+                <analog-deadzone>25</analog-deadzone>
+            </properties>
+        </global-instance>
+        <global-instance type="Keyboard" />
+    </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
     <files-folder expanded="1" />
