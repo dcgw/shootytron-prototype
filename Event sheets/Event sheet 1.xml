@@ -145,5 +145,17 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-1" name="Every tick" type="System" />
+            </conditions>
+            <actions>
+                <action id="-21" name="Rotate toward position" type="Grunt">
+                    <param id="0" name="Degrees">3</param>
+                    <param id="1" name="X">Player.X</param>
+                    <param id="2" name="Y">Player.Y</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
