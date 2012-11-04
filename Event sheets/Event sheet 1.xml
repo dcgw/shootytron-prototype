@@ -559,5 +559,78 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" title="Wrecksagon">
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="0" name="On collision with another object" type="Wrecksagon">
+                            <param id="0" name="Object">Shot</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" type="Wrecksagon" />
+                        <action behavior="Bullet" disabled="1" id="0" name="Set speed" type="Wrecksagon_Flower">
+                            <param id="0" name="Speed">Wrecksagon.Bullet.Speed</param>
+                        </action>
+                        <action id="0" name="Spawn another object" type="Wrecksagon">
+                            <param id="0" name="Object">Wrecksagon_Petal</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" type="Wrecksagon_Petal">
+                            <param id="0" name="Angle">Wrecksagon.Bullet.AngleOfMotion - 90</param>
+                        </action>
+                        <action id="0" name="Spawn another object" type="Wrecksagon">
+                            <param id="0" name="Object">Wrecksagon_Petal</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">2</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" type="Wrecksagon_Petal">
+                            <param id="0" name="Angle">Wrecksagon.Bullet.AngleOfMotion - 30</param>
+                        </action>
+                        <action id="0" name="Spawn another object" type="Wrecksagon">
+                            <param id="0" name="Object">Wrecksagon_Petal</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">3</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" type="Wrecksagon_Petal">
+                            <param id="0" name="Angle">Wrecksagon.Bullet.AngleOfMotion + 30</param>
+                        </action>
+                        <action id="0" name="Spawn another object" type="Wrecksagon">
+                            <param id="0" name="Object">Wrecksagon_Petal</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">4</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" type="Wrecksagon_Petal">
+                            <param id="0" name="Angle">Wrecksagon.Bullet.AngleOfMotion + 90</param>
+                        </action>
+                        <action id="0" name="Spawn another object" type="Wrecksagon">
+                            <param id="0" name="Object">Wrecksagon_Petal</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">5</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" type="Wrecksagon_Petal">
+                            <param id="0" name="Angle">Wrecksagon.Bullet.AngleOfMotion + 120</param>
+                        </action>
+                        <action id="0" name="Spawn another object" type="Wrecksagon">
+                            <param id="0" name="Object">Wrecksagon_Petal</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">6</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" type="Wrecksagon_Petal">
+                            <param id="0" name="Angle">Wrecksagon.Bullet.AngleOfMotion - 120</param>
+                        </action>
+                        <action id="0" name="Spawn another object" type="Wrecksagon">
+                            <param id="0" name="Object">Wrecksagon_Flower</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Bullet" disabled="1" id="4" name="Bounce off object" type="Wrecksagon_Flower">
+                            <param id="0" name="Object">Wrecksagon_Petal</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

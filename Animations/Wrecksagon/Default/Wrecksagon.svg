@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="New document 1">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient3829">
+      <stop
+         style="stop-color:#940076;stop-opacity:0;"
+         offset="0"
+         id="stop3831" />
+      <stop
+         style="stop-color:#940076;stop-opacity:1;"
+         offset="1"
+         id="stop3833" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="214.21596"
+     inkscape:cy="484.49899"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1280"
+     inkscape:window-height="738"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#820094;fill-opacity:1;stroke:none"
+       d="M 287.21875 431.1875 L 275.03125 452.34375 L 225.03125 452.375 L 212.8125 431.21875 L 205.03125 431.21875 L 201.15625 437.90625 L 213.375 459.03125 L 188.40625 502.34375 L 163.96875 502.34375 L 160.09375 509.09375 L 163.9375 515.75 L 188.34375 515.75 L 213.375 559.03125 L 201.1875 580.1875 L 205.09375 586.9375 L 212.75 586.9375 L 224.96875 565.75 L 274.96875 565.75 L 287.1875 586.875 L 294.96875 586.875 L 298.84375 580.1875 L 286.625 559.0625 L 311.59375 515.75 L 336 515.75 L 339.90625 509 L 336.0625 502.375 L 311.65625 502.375 L 286.625 459.0625 L 298.8125 437.9375 L 294.90625 431.1875 L 287.21875 431.1875 z "
+       id="path3827"
+       inkscape:export-filename="C:\Users\djc\Desktop\wrecksagon_flower.png"
+       inkscape:export-xdpi="20.091639"
+       inkscape:export-ydpi="20.091639" />
+    <path
+       sodipodi:type="star"
+       style="fill:#fb00d3;fill-opacity:1;stroke:none"
+       id="path3807"
+       sodipodi:sides="6"
+       sodipodi:cx="390"
+       sodipodi:cy="530.93359"
+       sodipodi:r1="127.04852"
+       sodipodi:r2="109.27171"
+       sodipodi:arg1="1.0467688"
+       sodipodi:arg2="1.5703676"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 453.57143,640.9336 -127.04851,0.0545 -63.57143,-110 63.47708,-110.05448 127.04851,-0.0545 63.57143,110 z"
+       transform="matrix(0.39355046,0,0,0.39355046,96.515321,200.10103)"
+       inkscape:export-filename="C:\Users\djc\Desktop\wrecksagon-part.png"
+       inkscape:export-xdpi="20.1"
+       inkscape:export-ydpi="20.1" />
+    <path
+       transform="matrix(0.39355046,0,0,0.39355046,96.515321,300.10103)"
+       d="m 453.57143,640.9336 -127.04851,0.0545 -63.57143,-110 63.47708,-110.05448 127.04851,-0.0545 63.57143,110 z"
+       inkscape:randomized="0"
+       inkscape:rounded="0"
+       inkscape:flatsided="true"
+       sodipodi:arg2="1.5703676"
+       sodipodi:arg1="1.0467688"
+       sodipodi:r2="109.27171"
+       sodipodi:r1="127.04852"
+       sodipodi:cy="530.93359"
+       sodipodi:cx="390"
+       sodipodi:sides="6"
+       id="path3813"
+       style="fill:#940076;fill-opacity:1;stroke:none"
+       sodipodi:type="star"
+       inkscape:export-filename="C:\Users\djc\Desktop\wrecksagon_flower.png"
+       inkscape:export-xdpi="20.091639"
+       inkscape:export-ydpi="20.091639" />
+    <path
+       sodipodi:type="star"
+       style="fill:#fb00d3;fill-opacity:1;stroke:none"
+       id="path3815"
+       sodipodi:sides="6"
+       sodipodi:cx="390"
+       sodipodi:cy="530.93359"
+       sodipodi:r1="127.04852"
+       sodipodi:r2="109.27171"
+       sodipodi:arg1="1.0467688"
+       sodipodi:arg2="1.5703676"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 453.57143,640.9336 -127.04851,0.0545 -63.57143,-110 63.47708,-110.05448 127.04851,-0.0545 63.57143,110 z"
+       transform="matrix(0.39355046,0,0,0.39355046,96.515321,400.10103)"
+       inkscape:export-filename="C:\Users\djc\Desktop\wrecksagon.png"
+       inkscape:export-xdpi="20.091639"
+       inkscape:export-ydpi="20.091639" />
+    <path
+       sodipodi:type="star"
+       style="fill:#fb00d3;fill-opacity:1;stroke:none"
+       id="path3817"
+       sodipodi:sides="6"
+       sodipodi:cx="390"
+       sodipodi:cy="530.93359"
+       sodipodi:r1="127.04852"
+       sodipodi:r2="109.27171"
+       sodipodi:arg1="1.0467688"
+       sodipodi:arg2="1.5703676"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 453.57143,640.9336 -127.04851,0.0545 -63.57143,-110 63.47708,-110.05448 127.04851,-0.0545 63.57143,110 z"
+       transform="matrix(0.39355046,0,0,0.39355056,9.8913207,250.10097)"
+       inkscape:export-filename="C:\Users\djc\Desktop\wrecksagon.png"
+       inkscape:export-xdpi="20.091639"
+       inkscape:export-ydpi="20.091639" />
+    <path
+       transform="matrix(0.39355046,0,0,0.39355056,9.8913207,350.10097)"
+       d="m 453.57143,640.9336 -127.04851,0.0545 -63.57143,-110 63.47708,-110.05448 127.04851,-0.0545 63.57143,110 z"
+       inkscape:randomized="0"
+       inkscape:rounded="0"
+       inkscape:flatsided="true"
+       sodipodi:arg2="1.5703676"
+       sodipodi:arg1="1.0467688"
+       sodipodi:r2="109.27171"
+       sodipodi:r1="127.04852"
+       sodipodi:cy="530.93359"
+       sodipodi:cx="390"
+       sodipodi:sides="6"
+       id="path3821"
+       style="fill:#fb00d3;fill-opacity:1;stroke:none"
+       sodipodi:type="star"
+       inkscape:export-filename="C:\Users\djc\Desktop\wrecksagon.png"
+       inkscape:export-xdpi="20.091639"
+       inkscape:export-ydpi="20.091639" />
+    <path
+       transform="matrix(0.39355046,0,0,0.39355056,183.13932,250.10097)"
+       d="m 453.57143,640.9336 -127.04851,0.0545 -63.57143,-110 63.47708,-110.05448 127.04851,-0.0545 63.57143,110 z"
+       inkscape:randomized="0"
+       inkscape:rounded="0"
+       inkscape:flatsided="true"
+       sodipodi:arg2="1.5703676"
+       sodipodi:arg1="1.0467688"
+       sodipodi:r2="109.27171"
+       sodipodi:r1="127.04852"
+       sodipodi:cy="530.93359"
+       sodipodi:cx="390"
+       sodipodi:sides="6"
+       id="path3823"
+       style="fill:#fb00d3;fill-opacity:1;stroke:none"
+       sodipodi:type="star"
+       inkscape:export-filename="C:\Users\djc\Desktop\wrecksagon.png"
+       inkscape:export-xdpi="20.091639"
+       inkscape:export-ydpi="20.091639" />
+    <path
+       sodipodi:type="star"
+       style="fill:#fb00d3;fill-opacity:1;stroke:none"
+       id="path3825"
+       sodipodi:sides="6"
+       sodipodi:cx="390"
+       sodipodi:cy="530.93359"
+       sodipodi:r1="127.04852"
+       sodipodi:r2="109.27171"
+       sodipodi:arg1="1.0467688"
+       sodipodi:arg2="1.5703676"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 453.57143,640.9336 -127.04851,0.0545 -63.57143,-110 63.47708,-110.05448 127.04851,-0.0545 63.57143,110 z"
+       transform="matrix(0.39355046,0,0,0.39355056,183.13932,350.10097)"
+       inkscape:export-filename="C:\Users\djc\Desktop\wrecksagon.png"
+       inkscape:export-xdpi="20.091639"
+       inkscape:export-ydpi="20.091639" />
+    <path
+       transform="matrix(0.7076118,0,0,0.7076118,-494.54003,-20.930404)"
+       d="m 453.57143,640.9336 -127.04851,0.0545 -63.57143,-110 63.47708,-110.05448 127.04851,-0.0545 63.57143,110 z"
+       inkscape:randomized="0"
+       inkscape:rounded="0"
+       inkscape:flatsided="true"
+       sodipodi:arg2="1.5703676"
+       sodipodi:arg1="1.0467688"
+       sodipodi:r2="109.27171"
+       sodipodi:r1="127.04852"
+       sodipodi:cy="530.93359"
+       sodipodi:cx="390"
+       sodipodi:sides="6"
+       id="path3839"
+       style="fill:#820094;fill-opacity:1;stroke:none"
+       sodipodi:type="star" />
+  </g>
+</svg>
