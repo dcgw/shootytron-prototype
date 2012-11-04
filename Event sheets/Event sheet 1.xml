@@ -502,6 +502,25 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" type="Wrecksagon" />
+                        <action id="-10" name="Add to" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">2000 * multiplier</param>
+                        </action>
+                        <action id="-10" name="Add to" type="System">
+                            <param id="0" name="Variable">multiplier</param>
+                            <param id="1" name="Value">MULTIPLIER_INCREMENT</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">lastKillTime</param>
+                            <param id="1" name="Value">time</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-19" name="On destroyed" type="Wrecksagon" />
+                    </conditions>
+                    <actions>
                         <action id="0" name="Spawn another object" type="Wrecksagon">
                             <param id="0" name="Object">Wrecksagon_Petal</param>
                             <param id="1" name="Layer">0</param>
@@ -554,18 +573,6 @@
                             <param id="0" name="Object">Wrecksagon_Flower</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="Image point">0</param>
-                        </action>
-                        <action id="-10" name="Add to" type="System">
-                            <param id="0" name="Variable">score</param>
-                            <param id="1" name="Value">2000 * multiplier</param>
-                        </action>
-                        <action id="-10" name="Add to" type="System">
-                            <param id="0" name="Variable">multiplier</param>
-                            <param id="1" name="Value">MULTIPLIER_INCREMENT</param>
-                        </action>
-                        <action id="-9" name="Set value" type="System">
-                            <param id="0" name="Variable">lastKillTime</param>
-                            <param id="1" name="Value">time</param>
                         </action>
                     </actions>
                 </event-block>
