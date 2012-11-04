@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
-        <variable constant="1" name="SAFERADIUS" static="0" type="number">96</variable>
+        <variable constant="1" name="SAFERADIUS" static="0" type="number">128</variable>
         <variable constant="0" name="lastKillTime" static="0" type="number">0</variable>
         <variable constant="0" name="multiplier" static="0" type="number">1</variable>
         <variable constant="0" name="score" static="0" type="number">0</variable>
