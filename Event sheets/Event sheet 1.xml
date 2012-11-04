@@ -477,7 +477,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" title="Score">
+        <event-group description="" title="Score">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -491,6 +491,12 @@
                         <action id="5" name="Set web font" type="MultiplierPopup">
                             <param id="0" name="Family name">&quot;Adore64&quot;</param>
                             <param id="1" name="CSS URL">&quot;webfont.css&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" type="MultiplierPopup">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" type="MultiplierPopup">
+                            <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
                 </event-block>
