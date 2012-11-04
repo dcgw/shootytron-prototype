@@ -20,6 +20,7 @@
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -146,8 +147,8 @@
                 <behavior-type name="Bullet">
                     <behavior id="Bullet" />
                 </behavior-type>
-                <behavior-type name="DestroyOutsideLayout">
-                    <behavior id="destroy" />
+                <behavior-type name="Wrap">
+                    <behavior id="wrap" />
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
