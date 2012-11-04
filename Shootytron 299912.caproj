@@ -14,6 +14,7 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
     </used-behaviors>
     <used-effects />
@@ -45,6 +46,9 @@
             <behaviors>
                 <behavior-type name="8Direction">
                     <behavior id="EightDir" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout">
+                    <behavior id="bound" />
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
