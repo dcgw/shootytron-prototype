@@ -67,6 +67,23 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block>
+                            <conditions>
+                                <condition id="-11" name="For Each" type="System">
+                                    <param id="0" name="Object">Wrecksagon</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" type="Wrecksagon">
+                                    <param id="0" name="X">random(SAFERADIUS, sqrt(WindowWidth * WindowWidth + WindowHeight * WindowHeight) * 0.5)</param>
+                                    <param id="1" name="Y">random(0, 360)</param>
+                                </action>
+                                <action id="-3" name="Set position" type="Wrecksagon">
+                                    <param id="0" name="X">(WindowWidth * 1.5 + sin(Wrecksagon.Y) * Wrecksagon.X) % WindowWidth</param>
+                                    <param id="1" name="Y">(WindowHeight * 1.5 + cos(Wrecksagon.Y) * Wrecksagon.X) % WindowHeight</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
