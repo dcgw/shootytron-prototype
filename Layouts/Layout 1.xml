@@ -154,12 +154,13 @@
                                 <set-angle>Yes</set-angle>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="DestroyOutsideLayout" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>613</x>
-                        <y>322</y>
+                        <x>770</x>
+                        <y>286</y>
                         <z>0</z>
                         <width>16</width>
                         <height>16</height>
