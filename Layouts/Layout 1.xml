@@ -805,10 +805,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>644</x>
-                        <y>242.007995605</y>
+                        <y>239</y>
                         <z>0</z>
                         <width>8</width>
-                        <height>484.032409668</height>
+                        <height>496</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -827,10 +827,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>321</x>
+                        <x>319</x>
                         <y>484</y>
                         <z>0</z>
-                        <width>642</width>
+                        <width>656</width>
                         <height>8</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -851,9 +851,9 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>319</x>
-                        <y>-4</y>
+                        <y>-5</y>
                         <z>0</z>
-                        <width>643</width>
+                        <width>656</width>
                         <height>8</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -873,11 +873,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-4</x>
+                        <x>-5</x>
                         <y>239</y>
                         <z>0</z>
                         <width>8</width>
-                        <height>478</height>
+                        <height>496</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
