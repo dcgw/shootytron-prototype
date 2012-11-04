@@ -145,38 +145,29 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block>
-            <conditions>
-                <condition id="0" name="On collision with another object" type="Creep">
-                    <param id="0" name="Object">Player</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-13" name="Set boolean" type="Player">
-                    <param id="0" name="Instance variable">dead</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block>
-            <conditions>
-                <condition id="0" name="On collision with another object" type="Creep">
-                    <param id="0" name="Object">Shot</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" type="Creep" />
-            </actions>
-        </event-block>
-        <event-block>
-            <conditions>
-                <condition id="-8" name="Is boolean instance variable set" type="Player">
-                    <param id="0" name="Instance variable">dead</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" type="Player" />
-            </actions>
-        </event-block>
+        <event-group description="" title="Creep">
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="0" name="On collision with another object" type="Creep">
+                            <param id="0" name="Object">Shot</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" type="Creep" />
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="0" name="On collision with another object" type="Creep">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" type="Player" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
