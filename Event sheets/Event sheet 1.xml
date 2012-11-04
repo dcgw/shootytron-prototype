@@ -23,7 +23,7 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" type="Creep">
-                                    <param id="0" name="X">random(SAFERADIUS, sqrt(WindowWidth * WindowWidth + WindowHeight * WindowHeight))</param>
+                                    <param id="0" name="X">random(SAFERADIUS, sqrt(WindowWidth * WindowWidth + WindowHeight * WindowHeight) * 0.5)</param>
                                     <param id="1" name="Y">random(0, 360)</param>
                                 </action>
                                 <action id="-3" name="Set position" type="Creep">
@@ -40,7 +40,7 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" type="Grunt">
-                                    <param id="0" name="X">random(SAFERADIUS, sqrt(WindowWidth * WindowWidth + WindowHeight * WindowHeight))</param>
+                                    <param id="0" name="X">random(SAFERADIUS, sqrt(WindowWidth * WindowWidth + WindowHeight * WindowHeight) * 0.5)</param>
                                     <param id="1" name="Y">random(0, 360)</param>
                                 </action>
                                 <action id="-3" name="Set position" type="Grunt">
@@ -57,7 +57,7 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" type="Spirosnipe">
-                                    <param id="0" name="X">random(SAFERADIUS, sqrt(WindowWidth * WindowWidth + WindowHeight * WindowHeight))</param>
+                                    <param id="0" name="X">random(SAFERADIUS, sqrt(WindowWidth * WindowWidth + WindowHeight * WindowHeight) * 0.5)</param>
                                     <param id="1" name="Y">random(0, 360)</param>
                                 </action>
                                 <action id="-3" name="Set position" type="Spirosnipe">
