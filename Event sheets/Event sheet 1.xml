@@ -244,5 +244,23 @@
                 </action>
             </actions>
         </event-block>
+        <event-group description="" title="Spirosnipe" />
+        <event-block>
+            <conditions>
+                <condition id="-1" name="Every tick" type="System" />
+            </conditions>
+            <actions>
+                <action id="-22" name="Set angle toward position" type="Spirosnipe">
+                    <param id="0" name="X">Player.X</param>
+                    <param id="1" name="Y">Player.Y</param>
+                </action>
+                <action behavior="Aroundment" id="3" name="Set angle of motion" type="Spirosnipe">
+                    <param id="0" name="Angle">SpiroSnipe.Angle + 90</param>
+                </action>
+                <action behavior="Inment" id="0" name="Set speed" type="Spirosnipe">
+                    <param id="0" name="Speed">distance(Player.X, Player.Y, Spirosnipe.X, Spirosnipe.Y) * 0.5</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
