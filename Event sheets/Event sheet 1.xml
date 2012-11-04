@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <variable constant="1" name="MULTIPLIER_INCREMENT" static="0" type="number">1</variable>
         <variable constant="1" name="SAFERADIUS" static="0" type="number">128</variable>
         <variable constant="0" name="lastKillTime" static="0" type="number">0</variable>
         <variable constant="0" name="multiplier" static="0" type="number">1</variable>
@@ -274,7 +275,7 @@
                         </action>
                         <action id="-10" name="Add to" type="System">
                             <param id="0" name="Variable">multiplier</param>
-                            <param id="1" name="Value">0.2</param>
+                            <param id="1" name="Value">MULTIPLIER_INCREMENT</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">lastKillTime</param>
@@ -324,7 +325,7 @@
                         </action>
                         <action id="-10" name="Add to" type="System">
                             <param id="0" name="Variable">multiplier</param>
-                            <param id="1" name="Value">0.2</param>
+                            <param id="1" name="Value">MULTIPLIER_INCREMENT</param>
                         </action>
                         <action id="-9" name="Set value" type="System">
                             <param id="0" name="Variable">lastKillTime</param>
@@ -455,9 +456,28 @@
                         <action id="-9" name="Destroy" type="Spiroshot" />
                     </actions>
                 </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-19" name="On destroyed" type="Spirosnipe" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">4000 * multiplier</param>
+                        </action>
+                        <action id="-10" name="Add to" type="System">
+                            <param id="0" name="Variable">multiplier</param>
+                            <param id="1" name="Value">MULTIPLIER_INCREMENT</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">lastKillTime</param>
+                            <param id="1" name="Value">time</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" title="Score">
+        <event-group collapsed="1" description="" title="Score">
             <sub-events>
                 <event-block>
                     <conditions>
