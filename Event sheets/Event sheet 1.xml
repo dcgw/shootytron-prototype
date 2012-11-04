@@ -167,6 +167,18 @@
                         <action id="-9" name="Destroy" type="Player" />
                     </actions>
                 </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-19" name="On destroyed" type="Creep" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" type="Creep">
+                            <param id="0" name="Object">CreepExplosion</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
     </events>
