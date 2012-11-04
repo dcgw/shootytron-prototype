@@ -235,7 +235,7 @@
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
-    <files-folder expanded="1">
+    <files-folder expanded="0">
         <file name="Adore64.woff" />
         <file name="webfont.css" />
     </files-folder>
