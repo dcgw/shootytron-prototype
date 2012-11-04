@@ -8,6 +8,7 @@
     <saved-with-version>10802</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
     </used-plugins>
@@ -164,6 +165,10 @@
                     </frame>
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="CreepExplosion">
+            <plugin id="Particles" />
+            <texture />
         </object-type>
     </object-folder>
     <families />
