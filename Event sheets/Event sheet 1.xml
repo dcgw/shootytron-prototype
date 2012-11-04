@@ -4,6 +4,7 @@
     <name>Event sheet 1</name>
     <events>
         <variable constant="1" name="SAFERADIUS" static="0" type="number">96</variable>
+        <variable constant="0" name="lastKillTime" static="0" type="number">0</variable>
         <variable constant="0" name="multiplier" static="0" type="number">1</variable>
         <variable constant="0" name="score" static="0" type="number">0</variable>
         <event-group description="" title="Wave start">
@@ -229,7 +230,11 @@
                         </action>
                         <action id="-10" name="Add to" type="System">
                             <param id="0" name="Variable">multiplier</param>
-                            <param id="1" name="Value">0.05</param>
+                            <param id="1" name="Value">0.2</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">lastKillTime</param>
+                            <param id="1" name="Value">time</param>
                         </action>
                     </actions>
                 </event-block>
@@ -275,7 +280,11 @@
                         </action>
                         <action id="-10" name="Add to" type="System">
                             <param id="0" name="Variable">multiplier</param>
-                            <param id="1" name="Value">0.05</param>
+                            <param id="1" name="Value">0.2</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">lastKillTime</param>
+                            <param id="1" name="Value">time</param>
                         </action>
                     </actions>
                 </event-block>
@@ -395,6 +404,82 @@
                         </action>
                         <action id="0" name="Set text" type="Multiplier">
                             <param id="0" name="Text">multiplier</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" title="Score">
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="-2" name="On start of layout" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set web font" type="Score">
+                            <param id="0" name="Family name">&quot;Adore64&quot;</param>
+                            <param id="1" name="CSS URL">&quot;webfont.css&quot;</param>
+                        </action>
+                        <action id="5" name="Set web font" type="MultiplierPopup">
+                            <param id="0" name="Family name">&quot;Adore64&quot;</param>
+                            <param id="1" name="CSS URL">&quot;webfont.css&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-1" name="Every tick" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" type="Score">
+                            <param id="0" name="Text">zeropad(floor(score), 8)</param>
+                        </action>
+                        <action id="0" name="Set text" type="Multiplier">
+                            <param id="0" name="Text">multiplier</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-8" name="Compare two values" type="System">
+                            <param id="0" name="First value">time</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">lastKillTime + 1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">multiplier</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" type="MultiplierPopup">
+                            <param id="0" name="Instance variable">lastShown</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-8" name="Compare two values" type="System">
+                            <param id="0" name="First value">floor(multiplier)</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">MultiplierPopup.lastShown</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" type="MultiplierPopup">
+                            <param id="0" name="Instance variable">lastShown</param>
+                            <param id="1" name="Value">floor(multiplier)</param>
+                        </action>
+                        <action id="0" name="Set text" type="MultiplierPopup">
+                            <param id="0" name="Text">&quot;x&quot; &amp; floor(multiplier)</param>
+                        </action>
+                        <action behavior="Fade" id="0" name="Restart fade" type="MultiplierPopup" />
+                        <action id="-15" name="Set visible" type="MultiplierPopup">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="3" name="Set font size" type="MultiplierPopup">
+                            <param id="0" name="Size (pt)">30 + (floor(multiplier) * 10)</param>
                         </action>
                     </actions>
                 </event-block>
