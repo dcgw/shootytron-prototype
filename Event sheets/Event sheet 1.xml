@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <variable constant="0" name="multiplier" static="0" type="number">1</variable>
+        <variable constant="0" name="score" static="0" type="number">0</variable>
         <event-group description="" title="Shooting">
             <sub-events>
                 <event-block any="1">
@@ -192,6 +194,21 @@
                         <action id="-9" name="Destroy" type="Player" />
                     </actions>
                 </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-19" name="On destroyed" type="Grunt" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">2000 * multiplier</param>
+                        </action>
+                        <action id="-10" name="Add to" type="System">
+                            <param id="0" name="Variable">multiplier</param>
+                            <param id="1" name="Value">0.05</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" title="Creep">
@@ -204,6 +221,7 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" type="Creep" />
+                        <action id="-9" name="Destroy" type="Shot" />
                     </actions>
                 </event-block>
                 <event-block>
@@ -226,23 +244,63 @@
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="Image point">0</param>
                         </action>
+                        <action id="-10" name="Add to" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">1000 * multiplier</param>
+                        </action>
+                        <action id="-10" name="Add to" type="System">
+                            <param id="0" name="Variable">multiplier</param>
+                            <param id="1" name="Value">0.05</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" type="System">
+                            <param id="0" name="Interval (seconds)">0.2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" type="Sprite">
+                            <param id="0" name="Object">Creep</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block>
-            <conditions>
-                <condition id="-6" name="Every X seconds" type="System">
-                    <param id="0" name="Interval (seconds)">1.0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Spawn another object" type="Sprite">
-                    <param id="0" name="Object">Creep</param>
-                    <param id="1" name="Layer">0</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group description="" title="Score">
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="-2" name="On start of layout" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set web font" type="Score">
+                            <param id="0" name="Family name">&quot;Adore64&quot;</param>
+                            <param id="1" name="CSS URL">&quot;webfont.css&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-1" name="Every tick" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" type="Score">
+                            <param id="0" name="Text">zeropad(floor(score), 8)</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">multiplier</param>
+                            <param id="1" name="Value">max(multiplier - 0.001, 1)</param>
+                        </action>
+                        <action id="0" name="Set text" type="Multiplier">
+                            <param id="0" name="Text">multiplier</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
