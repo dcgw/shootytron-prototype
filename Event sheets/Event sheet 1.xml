@@ -190,6 +190,7 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" type="Player" />
+                        <action id="-9" name="Destroy" type="Grunt" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -214,6 +215,7 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" type="Player" />
+                        <action id="-9" name="Destroy" type="Creep" />
                     </actions>
                 </event-block>
                 <event-block>
@@ -280,6 +282,38 @@
                 <action behavior="Bullet" id="3" name="Set angle of motion" type="Spiroshot">
                     <param id="0" name="Angle">Spirosnipe.Angle</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="0" name="On collision with another object" type="Spirosnipe">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" type="Player" />
+                <action id="-9" name="Destroy" type="Spirosnipe" />
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="0" name="On collision with another object" type="Spiroshot">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" type="Player" />
+                <action id="-9" name="Destroy" type="Spiroshot" />
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="0" name="On collision with another object" type="Spirosnipe">
+                    <param id="0" name="Object">Shot</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" type="Spirosnipe" />
             </actions>
         </event-block>
     </events>
