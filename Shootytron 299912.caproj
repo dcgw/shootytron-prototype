@@ -341,7 +341,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite2">
+        <object-type name="Border">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Sawtooth">
