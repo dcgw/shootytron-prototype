@@ -215,6 +215,9 @@
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
                     </properties>
+                    <instance-variables>
+                        <ColourChange>false</ColourChange>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sawtooth">
                             <properties>

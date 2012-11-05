@@ -343,6 +343,9 @@
         </object-type>
         <object-type name="Border">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="ColourChange" type="boolean" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Sawtooth">
                     <behavior id="Sin" />
