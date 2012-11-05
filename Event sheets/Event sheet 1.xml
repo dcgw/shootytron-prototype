@@ -494,7 +494,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" title="Wrecksagon">
+        <event-group collapsed="1" description="" title="Wrecksagon">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -660,7 +660,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" title="Score">
+        <event-group collapsed="1" description="" title="Score">
             <sub-events>
                 <event-block>
                     <conditions>
