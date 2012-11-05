@@ -605,6 +605,24 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" title="Border" />
+        <event-group description="" title="Border">
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" type="System">
+                            <param id="0" name="Interval (seconds)">2</param>
+                        </condition>
+                        <condition id="-11" name="For Each" type="System">
+                            <param id="0" name="Object">Sprite2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" type="Sprite2">
+                            <param id="0" name="Frame number">(Sprite2.AnimationFrame + 1) % Sprite2.AnimationFrameCount</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
