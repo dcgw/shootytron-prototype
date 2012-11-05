@@ -359,6 +359,7 @@
     </families>
     <layout-folder expanded="1">
         <layout>Layout 1.xml</layout>
+        <layout>Scratch.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>Event sheet 1.xml</event-sheet>
