@@ -19,72 +19,73 @@
                         <event-block>
                             <conditions>
                                 <condition id="-11" name="For Each" type="System">
-                                    <param id="0" name="Object">Creep</param>
+                                    <param id="0" name="Object">Enemy</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" type="Creep">
+                                <action id="-3" name="Set position" type="Enemy">
                                     <param id="0" name="X">random(SAFERADIUS, sqrt(WindowWidth * WindowWidth + WindowHeight * WindowHeight) * 0.5)</param>
                                     <param id="1" name="Y">random(0, 360)</param>
                                 </action>
-                                <action id="-3" name="Set position" type="Creep">
-                                    <param id="0" name="X">(WindowWidth * 1.5 + sin(Creep.Y) * Creep.X) % WindowWidth</param>
-                                    <param id="1" name="Y">(WindowHeight * 1.5 + cos(Creep.Y) * Creep.X) % WindowHeight</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block>
-                            <conditions>
-                                <condition id="-11" name="For Each" type="System">
-                                    <param id="0" name="Object">Grunt</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" type="Grunt">
-                                    <param id="0" name="X">random(SAFERADIUS, sqrt(WindowWidth * WindowWidth + WindowHeight * WindowHeight) * 0.5)</param>
-                                    <param id="1" name="Y">random(0, 360)</param>
-                                </action>
-                                <action id="-3" name="Set position" type="Grunt">
-                                    <param id="0" name="X">(WindowWidth * 1.5 + sin(Grunt.Y) * Grunt.X) % WindowWidth</param>
-                                    <param id="1" name="Y">(WindowHeight * 1.5 + cos(Grunt.Y) * Grunt.X) % WindowHeight</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block>
-                            <conditions>
-                                <condition id="-11" name="For Each" type="System">
-                                    <param id="0" name="Object">Spirosnipe</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" type="Spirosnipe">
-                                    <param id="0" name="X">random(SAFERADIUS, sqrt(WindowWidth * WindowWidth + WindowHeight * WindowHeight) * 0.5)</param>
-                                    <param id="1" name="Y">random(0, 360)</param>
-                                </action>
-                                <action id="-3" name="Set position" type="Spirosnipe">
-                                    <param id="0" name="X">(WindowWidth * 1.5 + sin(Spirosnipe.Y) * Spirosnipe.X) % WindowWidth</param>
-                                    <param id="1" name="Y">(WindowHeight * 1.5 + cos(Spirosnipe.Y) * Spirosnipe.X) % WindowHeight</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block>
-                            <conditions>
-                                <condition id="-11" name="For Each" type="System">
-                                    <param id="0" name="Object">Wrecksagon</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" type="Wrecksagon">
-                                    <param id="0" name="X">random(SAFERADIUS, sqrt(WindowWidth * WindowWidth + WindowHeight * WindowHeight) * 0.5)</param>
-                                    <param id="1" name="Y">random(0, 360)</param>
-                                </action>
-                                <action id="-3" name="Set position" type="Wrecksagon">
-                                    <param id="0" name="X">(WindowWidth * 1.5 + sin(Wrecksagon.Y) * Wrecksagon.X) % WindowWidth</param>
-                                    <param id="1" name="Y">(WindowHeight * 1.5 + cos(Wrecksagon.Y) * Wrecksagon.X) % WindowHeight</param>
+                                <action id="-3" name="Set position" type="Enemy">
+                                    <param id="0" name="X">(WindowWidth * 1.5 + sin(Enemy.Y) * Enemy.X) % WindowWidth</param>
+                                    <param id="1" name="Y">(WindowHeight * 1.5 + cos(Enemy.Y) * Enemy.X) % WindowHeight</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-11" name="For Each" type="System">
+                            <param id="0" name="Object">Creep</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" type="Creep">
+                            <param id="0" name="Instance variable">value</param>
+                            <param id="1" name="Value">1000</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-11" name="For Each" type="System">
+                            <param id="0" name="Object">Grunt</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" type="Grunt">
+                            <param id="0" name="Instance variable">value</param>
+                            <param id="1" name="Value">2000</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-11" name="For Each" type="System">
+                            <param id="0" name="Object">Spirosnipe</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" type="Spirosnipe">
+                            <param id="0" name="Instance variable">value</param>
+                            <param id="1" name="Value">4000</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-11" name="For Each" type="System">
+                            <param id="0" name="Object">Wrecksagon</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" type="Wrecksagon">
+                            <param id="0" name="Instance variable">value</param>
+                            <param id="1" name="Value">3000</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
@@ -234,6 +235,44 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group collapsed="1" description="" title="Enemies">
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="0" name="On collision with another object" type="Enemy">
+                            <param id="0" name="Object">Shot</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" type="Enemy" />
+                        <action id="-9" name="Destroy" type="Shot" />
+                        <action id="-10" name="Add to" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">Enemy.value * multiplier</param>
+                        </action>
+                        <action id="-10" name="Add to" type="System">
+                            <param id="0" name="Variable">multiplier</param>
+                            <param id="1" name="Value">MULTIPLIER_INCREMENT</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">lastKillTime</param>
+                            <param id="1" name="Value">time</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="0" name="On collision with another object" type="Enemy">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" type="Player" />
+                        <action id="-9" name="Destroy" type="Enemy" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group collapsed="1" description="" title="Grunt">
             <sub-events>
                 <event-block>
@@ -262,40 +301,6 @@
                 </event-block>
                 <event-block>
                     <conditions>
-                        <condition id="0" name="On collision with another object" type="Grunt">
-                            <param id="0" name="Object">Shot</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" type="Grunt" />
-                        <action id="-9" name="Destroy" type="Shot" />
-                        <action id="-10" name="Add to" type="System">
-                            <param id="0" name="Variable">score</param>
-                            <param id="1" name="Value">2000 * multiplier</param>
-                        </action>
-                        <action id="-10" name="Add to" type="System">
-                            <param id="0" name="Variable">multiplier</param>
-                            <param id="1" name="Value">MULTIPLIER_INCREMENT</param>
-                        </action>
-                        <action id="-9" name="Set value" type="System">
-                            <param id="0" name="Variable">lastKillTime</param>
-                            <param id="1" name="Value">time</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block>
-                    <conditions>
-                        <condition id="0" name="On collision with another object" type="Grunt">
-                            <param id="0" name="Object">Player</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" type="Player" />
-                        <action id="-9" name="Destroy" type="Grunt" />
-                    </actions>
-                </event-block>
-                <event-block>
-                    <conditions>
                         <condition id="-19" name="On destroyed" type="Grunt" />
                     </conditions>
                     <actions />
@@ -304,40 +309,6 @@
         </event-group>
         <event-group collapsed="1" description="" title="Creep">
             <sub-events>
-                <event-block>
-                    <conditions>
-                        <condition id="0" name="On collision with another object" type="Creep">
-                            <param id="0" name="Object">Shot</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" type="Creep" />
-                        <action id="-9" name="Destroy" type="Shot" />
-                        <action id="-10" name="Add to" type="System">
-                            <param id="0" name="Variable">score</param>
-                            <param id="1" name="Value">1000 * multiplier</param>
-                        </action>
-                        <action id="-10" name="Add to" type="System">
-                            <param id="0" name="Variable">multiplier</param>
-                            <param id="1" name="Value">MULTIPLIER_INCREMENT</param>
-                        </action>
-                        <action id="-9" name="Set value" type="System">
-                            <param id="0" name="Variable">lastKillTime</param>
-                            <param id="1" name="Value">time</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block>
-                    <conditions>
-                        <condition id="0" name="On collision with another object" type="Creep">
-                            <param id="0" name="Object">Player</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" type="Player" />
-                        <action id="-9" name="Destroy" type="Creep" />
-                    </actions>
-                </event-block>
                 <event-block>
                     <conditions>
                         <condition id="-19" name="On destroyed" type="Creep" />
@@ -443,40 +414,6 @@
                 </event-block>
                 <event-block>
                     <conditions>
-                        <condition id="0" name="On collision with another object" type="Spirosnipe">
-                            <param id="0" name="Object">Player</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" type="Player" />
-                        <action id="-9" name="Destroy" type="Spirosnipe" />
-                    </actions>
-                </event-block>
-                <event-block>
-                    <conditions>
-                        <condition id="0" name="On collision with another object" type="Spirosnipe">
-                            <param id="0" name="Object">Shot</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" type="Spirosnipe" />
-                        <action id="-9" name="Destroy" type="Shot" />
-                        <action id="-10" name="Add to" type="System">
-                            <param id="0" name="Variable">score</param>
-                            <param id="1" name="Value">4000 * multiplier</param>
-                        </action>
-                        <action id="-10" name="Add to" type="System">
-                            <param id="0" name="Variable">multiplier</param>
-                            <param id="1" name="Value">MULTIPLIER_INCREMENT</param>
-                        </action>
-                        <action id="-9" name="Set value" type="System">
-                            <param id="0" name="Variable">lastKillTime</param>
-                            <param id="1" name="Value">time</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block>
-                    <conditions>
                         <condition id="0" name="On collision with another object" type="Spiroshot">
                             <param id="0" name="Object">Player</param>
                         </condition>
@@ -498,29 +435,6 @@
             <sub-events>
                 <event-block>
                     <conditions>
-                        <condition id="0" name="On collision with another object" type="Wrecksagon">
-                            <param id="0" name="Object">Shot</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" type="Wrecksagon" />
-                        <action id="-9" name="Destroy" type="Shot" />
-                        <action id="-10" name="Add to" type="System">
-                            <param id="0" name="Variable">score</param>
-                            <param id="1" name="Value">2000 * multiplier</param>
-                        </action>
-                        <action id="-10" name="Add to" type="System">
-                            <param id="0" name="Variable">multiplier</param>
-                            <param id="1" name="Value">MULTIPLIER_INCREMENT</param>
-                        </action>
-                        <action id="-9" name="Set value" type="System">
-                            <param id="0" name="Variable">lastKillTime</param>
-                            <param id="1" name="Value">time</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block>
-                    <conditions>
                         <condition id="-19" name="On destroyed" type="Wrecksagon" />
                     </conditions>
                     <actions>
@@ -532,6 +446,10 @@
                         <action behavior="Bullet" id="3" name="Set angle of motion" type="Wrecksagon_Petal">
                             <param id="0" name="Angle">Wrecksagon.Bullet.AngleOfMotion - 90</param>
                         </action>
+                        <action id="-10" name="Set value" type="Wrecksagon_Petal">
+                            <param id="0" name="Instance variable">value</param>
+                            <param id="1" name="Value">250</param>
+                        </action>
                         <action id="0" name="Spawn another object" type="Wrecksagon">
                             <param id="0" name="Object">Wrecksagon_Petal</param>
                             <param id="1" name="Layer">0</param>
@@ -539,6 +457,10 @@
                         </action>
                         <action behavior="Bullet" id="3" name="Set angle of motion" type="Wrecksagon_Petal">
                             <param id="0" name="Angle">Wrecksagon.Bullet.AngleOfMotion - 30</param>
+                        </action>
+                        <action id="-10" name="Set value" type="Wrecksagon_Petal">
+                            <param id="0" name="Instance variable">value</param>
+                            <param id="1" name="Value">250</param>
                         </action>
                         <action id="0" name="Spawn another object" type="Wrecksagon">
                             <param id="0" name="Object">Wrecksagon_Petal</param>
@@ -548,6 +470,10 @@
                         <action behavior="Bullet" id="3" name="Set angle of motion" type="Wrecksagon_Petal">
                             <param id="0" name="Angle">Wrecksagon.Bullet.AngleOfMotion + 30</param>
                         </action>
+                        <action id="-10" name="Set value" type="Wrecksagon_Petal">
+                            <param id="0" name="Instance variable">value</param>
+                            <param id="1" name="Value">250</param>
+                        </action>
                         <action id="0" name="Spawn another object" type="Wrecksagon">
                             <param id="0" name="Object">Wrecksagon_Petal</param>
                             <param id="1" name="Layer">0</param>
@@ -555,6 +481,10 @@
                         </action>
                         <action behavior="Bullet" id="3" name="Set angle of motion" type="Wrecksagon_Petal">
                             <param id="0" name="Angle">Wrecksagon.Bullet.AngleOfMotion + 90</param>
+                        </action>
+                        <action id="-10" name="Set value" type="Wrecksagon_Petal">
+                            <param id="0" name="Instance variable">value</param>
+                            <param id="1" name="Value">250</param>
                         </action>
                         <action id="0" name="Spawn another object" type="Wrecksagon">
                             <param id="0" name="Object">Wrecksagon_Petal</param>
@@ -564,6 +494,10 @@
                         <action behavior="Bullet" id="3" name="Set angle of motion" type="Wrecksagon_Petal">
                             <param id="0" name="Angle">Wrecksagon.Bullet.AngleOfMotion + 120</param>
                         </action>
+                        <action id="-10" name="Set value" type="Wrecksagon_Petal">
+                            <param id="0" name="Instance variable">value</param>
+                            <param id="1" name="Value">250</param>
+                        </action>
                         <action id="0" name="Spawn another object" type="Wrecksagon">
                             <param id="0" name="Object">Wrecksagon_Petal</param>
                             <param id="1" name="Layer">0</param>
@@ -572,90 +506,19 @@
                         <action behavior="Bullet" id="3" name="Set angle of motion" type="Wrecksagon_Petal">
                             <param id="0" name="Angle">Wrecksagon.Bullet.AngleOfMotion - 120</param>
                         </action>
+                        <action id="-10" name="Set value" type="Wrecksagon_Petal">
+                            <param id="0" name="Instance variable">value</param>
+                            <param id="1" name="Value">250</param>
+                        </action>
                         <action id="0" name="Spawn another object" type="Wrecksagon">
                             <param id="0" name="Object">Wrecksagon_Flower</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                    </actions>
-                </event-block>
-                <event-block>
-                    <conditions>
-                        <condition id="0" name="On collision with another object" type="Wrecksagon">
-                            <param id="0" name="Object">Player</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" type="Player" />
-                        <action id="-9" name="Destroy" type="Wrecksagon" />
-                    </actions>
-                </event-block>
-                <event-block>
-                    <conditions>
-                        <condition id="0" name="On collision with another object" type="Wrecksagon_Flower">
-                            <param id="0" name="Object">Shot</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" type="Wrecksagon_Flower" />
-                        <action id="-9" name="Destroy" type="Shot" />
-                        <action id="-10" name="Add to" type="System">
-                            <param id="0" name="Variable">score</param>
-                            <param id="1" name="Value">500 * multiplier</param>
+                        <action id="-10" name="Set value" type="Wrecksagon_Flower">
+                            <param id="0" name="Instance variable">value</param>
+                            <param id="1" name="Value">500</param>
                         </action>
-                        <action id="-10" name="Add to" type="System">
-                            <param id="0" name="Variable">multiplier</param>
-                            <param id="1" name="Value">MULTIPLIER_INCREMENT</param>
-                        </action>
-                        <action id="-9" name="Set value" type="System">
-                            <param id="0" name="Variable">lastKillTime</param>
-                            <param id="1" name="Value">time</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block>
-                    <conditions>
-                        <condition id="0" name="On collision with another object" type="Wrecksagon_Flower">
-                            <param id="0" name="Object">Player</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" type="Player" />
-                        <action id="-9" name="Destroy" type="Wrecksagon_Flower" />
-                    </actions>
-                </event-block>
-                <event-block>
-                    <conditions>
-                        <condition id="0" name="On collision with another object" type="Wrecksagon_Petal">
-                            <param id="0" name="Object">Shot</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" type="Wrecksagon_Petal" />
-                        <action id="-9" name="Destroy" type="Shot" />
-                        <action id="-10" name="Add to" type="System">
-                            <param id="0" name="Variable">score</param>
-                            <param id="1" name="Value">250 * multiplier</param>
-                        </action>
-                        <action id="-10" name="Add to" type="System">
-                            <param id="0" name="Variable">multiplier</param>
-                            <param id="1" name="Value">MULTIPLIER_INCREMENT</param>
-                        </action>
-                        <action id="-9" name="Set value" type="System">
-                            <param id="0" name="Variable">lastKillTime</param>
-                            <param id="1" name="Value">time</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block>
-                    <conditions>
-                        <condition id="0" name="On collision with another object" type="Wrecksagon_Petal">
-                            <param id="0" name="Object">Player</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" type="Player" />
-                        <action id="-9" name="Destroy" type="Wrecksagon_Petal" />
                     </actions>
                 </event-block>
             </sub-events>

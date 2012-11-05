@@ -7,10 +7,10 @@
     <unique-id>2853xhfleqhg2</unique-id>
     <saved-with-version>10802</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
-        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
     </used-plugins>
     <used-behaviors>
@@ -342,7 +342,21 @@
             </animation-folder>
         </object-type>
     </object-folder>
-    <families />
+    <families>
+        <family name="Enemy" plugin-id="Sprite">
+            <members>
+                <member>Creep</member>
+                <member>Grunt</member>
+                <member>Spirosnipe</member>
+                <member>Wrecksagon</member>
+                <member>Wrecksagon_Flower</member>
+                <member>Wrecksagon_Petal</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="value" type="number" />
+            </instance-variables>
+        </family>
+    </families>
     <layout-folder expanded="1">
         <layout>Layout 1.xml</layout>
     </layout-folder>
