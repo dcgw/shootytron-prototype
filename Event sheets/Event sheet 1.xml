@@ -605,5 +605,23 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" title="Border">
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition behavior="Wave" id="0" name="Is active" type="Border" />
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" type="Border">
+                            <param id="0" name="Width">Border.ImageWidth * (0.9 + 0.2 * Border.Wave.Value)</param>
+                            <param id="1" name="Height">Border.ImageHeight * (0.9 + 0.2 * Border.Wave.Value)</param>
+                        </action>
+                        <action id="-16" name="Set opacity" type="Border">
+                            <param id="0" name="Opacity">50 + 100 * Border.Wave.Value</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
