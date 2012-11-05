@@ -607,13 +607,39 @@
         </event-group>
         <event-group description="" title="Border">
             <sub-events>
+                <variable constant="1" name="START_SIZE" static="0" type="number">72</variable>
+                <variable constant="1" name="END_SIZE" static="0" type="number">24</variable>
+                <variable constant="1" name="TRAVEL" static="0" type="number">128</variable>
                 <event-block>
                     <conditions>
-                        <condition id="-6" name="Every X seconds" type="System">
-                            <param id="0" name="Interval (seconds)">2</param>
-                        </condition>
+                        <condition id="-2" name="On start of layout" type="System" />
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-3" name="Create object" type="System">
+                            <param id="0" name="Object to create">Sprite2</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">-START_SIZE * 0.5</param>
+                            <param id="3" name="Y">WindowHeight * 0.5</param>
+                        </action>
+                        <action id="2" name="Stop" type="Sprite2" />
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition behavior="Sawtooth" id="0" name="Is active" type="Sprite2" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" type="Sprite2">
+                            <param id="0" name="X">-START_SIZE * 0.5 + (0.5 + Sprite2.Sawtooth.Value) * TRAVEL</param>
+                            <param id="1" name="Y">Sprite2.Y</param>
+                        </action>
+                        <action id="-5" name="Set width" type="Sprite2">
+                            <param id="0" name="Width">END_SIZE + (0.5 - Sprite2.Sawtooth.Value) * (START_SIZE - END_SIZE)</param>
+                        </action>
+                        <action id="-16" name="Set opacity" type="Sprite2">
+                            <param id="0" name="Opacity">(0.5 - Sprite2.Sawtooth.Value) * 100</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
