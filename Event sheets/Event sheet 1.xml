@@ -590,6 +590,74 @@
                         <action id="-9" name="Destroy" type="Wrecksagon" />
                     </actions>
                 </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="0" name="On collision with another object" type="Wrecksagon_Flower">
+                            <param id="0" name="Object">Shot</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" type="Wrecksagon_Flower" />
+                        <action id="-9" name="Destroy" type="Shot" />
+                        <action id="-10" name="Add to" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">500 * multiplier</param>
+                        </action>
+                        <action id="-10" name="Add to" type="System">
+                            <param id="0" name="Variable">multiplier</param>
+                            <param id="1" name="Value">MULTIPLIER_INCREMENT</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">lastKillTime</param>
+                            <param id="1" name="Value">time</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="0" name="On collision with another object" type="Wrecksagon_Flower">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" type="Player" />
+                        <action id="-9" name="Destroy" type="Wrecksagon_Flower" />
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="0" name="On collision with another object" type="Wrecksagon_Petal">
+                            <param id="0" name="Object">Shot</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" type="Wrecksagon_Petal" />
+                        <action id="-9" name="Destroy" type="Shot" />
+                        <action id="-10" name="Add to" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">250 * multiplier</param>
+                        </action>
+                        <action id="-10" name="Add to" type="System">
+                            <param id="0" name="Variable">multiplier</param>
+                            <param id="1" name="Value">MULTIPLIER_INCREMENT</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">lastKillTime</param>
+                            <param id="1" name="Value">time</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="0" name="On collision with another object" type="Wrecksagon_Petal">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" type="Player" />
+                        <action id="-9" name="Destroy" type="Wrecksagon_Petal" />
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" title="Score">
