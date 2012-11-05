@@ -216,7 +216,11 @@
                         <initial-frame>0</initial-frame>
                     </properties>
                     <instance-variables>
-                        <ColourChange>false</ColourChange>
+                        <colourChange>false</colourChange>
+                        <startX>0</startX>
+                        <startY>0</startY>
+                        <travelX>0</travelX>
+                        <travelY>0</travelY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sawtooth">
