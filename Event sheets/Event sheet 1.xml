@@ -611,114 +611,153 @@
                 <variable constant="1" name="END_SIZE" static="0" type="number">24</variable>
                 <variable constant="1" name="TRAVEL" static="0" type="number">64</variable>
                 <variable constant="0" name="thisTravel" static="0" type="number">0</variable>
+                <variable constant="0" name="period" static="0" type="number">4</variable>
                 <event-block>
                     <conditions>
                         <condition id="-2" name="On start of layout" type="System" />
                     </conditions>
-                    <actions>
-                        <action id="-3" name="Create object" type="System">
-                            <param id="0" name="Object to create">Border</param>
-                            <param id="1" name="Layer">1</param>
-                            <param id="2" name="X">-START_SIZE * 0.5</param>
-                            <param id="3" name="Y">WindowHeight * 0.5</param>
-                        </action>
-                        <action id="2" name="Stop" type="Border" />
-                        <action id="-10" name="Set value" type="Border">
-                            <param id="0" name="Instance variable">startX</param>
-                            <param id="1" name="Value">Border.X</param>
-                        </action>
-                        <action id="-10" name="Set value" type="Border">
-                            <param id="0" name="Instance variable">startY</param>
-                            <param id="1" name="Value">Border.Y</param>
-                        </action>
-                        <action id="-10" name="Set value" type="Border">
-                            <param id="0" name="Instance variable">travelX</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-10" name="Set value" type="Border">
-                            <param id="0" name="Instance variable">travelY</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-3" name="Create object" type="System">
-                            <param id="0" name="Object to create">Border</param>
-                            <param id="1" name="Layer">1</param>
-                            <param id="2" name="X">WindowWidth + START_SIZE * 0.5</param>
-                            <param id="3" name="Y">WindowHeight * 0.5</param>
-                        </action>
-                        <action id="2" name="Stop" type="Border" />
-                        <action id="-10" name="Set value" type="Border">
-                            <param id="0" name="Instance variable">startX</param>
-                            <param id="1" name="Value">Border.X</param>
-                        </action>
-                        <action id="-10" name="Set value" type="Border">
-                            <param id="0" name="Instance variable">startY</param>
-                            <param id="1" name="Value">Border.Y</param>
-                        </action>
-                        <action id="-10" name="Set value" type="Border">
-                            <param id="0" name="Instance variable">travelX</param>
-                            <param id="1" name="Value">-1</param>
-                        </action>
-                        <action id="-10" name="Set value" type="Border">
-                            <param id="0" name="Instance variable">travelY</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-3" name="Create object" type="System">
-                            <param id="0" name="Object to create">Border</param>
-                            <param id="1" name="Layer">1</param>
-                            <param id="2" name="X">WindowWidth * 0.5</param>
-                            <param id="3" name="Y">-START_SIZE * 0.5</param>
-                        </action>
-                        <action id="-8" name="Set angle" type="Border">
-                            <param id="0" name="Angle">90</param>
-                        </action>
-                        <action id="2" name="Stop" type="Border" />
-                        <action id="-10" name="Set value" type="Border">
-                            <param id="0" name="Instance variable">startX</param>
-                            <param id="1" name="Value">Border.X</param>
-                        </action>
-                        <action id="-10" name="Set value" type="Border">
-                            <param id="0" name="Instance variable">startY</param>
-                            <param id="1" name="Value">Border.Y</param>
-                        </action>
-                        <action id="-10" name="Set value" type="Border">
-                            <param id="0" name="Instance variable">travelX</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-10" name="Set value" type="Border">
-                            <param id="0" name="Instance variable">travelY</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-3" name="Create object" type="System">
-                            <param id="0" name="Object to create">Border</param>
-                            <param id="1" name="Layer">1</param>
-                            <param id="2" name="X">WindowWidth * 0.5</param>
-                            <param id="3" name="Y">WindowHeight + START_SIZE * 0.5</param>
-                        </action>
-                        <action id="-8" name="Set angle" type="Border">
-                            <param id="0" name="Angle">90</param>
-                        </action>
-                        <action id="2" name="Stop" type="Border" />
-                        <action id="-10" name="Set value" type="Border">
-                            <param id="0" name="Instance variable">startX</param>
-                            <param id="1" name="Value">Border.X</param>
-                        </action>
-                        <action id="-10" name="Set value" type="Border">
-                            <param id="0" name="Instance variable">startY</param>
-                            <param id="1" name="Value">Border.Y</param>
-                        </action>
-                        <action id="-10" name="Set value" type="Border">
-                            <param id="0" name="Instance variable">travelX</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-10" name="Set value" type="Border">
-                            <param id="0" name="Instance variable">travelY</param>
-                            <param id="1" name="Value">-1</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block>
+                            <conditions>
+                                <condition id="-10" name="For" type="System">
+                                    <param id="0" name="Name">&quot;&quot;</param>
+                                    <param id="1" name="Start index">1</param>
+                                    <param id="2" name="End index">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" type="System">
+                                    <param id="0" name="Object to create">Border</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">-START_SIZE * 0.5</param>
+                                    <param id="3" name="Y">WindowHeight * 0.5</param>
+                                </action>
+                                <action behavior="Sawtooth" id="1" name="Set period" type="Border">
+                                    <param id="0" name="Period">period / loopindex</param>
+                                </action>
+                                <action id="2" name="Stop" type="Border" />
+                                <action id="5" name="Set frame" type="Border">
+                                    <param id="0" name="Frame number">loopindex</param>
+                                </action>
+                                <action id="-10" name="Set value" type="Border">
+                                    <param id="0" name="Instance variable">startX</param>
+                                    <param id="1" name="Value">Border.X</param>
+                                </action>
+                                <action id="-10" name="Set value" type="Border">
+                                    <param id="0" name="Instance variable">startY</param>
+                                    <param id="1" name="Value">Border.Y</param>
+                                </action>
+                                <action id="-10" name="Set value" type="Border">
+                                    <param id="0" name="Instance variable">travelX</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Set value" type="Border">
+                                    <param id="0" name="Instance variable">travelY</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-3" name="Create object" type="System">
+                                    <param id="0" name="Object to create">Border</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">WindowWidth + START_SIZE * 0.5</param>
+                                    <param id="3" name="Y">WindowHeight * 0.5</param>
+                                </action>
+                                <action behavior="Sawtooth" id="1" name="Set period" type="Border">
+                                    <param id="0" name="Period">period / loopindex</param>
+                                </action>
+                                <action id="2" name="Stop" type="Border" />
+                                <action id="5" name="Set frame" type="Border">
+                                    <param id="0" name="Frame number">loopindex</param>
+                                </action>
+                                <action id="-10" name="Set value" type="Border">
+                                    <param id="0" name="Instance variable">startX</param>
+                                    <param id="1" name="Value">Border.X</param>
+                                </action>
+                                <action id="-10" name="Set value" type="Border">
+                                    <param id="0" name="Instance variable">startY</param>
+                                    <param id="1" name="Value">Border.Y</param>
+                                </action>
+                                <action id="-10" name="Set value" type="Border">
+                                    <param id="0" name="Instance variable">travelX</param>
+                                    <param id="1" name="Value">-1</param>
+                                </action>
+                                <action id="-10" name="Set value" type="Border">
+                                    <param id="0" name="Instance variable">travelY</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-3" name="Create object" type="System">
+                                    <param id="0" name="Object to create">Border</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">WindowWidth * 0.5</param>
+                                    <param id="3" name="Y">-START_SIZE * 0.5</param>
+                                </action>
+                                <action behavior="Sawtooth" id="1" name="Set period" type="Border">
+                                    <param id="0" name="Period">period / loopindex</param>
+                                </action>
+                                <action id="-8" name="Set angle" type="Border">
+                                    <param id="0" name="Angle">90</param>
+                                </action>
+                                <action id="2" name="Stop" type="Border" />
+                                <action id="5" name="Set frame" type="Border">
+                                    <param id="0" name="Frame number">loopindex</param>
+                                </action>
+                                <action id="-10" name="Set value" type="Border">
+                                    <param id="0" name="Instance variable">startX</param>
+                                    <param id="1" name="Value">Border.X</param>
+                                </action>
+                                <action id="-10" name="Set value" type="Border">
+                                    <param id="0" name="Instance variable">startY</param>
+                                    <param id="1" name="Value">Border.Y</param>
+                                </action>
+                                <action id="-10" name="Set value" type="Border">
+                                    <param id="0" name="Instance variable">travelX</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" type="Border">
+                                    <param id="0" name="Instance variable">travelY</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-3" name="Create object" type="System">
+                                    <param id="0" name="Object to create">Border</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">WindowWidth * 0.5</param>
+                                    <param id="3" name="Y">WindowHeight + START_SIZE * 0.5</param>
+                                </action>
+                                <action behavior="Sawtooth" id="1" name="Set period" type="Border">
+                                    <param id="0" name="Period">period / loopindex</param>
+                                </action>
+                                <action id="-8" name="Set angle" type="Border">
+                                    <param id="0" name="Angle">90</param>
+                                </action>
+                                <action id="2" name="Stop" type="Border" />
+                                <action id="5" name="Set frame" type="Border">
+                                    <param id="0" name="Frame number">loopindex</param>
+                                </action>
+                                <action id="-10" name="Set value" type="Border">
+                                    <param id="0" name="Instance variable">startX</param>
+                                    <param id="1" name="Value">Border.X</param>
+                                </action>
+                                <action id="-10" name="Set value" type="Border">
+                                    <param id="0" name="Instance variable">startY</param>
+                                    <param id="1" name="Value">Border.Y</param>
+                                </action>
+                                <action id="-10" name="Set value" type="Border">
+                                    <param id="0" name="Instance variable">travelX</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" type="Border">
+                                    <param id="0" name="Instance variable">travelY</param>
+                                    <param id="1" name="Value">-1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block>
                     <conditions>
-                        <condition behavior="Sawtooth" id="0" name="Is active" type="Border" />
+                        <condition id="-11" name="For Each" type="System">
+                            <param id="0" name="Object">Border</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" type="System">
