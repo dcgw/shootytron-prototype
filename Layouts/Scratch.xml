@@ -221,6 +221,7 @@
                         <startY>0</startY>
                         <travelX>0</travelX>
                         <travelY>0</travelY>
+                        <offset>0</offset>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sawtooth">

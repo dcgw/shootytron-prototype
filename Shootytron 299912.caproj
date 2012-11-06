@@ -349,6 +349,7 @@
                 <instance-variable name="startY" type="number" />
                 <instance-variable name="travelX" type="number" />
                 <instance-variable name="travelY" type="number" />
+                <instance-variable name="offset" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Sawtooth">
