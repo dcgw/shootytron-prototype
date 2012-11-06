@@ -91,6 +91,44 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group collapsed="1" description="" title="Player">
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="-2" name="On start of layout" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" type="Player">
+                            <param id="0" name="Object">PlayerGlow</param>
+                            <param id="1" name="Layer">GLOW_LAYER</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" type="PlayerGlow">
+                            <param id="0" name="Pin to">Player</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" type="Player">
+                            <param id="0" name="Object">PlayerGlow</param>
+                            <param id="1" name="Layer">GLOW_LAYER</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" type="PlayerGlow">
+                            <param id="0" name="Pin to">Player</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action id="-8" name="Set angle" type="PlayerGlow">
+                            <param id="0" name="Angle">60</param>
+                        </action>
+                        <action behavior="Rotate" id="0" name="Set speed" type="PlayerGlow">
+                            <param id="0" name="Speed">PlayerGlow.Rotate.Speed * 0.5</param>
+                        </action>
+                        <action behavior="Sine" id="1" name="Set period" type="PlayerGlow">
+                            <param id="0" name="Period">PlayerGlow.Sine.Period * 0.5</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group collapsed="1" description="" title="Shooting">
             <sub-events>
                 <event-block any="1">
@@ -433,7 +471,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" title="Wrecksagon">
+        <event-group collapsed="1" description="" title="Wrecksagon">
             <sub-events>
                 <event-block>
                     <conditions>
