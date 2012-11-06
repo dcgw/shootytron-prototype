@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <variable constant="1" name="MAIN_LAYER" static="0" type="number">1</variable>
+        <variable constant="1" name="GLOW_LAYER" static="0" type="number">0</variable>
         <variable constant="1" name="MULTIPLIER_INCREMENT" static="0" type="number">1</variable>
         <variable constant="1" name="SAFERADIUS" static="0" type="number">128</variable>
         <variable constant="0" name="lastKillTime" static="0" type="number">0</variable>
@@ -109,7 +111,7 @@
                     <actions>
                         <action id="0" name="Spawn another object" type="Player">
                             <param id="0" name="Object">Shot</param>
-                            <param id="1" name="Layer">0</param>
+                            <param id="1" name="Layer">MAIN_LAYER</param>
                             <param id="2" name="Image point">0</param>
                         </action>
                     </actions>
@@ -316,7 +318,7 @@
                     <actions>
                         <action id="0" name="Spawn another object" type="Creep">
                             <param id="0" name="Object">CreepExplosion</param>
-                            <param id="1" name="Layer">0</param>
+                            <param id="1" name="Layer">GLOW_LAYER</param>
                             <param id="2" name="Image point">0</param>
                         </action>
                     </actions>
@@ -333,7 +335,7 @@
                     <actions>
                         <action id="0" name="Spawn another object" type="Sprite">
                             <param id="0" name="Object">Creep</param>
-                            <param id="1" name="Layer">0</param>
+                            <param id="1" name="Layer">MAIN_LAYER</param>
                             <param id="2" name="Image point">0</param>
                         </action>
                     </actions>
@@ -383,7 +385,7 @@
                             <actions>
                                 <action id="0" name="Spawn another object" type="Spirosnipe">
                                     <param id="0" name="Object">Spiroshot</param>
-                                    <param id="1" name="Layer">0</param>
+                                    <param id="1" name="Layer">MAIN_LAYER</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
                                 <action behavior="Bullet" id="3" name="Set angle of motion" type="Spiroshot">
@@ -431,7 +433,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" title="Wrecksagon">
+        <event-group description="" title="Wrecksagon">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -440,7 +442,7 @@
                     <actions>
                         <action id="0" name="Spawn another object" type="Wrecksagon">
                             <param id="0" name="Object">Wrecksagon_Petal</param>
-                            <param id="1" name="Layer">0</param>
+                            <param id="1" name="Layer">MAIN_LAYER</param>
                             <param id="2" name="Image point">1</param>
                         </action>
                         <action behavior="Bullet" id="3" name="Set angle of motion" type="Wrecksagon_Petal">
@@ -452,7 +454,7 @@
                         </action>
                         <action id="0" name="Spawn another object" type="Wrecksagon">
                             <param id="0" name="Object">Wrecksagon_Petal</param>
-                            <param id="1" name="Layer">0</param>
+                            <param id="1" name="Layer">MAIN_LAYER</param>
                             <param id="2" name="Image point">2</param>
                         </action>
                         <action behavior="Bullet" id="3" name="Set angle of motion" type="Wrecksagon_Petal">
@@ -464,7 +466,7 @@
                         </action>
                         <action id="0" name="Spawn another object" type="Wrecksagon">
                             <param id="0" name="Object">Wrecksagon_Petal</param>
-                            <param id="1" name="Layer">0</param>
+                            <param id="1" name="Layer">MAIN_LAYER</param>
                             <param id="2" name="Image point">3</param>
                         </action>
                         <action behavior="Bullet" id="3" name="Set angle of motion" type="Wrecksagon_Petal">
@@ -476,7 +478,7 @@
                         </action>
                         <action id="0" name="Spawn another object" type="Wrecksagon">
                             <param id="0" name="Object">Wrecksagon_Petal</param>
-                            <param id="1" name="Layer">0</param>
+                            <param id="1" name="Layer">MAIN_LAYER</param>
                             <param id="2" name="Image point">4</param>
                         </action>
                         <action behavior="Bullet" id="3" name="Set angle of motion" type="Wrecksagon_Petal">
@@ -488,7 +490,7 @@
                         </action>
                         <action id="0" name="Spawn another object" type="Wrecksagon">
                             <param id="0" name="Object">Wrecksagon_Petal</param>
-                            <param id="1" name="Layer">0</param>
+                            <param id="1" name="Layer">MAIN_LAYER</param>
                             <param id="2" name="Image point">5</param>
                         </action>
                         <action behavior="Bullet" id="3" name="Set angle of motion" type="Wrecksagon_Petal">
@@ -500,7 +502,7 @@
                         </action>
                         <action id="0" name="Spawn another object" type="Wrecksagon">
                             <param id="0" name="Object">Wrecksagon_Petal</param>
-                            <param id="1" name="Layer">0</param>
+                            <param id="1" name="Layer">MAIN_LAYER</param>
                             <param id="2" name="Image point">6</param>
                         </action>
                         <action behavior="Bullet" id="3" name="Set angle of motion" type="Wrecksagon_Petal">
@@ -512,7 +514,7 @@
                         </action>
                         <action id="0" name="Spawn another object" type="Wrecksagon">
                             <param id="0" name="Object">Wrecksagon_Flower</param>
-                            <param id="1" name="Layer">0</param>
+                            <param id="1" name="Layer">MAIN_LAYER</param>
                             <param id="2" name="Image point">0</param>
                         </action>
                         <action id="-10" name="Set value" type="Wrecksagon_Flower">
@@ -605,7 +607,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" title="Border">
+        <event-group collapsed="1" description="" title="Border">
             <sub-events>
                 <variable constant="1" name="START_SIZE" static="0" type="number">72</variable>
                 <variable constant="1" name="END_SIZE" static="0" type="number">24</variable>
@@ -660,7 +662,7 @@
                                         </action>
                                         <action id="-3" name="Create object" type="System">
                                             <param id="0" name="Object to create">Border</param>
-                                            <param id="1" name="Layer">1</param>
+                                            <param id="1" name="Layer">GLOW_LAYER</param>
                                             <param id="2" name="X">-START_SIZE * 0.5</param>
                                             <param id="3" name="Y">WindowHeight * 0.5</param>
                                         </action>
@@ -693,7 +695,7 @@
                                         </action>
                                         <action id="-3" name="Create object" type="System">
                                             <param id="0" name="Object to create">Border</param>
-                                            <param id="1" name="Layer">1</param>
+                                            <param id="1" name="Layer">GLOW_LAYER</param>
                                             <param id="2" name="X">WindowWidth + START_SIZE * 0.5</param>
                                             <param id="3" name="Y">WindowHeight * 0.5</param>
                                         </action>
@@ -726,7 +728,7 @@
                                         </action>
                                         <action id="-3" name="Create object" type="System">
                                             <param id="0" name="Object to create">Border</param>
-                                            <param id="1" name="Layer">1</param>
+                                            <param id="1" name="Layer">GLOW_LAYER</param>
                                             <param id="2" name="X">WindowWidth * 0.5</param>
                                             <param id="3" name="Y">-START_SIZE * 0.5</param>
                                         </action>
@@ -762,7 +764,7 @@
                                         </action>
                                         <action id="-3" name="Create object" type="System">
                                             <param id="0" name="Object to create">Border</param>
-                                            <param id="1" name="Layer">1</param>
+                                            <param id="1" name="Layer">GLOW_LAYER</param>
                                             <param id="2" name="X">WindowWidth * 0.5</param>
                                             <param id="3" name="Y">WindowHeight + START_SIZE * 0.5</param>
                                         </action>
