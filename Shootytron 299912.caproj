@@ -7,6 +7,7 @@
     <unique-id>2853xhfleqhg2</unique-id>
     <saved-with-version>10802</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -365,6 +366,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Audio">
+            <plugin id="Audio" />
+        </object-type>
     </object-folder>
     <families>
         <family name="Enemy" plugin-id="Sprite">
@@ -395,9 +399,17 @@
             </properties>
         </global-instance>
         <global-instance type="Keyboard" />
+        <global-instance type="Audio">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+            </properties>
+        </global-instance>
     </global-instances>
     <sounds-folder expanded="1" />
-    <music-folder expanded="1" />
+    <music-folder expanded="1">
+        <file name="Ingame.m4a" />
+        <file name="Ingame.ogg" />
+    </music-folder>
     <files-folder expanded="0">
         <file name="Adore64.woff" />
         <file name="webfont.css" />

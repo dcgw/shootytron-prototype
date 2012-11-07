@@ -10,13 +10,20 @@
         <variable constant="0" name="lastKillTime" static="0" type="number">0</variable>
         <variable constant="0" name="multiplier" static="0" type="number">1</variable>
         <variable constant="0" name="score" static="0" type="number">0</variable>
-        <event-group collapsed="1" description="" title="Wave start">
+        <event-group description="" title="Wave start">
             <sub-events>
                 <event-block>
                     <conditions>
                         <condition id="-2" name="On start of layout" type="System" />
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="0" name="Play" type="Audio">
+                            <param id="0" name="Audio file">Ingame</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Ingame&quot;</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block>
                             <conditions>
