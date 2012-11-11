@@ -5,6 +5,7 @@
     <events>
         <variable constant="1" name="MAIN_LAYER" static="0" type="number">1</variable>
         <variable constant="1" name="GLOW_LAYER" static="0" type="number">0</variable>
+        <variable constant="1" name="WALL_THICKNESS" static="0" type="number">8</variable>
         <variable constant="1" name="MULTIPLIER_INCREMENT" static="0" type="number">1</variable>
         <variable constant="1" name="SAFERADIUS" static="0" type="number">128</variable>
         <variable constant="0" name="lastKillTime" static="0" type="number">0</variable>
@@ -22,6 +23,46 @@
                             <param id="2" name="Loop">1</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Ingame&quot;</param>
+                        </action>
+                        <action id="-3" name="Create object" type="System">
+                            <param id="0" name="Object to create">Wall</param>
+                            <param id="1" name="Layer">MAIN_LAYER</param>
+                            <param id="2" name="X">-WALL_THICKNESS * 0.5 - 1</param>
+                            <param id="3" name="Y">LayoutHeight * 0.5</param>
+                        </action>
+                        <action id="-7" name="Set size" type="Wall">
+                            <param id="0" name="Width">WALL_THICKNESS</param>
+                            <param id="1" name="Height">LayoutHeight + WALL_THICKNESS + WALL_THICKNESS</param>
+                        </action>
+                        <action id="-3" name="Create object" type="System">
+                            <param id="0" name="Object to create">Wall</param>
+                            <param id="1" name="Layer">MAIN_LAYER</param>
+                            <param id="2" name="X">LayoutWidth + WALL_THICKNESS * 0.5</param>
+                            <param id="3" name="Y">LayoutHeight * 0.5</param>
+                        </action>
+                        <action id="-7" name="Set size" type="Wall">
+                            <param id="0" name="Width">WALL_THICKNESS</param>
+                            <param id="1" name="Height">LayoutHeight + WALL_THICKNESS + WALL_THICKNESS</param>
+                        </action>
+                        <action id="-3" name="Create object" type="System">
+                            <param id="0" name="Object to create">Wall</param>
+                            <param id="1" name="Layer">MAIN_LAYER</param>
+                            <param id="2" name="X">LayoutWidth * 0.5</param>
+                            <param id="3" name="Y">-WALL_THICKNESS * 0.5 - 1</param>
+                        </action>
+                        <action id="-7" name="Set size" type="Wall">
+                            <param id="0" name="Width">LayoutWidth * WALL_THICKNESS + WALL_THICKNESS</param>
+                            <param id="1" name="Height">WALL_THICKNESS</param>
+                        </action>
+                        <action id="-3" name="Create object" type="System">
+                            <param id="0" name="Object to create">Wall</param>
+                            <param id="1" name="Layer">MAIN_LAYER</param>
+                            <param id="2" name="X">LayoutWidth * 0.5</param>
+                            <param id="3" name="Y">LayoutHeight + WALL_THICKNESS * 0.5</param>
+                        </action>
+                        <action id="-7" name="Set size" type="Wall">
+                            <param id="0" name="Width">LayoutWidth * WALL_THICKNESS + WALL_THICKNESS</param>
+                            <param id="1" name="Height">WALL_THICKNESS</param>
                         </action>
                     </actions>
                     <sub-events>
