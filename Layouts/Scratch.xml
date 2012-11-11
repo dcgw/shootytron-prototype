@@ -323,6 +323,48 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Score">
+                    <properties>
+                        <text>00000000</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Small Fonts,-48,400,0</font>
+                        <color>255,255,255</color>
+                        <horizontal-alignment>Right</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <effect-instances>
+                        <effect-instance type="Water">
+                            <parameters>
+                                <angle>7</angle>
+                                <delta>20</delta>
+                                <emboss>0.3</emboss>
+                                <frequency>4</frequency>
+                                <intensity>1</intensity>
+                                <reflectivity>400</reflectivity>
+                                <speed>0.02</speed>
+                                <x-speed>0.3</x-speed>
+                                <y-speed>0.05</y-speed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>16</x>
+                        <y>16</y>
+                        <z>0</z>
+                        <width>612</width>
+                        <height>66</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.75</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
