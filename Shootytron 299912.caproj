@@ -48,7 +48,7 @@
         <prop name="Use iOS retina display">iPhone only</prop>
     </configuration-settings>
     <object-folder expanded="1">
-        <object-type name="Player">
+        <object-type global="1" name="Player">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="8Direction">
@@ -423,7 +423,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="PlayerExit">
+        <object-type global="1" name="PlayerExit">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Fade">

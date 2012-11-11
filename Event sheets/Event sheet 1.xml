@@ -82,6 +82,12 @@
                             <param id="0" name="X">(WindowWidth * 1.5 + sin(Giraffe.Y) * Giraffe.X) % WindowWidth</param>
                             <param id="1" name="Y">(WindowHeight * 1.5 + cos(Giraffe.Y) * Giraffe.X) % WindowHeight</param>
                         </action>
+                        <action id="-3" name="Create object" type="System">
+                            <param id="0" name="Object to create">PlayerSpawn</param>
+                            <param id="1" name="Layer">MAIN_LAYER</param>
+                            <param id="2" name="X">320</param>
+                            <param id="3" name="Y">240</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block>
@@ -170,7 +176,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" title="Spawners">
+        <event-group collapsed="1" description="" title="Spawners">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -1028,7 +1034,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" title="Wave end">
+        <event-group description="" title="Wave end">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -1049,13 +1055,6 @@
                             <param id="0" name="Variable">lastKillTime</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                    </actions>
-                </event-block>
-                <event-block>
-                    <conditions>
-                        <condition id="-19" name="On destroyed" type="PlayerExit" />
-                    </conditions>
-                    <actions>
                         <action id="-10" name="Add to" type="System">
                             <param id="0" name="Variable">wave</param>
                             <param id="1" name="Value">1</param>
