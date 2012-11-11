@@ -704,7 +704,7 @@
                 <event-block>
                     <conditions>
                         <condition id="-8" name="Compare two values" type="System">
-                            <param id="0" name="First value">floor(multiplier)</param>
+                            <param id="0" name="First value">floor(multiplier-1)</param>
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Second value">MultiplierPopup.lastShown</param>
                         </condition>
@@ -712,10 +712,10 @@
                     <actions>
                         <action id="-10" name="Set value" type="MultiplierPopup">
                             <param id="0" name="Instance variable">lastShown</param>
-                            <param id="1" name="Value">floor(multiplier)</param>
+                            <param id="1" name="Value">floor(multiplier-1)</param>
                         </action>
                         <action id="0" name="Set text" type="MultiplierPopup">
-                            <param id="0" name="Text">&quot;x&quot; &amp; floor(multiplier)</param>
+                            <param id="0" name="Text">&quot;x&quot; &amp; MultiplierPopup.lastShown</param>
                         </action>
                         <action behavior="Fade" id="0" name="Restart fade" type="MultiplierPopup" />
                         <action id="-15" name="Set visible" type="MultiplierPopup">
