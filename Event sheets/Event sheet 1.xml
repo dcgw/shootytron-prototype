@@ -315,7 +315,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" title="Enemies">
+        <event-group description="" title="Enemies">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -603,7 +603,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" title="Giraffe">
+        <event-group description="" title="Giraffe">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -647,9 +647,27 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="0" name="On collision with another object" type="Player">
+                            <param id="0" name="Object">Giraffe</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">multiplier</param>
+                            <param id="1" name="Value">multiplier + 10</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">lastKillTime</param>
+                            <param id="1" name="Value">time</param>
+                        </action>
+                        <action id="-9" name="Destroy" type="Giraffe" />
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" title="Score">
+        <event-group description="" title="Score">
             <sub-events>
                 <event-block>
                     <conditions>
