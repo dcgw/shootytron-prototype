@@ -42,59 +42,72 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block>
+                            <conditions>
+                                <condition id="-11" name="For Each" type="System">
+                                    <param id="0" name="Object">Creep</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" type="Creep">
+                                    <param id="0" name="Instance variable">value</param>
+                                    <param id="1" name="Value">1000</param>
+                                </action>
+                                <action id="-8" name="Set angle" type="Creep">
+                                    <param id="0" name="Angle">Random(360)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block>
+                            <conditions>
+                                <condition id="-11" name="For Each" type="System">
+                                    <param id="0" name="Object">Grunt</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" type="Grunt">
+                                    <param id="0" name="Instance variable">value</param>
+                                    <param id="1" name="Value">2000</param>
+                                </action>
+                                <action id="-22" name="Set angle toward position" type="Grunt">
+                                    <param id="0" name="X">Player.X</param>
+                                    <param id="1" name="Y">Player.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block>
+                            <conditions>
+                                <condition id="-11" name="For Each" type="System">
+                                    <param id="0" name="Object">Spirosnipe</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" type="Spirosnipe">
+                                    <param id="0" name="Instance variable">value</param>
+                                    <param id="1" name="Value">4000</param>
+                                </action>
+                                <action id="-8" name="Set angle" type="Spirosnipe">
+                                    <param id="0" name="Angle">Random(360)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block>
+                            <conditions>
+                                <condition id="-11" name="For Each" type="System">
+                                    <param id="0" name="Object">Wrecksagon</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" type="Wrecksagon">
+                                    <param id="0" name="Instance variable">value</param>
+                                    <param id="1" name="Value">3000</param>
+                                </action>
+                                <action id="-8" name="Set angle" type="Wrecksagon">
+                                    <param id="0" name="Angle">Random(360)</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
-                </event-block>
-                <event-block>
-                    <conditions>
-                        <condition id="-11" name="For Each" type="System">
-                            <param id="0" name="Object">Creep</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" type="Creep">
-                            <param id="0" name="Instance variable">value</param>
-                            <param id="1" name="Value">1000</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block>
-                    <conditions>
-                        <condition id="-11" name="For Each" type="System">
-                            <param id="0" name="Object">Grunt</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" type="Grunt">
-                            <param id="0" name="Instance variable">value</param>
-                            <param id="1" name="Value">2000</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block>
-                    <conditions>
-                        <condition id="-11" name="For Each" type="System">
-                            <param id="0" name="Object">Spirosnipe</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" type="Spirosnipe">
-                            <param id="0" name="Instance variable">value</param>
-                            <param id="1" name="Value">4000</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block>
-                    <conditions>
-                        <condition id="-11" name="For Each" type="System">
-                            <param id="0" name="Object">Wrecksagon</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" type="Wrecksagon">
-                            <param id="0" name="Instance variable">value</param>
-                            <param id="1" name="Value">3000</param>
-                        </action>
-                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
@@ -282,7 +295,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" title="Grunt">
+        <event-group description="" title="Grunt">
             <sub-events>
                 <event-block>
                     <conditions>
