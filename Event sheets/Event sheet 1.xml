@@ -3,8 +3,9 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
-        <variable constant="1" name="MAIN_LAYER" static="0" type="number">1</variable>
         <variable constant="1" name="GLOW_LAYER" static="0" type="number">0</variable>
+        <variable constant="1" name="MAIN_LAYER" static="0" type="number">1</variable>
+        <variable constant="1" name="UI_LAYER" static="0" type="number">2</variable>
         <variable constant="1" name="WALL_THICKNESS" static="0" type="number">8</variable>
         <variable constant="1" name="MULTIPLIER_INCREMENT" static="0" type="number">1</variable>
         <variable constant="1" name="SAFERADIUS" static="0" type="number">128</variable>
@@ -66,7 +67,7 @@
                         </action>
                         <action id="-3" name="Create object" type="System">
                             <param id="0" name="Object to create">Score</param>
-                            <param id="1" name="Layer">0</param>
+                            <param id="1" name="Layer">UI_LAYER</param>
                             <param id="2" name="X">16</param>
                             <param id="3" name="Y">16</param>
                         </action>
