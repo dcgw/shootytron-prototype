@@ -576,9 +576,6 @@
                         <action id="0" name="Set text" type="Score">
                             <param id="0" name="Text">zeropad(floor(score), 8)</param>
                         </action>
-                        <action id="0" name="Set text" type="Multiplier">
-                            <param id="0" name="Text">multiplier</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block>

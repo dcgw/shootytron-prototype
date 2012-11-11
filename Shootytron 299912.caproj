@@ -197,9 +197,6 @@
                 </effect-type>
             </effects>
         </object-type>
-        <object-type name="Multiplier">
-            <plugin id="Text" />
-        </object-type>
         <object-type name="Spirosnipe">
             <plugin id="Sprite" />
             <instance-variables>
