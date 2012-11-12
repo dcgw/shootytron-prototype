@@ -569,6 +569,14 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Announcement">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Fade">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
     </object-folder>
     <families>
         <family name="Enemy" plugin-id="Sprite">
