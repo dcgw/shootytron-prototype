@@ -26,6 +26,7 @@
     </used-behaviors>
     <used-effects>
         <effect author="Viktor Korsun" id="water">Water</effect>
+        <effect author="Danguafer/Silexars" id="pulse">Pulse</effect>
     </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -257,6 +258,11 @@
                     <behavior id="Fade" />
                 </behavior-type>
             </behaviors>
+            <effects>
+                <effect-type name="Pulse">
+                    <effect id="pulse" />
+                </effect-type>
+            </effects>
         </object-type>
         <object-type name="Wrecksagon">
             <plugin id="Sprite" />

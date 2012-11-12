@@ -1077,6 +1077,11 @@
                         <action id="3" name="Set font size" type="MultiplierPopup">
                             <param id="0" name="Size (pt)">Clamp(20 + (floor(multiplier) * 2), 0, 160)</param>
                         </action>
+                        <action id="-28" name="Set effect parameter" type="MultiplierPopup">
+                            <param id="0" name="Effect">&quot;Pulse&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">Clamp(multiplier - 40, 0, 100)</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block>

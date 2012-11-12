@@ -799,6 +799,18 @@
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="Pulse">
+                            <parameters>
+                                <center-x>0.5</center-x>
+                                <center-y>0.5</center-y>
+                                <frequency>30</frequency>
+                                <intensity>0</intensity>
+                                <lighting>0</lighting>
+                                <speed>10</speed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>1</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
