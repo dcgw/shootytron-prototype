@@ -634,6 +634,7 @@
         <layout>Globals.xml</layout>
         <layout>Wave 1.xml</layout>
         <layout>Wave 2.xml</layout>
+        <layout>Wave 3.xml</layout>
         <layout>Scratch.xml</layout>
     </layout-folder>
     <event-folder expanded="1">

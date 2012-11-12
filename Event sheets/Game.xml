@@ -1482,7 +1482,7 @@
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="-25" name="Go to layout (by name)" type="System">
-                            <param id="0" name="Layout">&quot;Wave &quot; &amp; Clamp(wave, 1, 2)</param>
+                            <param id="0" name="Layout">&quot;Wave &quot; &amp; Clamp(wave, 1, 3)</param>
                         </action>
                     </actions>
                 </event-block>
