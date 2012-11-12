@@ -128,8 +128,8 @@
                             </conditions>
                             <actions>
                                 <action id="-22" name="Set angle toward position" type="GruntSpawn">
-                                    <param id="0" name="X">Player.X</param>
-                                    <param id="1" name="Y">Player.Y</param>
+                                    <param id="0" name="X">PlayerSpawn.X</param>
+                                    <param id="1" name="Y">PlayerSpawn.Y</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1224,7 +1224,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" title="Wave end">
+        <event-group collapsed="1" description="" title="Wave end">
             <sub-events>
                 <event-block>
                     <conditions>
