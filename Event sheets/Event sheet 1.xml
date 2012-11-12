@@ -14,7 +14,7 @@
         <variable constant="0" name="score" static="0" type="number">0</variable>
         <variable constant="0" name="wave" static="0" type="number">1</variable>
         <variable constant="0" name="playerDead" static="0" type="number">0</variable>
-        <event-group collapsed="1" description="" title="Wave start">
+        <event-group description="" title="Wave start">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -88,6 +88,12 @@
                             <param id="1" name="Layer">MAIN_LAYER</param>
                             <param id="2" name="X">320</param>
                             <param id="3" name="Y">240</param>
+                        </action>
+                        <action id="-3" name="Create object" type="System">
+                            <param id="0" name="Object to create">MultiplierPopup</param>
+                            <param id="1" name="Layer">UI_LAYER</param>
+                            <param id="2" name="X">-500</param>
+                            <param id="3" name="Y">-500</param>
                         </action>
                     </actions>
                     <sub-events>
