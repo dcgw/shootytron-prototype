@@ -379,6 +379,9 @@
                 <behavior-type name="Bullet">
                     <behavior id="Bullet" />
                 </behavior-type>
+                <behavior-type name="BoundToLayout">
+                    <behavior id="bound" />
+                </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
