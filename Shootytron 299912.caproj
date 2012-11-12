@@ -627,6 +627,7 @@
             <instance-variables>
                 <instance-variable name="winner" type="boolean" />
                 <instance-variable name="owner" type="number" />
+                <instance-variable name="ownerName" type="string" />
             </instance-variables>
         </family>
     </families>

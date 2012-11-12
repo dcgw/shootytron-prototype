@@ -34,6 +34,7 @@
                     <instance-variables>
                         <winner>false</winner>
                         <owner>0</owner>
+                        <ownerName></ownerName>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet">
