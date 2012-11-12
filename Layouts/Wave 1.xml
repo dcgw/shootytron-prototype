@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
     <name>Wave 1</name>
-    <event-sheet>Event sheet 1</event-sheet>
+    <event-sheet>Game</event-sheet>
     <size>
         <width>640</width>
         <height>480</height>

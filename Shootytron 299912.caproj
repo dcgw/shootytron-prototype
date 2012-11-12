@@ -194,7 +194,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Score">
+        <object-type global="1" name="Score">
             <plugin id="Text" />
             <effects>
                 <effect-type name="Water">
@@ -240,7 +240,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="MultiplierPopup">
+        <object-type global="1" name="MultiplierPopup">
             <plugin id="Text" />
             <instance-variables>
                 <instance-variable name="lastShown" type="number" />
@@ -569,7 +569,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Announcement">
+        <object-type global="1" name="Announcement">
             <plugin id="Text" />
             <behaviors>
                 <behavior-type name="Fade">
@@ -618,12 +618,14 @@
         </family>
     </families>
     <layout-folder expanded="1">
+        <layout>Globals.xml</layout>
         <layout>Wave 1.xml</layout>
         <layout>Wave 2.xml</layout>
         <layout>Scratch.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Game.xml</event-sheet>
+        <event-sheet>Globals.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Gamepad">
