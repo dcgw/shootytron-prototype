@@ -3,8 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Game</name>
     <events>
-        <variable constant="0" name="winnerName" static="0" type="text"></variable>
-        <variable constant="0" name="battleEnded" static="0" type="number">0</variable>
         <variable constant="1" name="GLOW_LAYER" static="0" type="number">0</variable>
         <variable constant="1" name="MAIN_LAYER" static="0" type="number">1</variable>
         <variable constant="1" name="UI_LAYER" static="0" type="number">2</variable>
@@ -16,6 +14,8 @@
         <variable constant="0" name="score" static="0" type="number">0</variable>
         <variable constant="0" name="wave" static="0" type="number">1</variable>
         <variable constant="0" name="playerDead" static="0" type="number">0</variable>
+        <variable constant="0" name="winnerName" static="0" type="text"></variable>
+        <variable constant="0" name="battleEnded" static="0" type="number">0</variable>
         <event-group collapsed="1" description="" title="Wave start">
             <sub-events>
                 <event-block>
