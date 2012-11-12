@@ -64,6 +64,7 @@
                     </properties>
                     <instance-variables>
                         <value>0</value>
+                        <winner>false</winner>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid" />
@@ -105,6 +106,7 @@
                     </properties>
                     <instance-variables>
                         <value>0</value>
+                        <winner>false</winner>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid" />
@@ -260,6 +262,7 @@
                     </properties>
                     <instance-variables>
                         <value>0</value>
+                        <winner>false</winner>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet">
