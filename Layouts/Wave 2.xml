@@ -50,6 +50,7 @@
                     <instance-variables>
                         <value>0</value>
                         <winner>false</winner>
+                        <name></name>
                         <hasShot>false</hasShot>
                     </instance-variables>
                     <behavior-instances>
@@ -113,6 +114,7 @@
                     <instance-variables>
                         <value>0</value>
                         <winner>false</winner>
+                        <name></name>
                         <hasShot>false</hasShot>
                     </instance-variables>
                     <behavior-instances>
@@ -176,6 +178,7 @@
                     <instance-variables>
                         <value>0</value>
                         <winner>false</winner>
+                        <name></name>
                         <hasShot>false</hasShot>
                     </instance-variables>
                     <behavior-instances>
@@ -239,6 +242,7 @@
                     <instance-variables>
                         <value>0</value>
                         <winner>false</winner>
+                        <name></name>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet">
@@ -286,6 +290,7 @@
                     <instance-variables>
                         <value>0</value>
                         <winner>false</winner>
+                        <name></name>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet">

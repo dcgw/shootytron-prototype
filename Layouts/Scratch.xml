@@ -69,6 +69,7 @@
                     <instance-variables>
                         <value>0</value>
                         <winner>false</winner>
+                        <name></name>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid" />
@@ -116,6 +117,7 @@
                     <instance-variables>
                         <value>0</value>
                         <winner>false</winner>
+                        <name></name>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid" />
@@ -277,6 +279,7 @@
                     <instance-variables>
                         <value>0</value>
                         <winner>false</winner>
+                        <name></name>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet">
@@ -736,6 +739,7 @@
                     <instance-variables>
                         <value>0</value>
                         <winner>false</winner>
+                        <name></name>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet">
@@ -849,7 +853,7 @@
                                 <fade-in-time>0</fade-in-time>
                                 <wait-time>0</wait-time>
                                 <fade-out-time>1</fade-out-time>
-                                <destroy>After fade out</destroy>
+                                <destroy>No</destroy>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
