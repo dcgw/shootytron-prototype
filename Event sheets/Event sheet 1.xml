@@ -435,22 +435,76 @@
                 </event-block>
                 <event-block>
                     <conditions>
+                        <condition id="0" name="On collision with another object" type="EnemyShot">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" type="Player" />
+                        <action id="-13" name="Set boolean" type="EnemyShot">
+                            <param id="0" name="Instance variable">winner</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">playerDead</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block>
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" type="Enemy">
+                                    <param id="0" name="Unique ID">EnemyShot.owner</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" type="Enemy">
+                                    <param id="0" name="Instance variable">winner</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block>
+                    <conditions>
                         <condition id="-14" name="Compare variable" type="System">
                             <param id="0" name="Variable">playerDead</param>
                             <param id="1" name="Comparison">1</param>
                             <param id="2" name="Value">0</param>
                         </condition>
-                        <condition id="-11" name="For Each" type="System">
-                            <param id="0" name="Object">Enemy</param>
-                        </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" type="Enemy">
-                            <param id="0" name="Instance variable">winner</param>
-                        </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" type="Enemy" />
                         <action id="-9" name="Destroy" type="Giraffe" />
                     </actions>
+                    <sub-events>
+                        <event-block>
+                            <conditions>
+                                <condition id="-11" name="For Each" type="System">
+                                    <param id="0" name="Object">Enemy</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" type="Enemy">
+                                    <param id="0" name="Instance variable">winner</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" type="Enemy" />
+                            </actions>
+                        </event-block>
+                        <event-block>
+                            <conditions>
+                                <condition id="-11" name="For Each" type="System">
+                                    <param id="0" name="Object">EnemyShot</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" type="EnemyShot">
+                                    <param id="0" name="Instance variable">winner</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" type="EnemyShot" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -606,6 +660,10 @@
                                 <action behavior="Bullet" id="3" name="Set angle of motion" type="Spiroshot">
                                     <param id="0" name="Angle">Spirosnipe.Angle</param>
                                 </action>
+                                <action id="-10" name="Set value" type="Spiroshot">
+                                    <param id="0" name="Instance variable">owner</param>
+                                    <param id="1" name="Value">Spirosnipe.UID</param>
+                                </action>
                                 <action id="-13" name="Set boolean" type="Spirosnipe">
                                     <param id="0" name="Instance variable">hasShot</param>
                                     <param id="1" name="Value">1</param>
@@ -631,17 +689,6 @@
                 </event-block>
                 <event-block>
                     <conditions>
-                        <condition id="0" name="On collision with another object" type="Spiroshot">
-                            <param id="0" name="Object">Player</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" type="Player" />
-                        <action id="-9" name="Destroy" type="Spiroshot" />
-                    </actions>
-                </event-block>
-                <event-block>
-                    <conditions>
                         <condition id="-19" name="On destroyed" type="Spirosnipe" />
                     </conditions>
                     <actions />
@@ -660,6 +707,18 @@
                             <param id="0" name="State">0</param>
                         </action>
                         <action behavior="Inment" id="5" name="Set enabled" type="Spirosnipe">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" type="Spiroshot">
+                            <param id="0" name="Instance variable">winner</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="5" name="Set enabled" type="Spiroshot">
                             <param id="0" name="State">0</param>
                         </action>
                     </actions>

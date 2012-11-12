@@ -578,6 +578,15 @@
                 <member>GruntSpawn</member>
             </members>
         </family>
+        <family name="EnemyShot" plugin-id="Sprite">
+            <members>
+                <member>Spiroshot</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="winner" type="boolean" />
+                <instance-variable name="owner" type="number" />
+            </instance-variables>
+        </family>
     </families>
     <layout-folder expanded="1">
         <layout>Wave 1.xml</layout>

@@ -31,6 +31,10 @@
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
                     </properties>
+                    <instance-variables>
+                        <winner>false</winner>
+                        <owner>0</owner>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet">
                             <properties>
