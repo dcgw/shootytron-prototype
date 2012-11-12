@@ -13,7 +13,7 @@
         <variable constant="0" name="multiplier" static="0" type="number">1</variable>
         <variable constant="0" name="score" static="0" type="number">0</variable>
         <variable constant="0" name="wave" static="0" type="number">1</variable>
-        <event-group collapsed="1" description="" title="Wave start">
+        <event-group description="" title="Wave start">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -93,17 +93,17 @@
                         <event-block>
                             <conditions>
                                 <condition id="-11" name="For Each" type="System">
-                                    <param id="0" name="Object">Enemy</param>
+                                    <param id="0" name="Object">EnemySpawn</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" type="Enemy">
+                                <action id="-3" name="Set position" type="EnemySpawn">
                                     <param id="0" name="X">random(SAFERADIUS, sqrt(WindowWidth * WindowWidth + WindowHeight * WindowHeight) * 0.5)</param>
                                     <param id="1" name="Y">random(0, 360)</param>
                                 </action>
-                                <action id="-3" name="Set position" type="Enemy">
-                                    <param id="0" name="X">(WindowWidth * 1.5 + sin(Enemy.Y) * Enemy.X) % WindowWidth</param>
-                                    <param id="1" name="Y">(WindowHeight * 1.5 + cos(Enemy.Y) * Enemy.X) % WindowHeight</param>
+                                <action id="-3" name="Set position" type="EnemySpawn">
+                                    <param id="0" name="X">(WindowWidth * 1.5 + sin(EnemySpawn.Y) * EnemySpawn.X) % WindowWidth</param>
+                                    <param id="1" name="Y">(WindowHeight * 1.5 + cos(EnemySpawn.Y) * EnemySpawn.X) % WindowHeight</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -126,15 +126,11 @@
                         <event-block>
                             <conditions>
                                 <condition id="-11" name="For Each" type="System">
-                                    <param id="0" name="Object">Grunt</param>
+                                    <param id="0" name="Object">GruntSpawn</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" type="Grunt">
-                                    <param id="0" name="Instance variable">value</param>
-                                    <param id="1" name="Value">2000</param>
-                                </action>
-                                <action id="-22" name="Set angle toward position" type="Grunt">
+                                <action id="-22" name="Set angle toward position" type="GruntSpawn">
                                     <param id="0" name="X">Player.X</param>
                                     <param id="1" name="Y">Player.Y</param>
                                 </action>
@@ -176,7 +172,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" title="Spawners">
+        <event-group description="" title="Spawners">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -193,6 +189,33 @@
                             <param id="2" name="Image point">0</param>
                         </action>
                         <action id="-9" name="Destroy" type="PlayerSpawn" />
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-11" name="For Each" type="System">
+                            <param id="0" name="Object">GruntSpawn</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" type="System">
+                            <param id="0" name="First value">GruntSpawn.Clock.Value</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" type="GruntSpawn">
+                            <param id="0" name="Object">Grunt</param>
+                            <param id="1" name="Layer">MAIN_LAYER</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" type="Grunt">
+                            <param id="0" name="Angle">GruntSpawn.Angle</param>
+                        </action>
+                        <action id="-10" name="Set value" type="Grunt">
+                            <param id="0" name="Instance variable">value</param>
+                            <param id="1" name="Value">2000</param>
+                        </action>
+                        <action id="-9" name="Destroy" type="GruntSpawn" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -1034,12 +1057,12 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" title="Wave end">
+        <event-group collapsed="1" description="" title="Wave end">
             <sub-events>
                 <event-block>
                     <conditions>
                         <condition id="-8" name="Compare two values" type="System">
-                            <param id="0" name="First value">Enemy.Count</param>
+                            <param id="0" name="First value">Enemy.Count + EnemySpawn.Count</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Second value">0</param>
                         </condition>
