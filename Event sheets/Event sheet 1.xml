@@ -14,7 +14,7 @@
         <variable constant="0" name="score" static="0" type="number">0</variable>
         <variable constant="0" name="wave" static="0" type="number">1</variable>
         <variable constant="0" name="playerDead" static="0" type="number">0</variable>
-        <event-group description="" title="Wave start">
+        <event-group collapsed="1" description="" title="Wave start">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -396,7 +396,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" title="Enemies">
+        <event-group description="" title="Enemies">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -428,6 +428,11 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Spawn another object" type="Player">
+                            <param id="0" name="Object">PlayerDeath</param>
+                            <param id="1" name="Layer">MAIN_LAYER</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
                         <action id="-9" name="Destroy" type="Player" />
                         <action id="-13" name="Set boolean" type="Enemy">
                             <param id="0" name="Instance variable">winner</param>
@@ -446,6 +451,11 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Spawn another object" type="Player">
+                            <param id="0" name="Object">PlayerDeath</param>
+                            <param id="1" name="Layer">MAIN_LAYER</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
                         <action id="-9" name="Destroy" type="Player" />
                         <action id="-13" name="Set boolean" type="EnemyShot">
                             <param id="0" name="Instance variable">winner</param>

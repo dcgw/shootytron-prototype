@@ -23,7 +23,6 @@
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
-        <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
     </used-behaviors>
     <used-effects>
         <effect author="Viktor Korsun" id="water">Water</effect>
@@ -139,6 +138,9 @@
                 <behavior-type name="Sine">
                     <behavior id="Sin" />
                 </behavior-type>
+                <behavior-type name="BoundToLayout">
+                    <behavior id="bound" />
+                </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
@@ -152,8 +154,11 @@
                 <behavior-type name="Bullet">
                     <behavior id="Bullet" />
                 </behavior-type>
-                <behavior-type name="Wrap">
-                    <behavior id="wrap" />
+                <behavior-type name="Solid">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout">
+                    <behavior id="bound" />
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
@@ -212,6 +217,9 @@
                 <behavior-type name="Inment">
                     <behavior id="Bullet" />
                 </behavior-type>
+                <behavior-type name="BoundToLayout">
+                    <behavior id="bound" />
+                </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
@@ -254,6 +262,9 @@
                 </behavior-type>
                 <behavior-type name="Solid">
                     <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout">
+                    <behavior id="bound" />
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
@@ -302,6 +313,9 @@
                 <behavior-type name="Rotate">
                     <behavior id="Rotate" />
                 </behavior-type>
+                <behavior-type name="BoundToLayout">
+                    <behavior id="bound" />
+                </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
@@ -329,6 +343,9 @@
                 </behavior-type>
                 <behavior-type name="Rotate">
                     <behavior id="Rotate" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout">
+                    <behavior id="bound" />
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
@@ -481,14 +498,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite2">
-            <plugin id="Sprite" />
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="GruntSpawn">
             <plugin id="Sprite" />
             <behaviors>
@@ -546,6 +555,17 @@
                             <point x="0" y="0.5" />
                         </collision-poly>
                     </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PlayerDeath">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="30">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
