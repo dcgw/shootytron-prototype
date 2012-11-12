@@ -263,7 +263,7 @@
                         <behavior-instance type="Solid" />
                         <behavior-instance type="BoundToLayout">
                             <properties>
-                                <bound-by>Edge</bound-by>
+                                <bound-by>Origin</bound-by>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -311,7 +311,7 @@
                         <behavior-instance type="Solid" />
                         <behavior-instance type="BoundToLayout">
                             <properties>
-                                <bound-by>Edge</bound-by>
+                                <bound-by>Origin</bound-by>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
