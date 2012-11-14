@@ -70,14 +70,17 @@
                             <param id="1" name="Height">WALL_THICKNESS</param>
                         </action>
                         <action id="-3" name="Create object" type="System">
-                            <param id="0" name="Object to create">Giraffe</param>
+                            <param id="0" name="Object to create">GiraffeSpawn</param>
                             <param id="1" name="Layer">MAIN_LAYER</param>
                             <param id="2" name="X">random(SAFERADIUS, sqrt(WindowWidth * WindowWidth + WindowHeight * WindowHeight) * 0.5)</param>
                             <param id="3" name="Y">random(0, 360)</param>
                         </action>
-                        <action id="-3" name="Set position" type="Giraffe">
-                            <param id="0" name="X">(WindowWidth * 1.5 + sin(Giraffe.Y) * Giraffe.X) % WindowWidth</param>
-                            <param id="1" name="Y">(WindowHeight * 1.5 + cos(Giraffe.Y) * Giraffe.X) % WindowHeight</param>
+                        <action id="-3" name="Set position" type="GiraffeSpawn">
+                            <param id="0" name="X">(WindowWidth * 1.5 + sin(GiraffeSpawn.Y) * GiraffeSpawn.X) % WindowWidth</param>
+                            <param id="1" name="Y">(WindowHeight * 1.5 + cos(GiraffeSpawn.Y) * GiraffeSpawn.X) % WindowHeight</param>
+                        </action>
+                        <action id="-8" name="Set angle" type="GiraffeSpawn">
+                            <param id="0" name="Angle">Random(360)</param>
                         </action>
                         <action id="-3" name="Create object" type="System">
                             <param id="0" name="Object to create">PlayerSpawn</param>
@@ -269,6 +272,29 @@
                             <param id="1" name="Value">&quot;Creep&quot;</param>
                         </action>
                         <action id="-9" name="Destroy" type="CreepSpawn" />
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-11" name="For Each" type="System">
+                            <param id="0" name="Object">GiraffeSpawn</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" type="System">
+                            <param id="0" name="First value">GiraffeSpawn.Clock.Value</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" type="GiraffeSpawn">
+                            <param id="0" name="Object">Giraffe</param>
+                            <param id="1" name="Layer">MAIN_LAYER</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" type="Giraffe">
+                            <param id="0" name="Angle">GiraffeSpawn.Angle</param>
+                        </action>
+                        <action id="-9" name="Destroy" type="GiraffeSpawn" />
                     </actions>
                 </event-block>
             </sub-events>
