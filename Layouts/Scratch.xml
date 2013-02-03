@@ -179,16 +179,16 @@
                         </behavior-instance>
                         <behavior-instance type="DestroyOutsideLayout" />
                     </behavior-instances>
-                    <blend-mode>0</blend-mode>
+                    <blend-mode>1</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>222</x>
                         <y>157</y>
                         <z>0</z>
-                        <width>20</width>
-                        <height>6</height>
+                        <width>27</width>
+                        <height>13</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
+                        <hotspotX>0.508196712</hotspotX>
                         <hotspotY>0.666666687</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
