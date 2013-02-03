@@ -346,7 +346,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" title="Movement">
+        <event-group collapsed="1" description="" title="Movement">
             <sub-events>
                 <variable constant="0" name="velocityX" static="0" type="number">0</variable>
                 <variable constant="0" name="velocityY" static="0" type="number">0</variable>
@@ -554,7 +554,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" title="Shooting">
+        <event-group collapsed="1" description="" title="Shooting">
             <sub-events>
                 <event-block>
                     <conditions>
@@ -1816,9 +1816,27 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block>
-            <conditions />
-            <actions />
-        </event-block>
+        <event-group collapsed="1" description="" title="Restart">
+            <sub-events>
+                <event-block any="1">
+                    <conditions>
+                        <condition id="7" name="On button released" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">9</param>
+                        </condition>
+                        <condition id="2" name="Key is down" type="Keyboard">
+                            <param id="0" name="Key">82 (R)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-21" name="Reset global variables" type="System" />
+                        <action id="-9" name="Destroy" type="Player" />
+                        <action id="-2" name="Go to layout" type="System">
+                            <param id="0" name="Layout">Wave 1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
