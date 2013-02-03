@@ -7,10 +7,11 @@
     <unique-id>2853xhfleqhg2</unique-id>
     <saved-with-version>11400</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
-        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
-        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
     </used-plugins>
@@ -24,8 +25,8 @@
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects>
-        <effect author="Viktor Korsun" id="water">Water</effect>
         <effect author="Danguafer/Silexars" id="pulse">Pulse</effect>
+        <effect author="Viktor Korsun" id="water">Water</effect>
     </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -664,6 +665,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Browser">
+            <plugin id="Browser" />
+        </object-type>
     </object-folder>
     <families>
         <family name="Enemy" plugin-id="Sprite">
@@ -735,6 +739,7 @@
                 <timescale-audio>Off</timescale-audio>
             </properties>
         </global-instance>
+        <global-instance type="Browser" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1">

@@ -73,12 +73,12 @@
                         <action id="-3" name="Create object" type="System">
                             <param id="0" name="Object to create">GiraffeSpawn</param>
                             <param id="1" name="Layer">MAIN_LAYER</param>
-                            <param id="2" name="X">random(SAFERADIUS, sqrt(WindowWidth * WindowWidth + WindowHeight * WindowHeight) * 0.5)</param>
+                            <param id="2" name="X">random(SAFERADIUS, sqrt(LayoutWidth * LayoutWidth + LayoutHeight * LayoutHeight) * 0.5)</param>
                             <param id="3" name="Y">random(0, 360)</param>
                         </action>
                         <action id="-3" name="Set position" type="GiraffeSpawn">
-                            <param id="0" name="X">(WindowWidth * 1.5 + sin(GiraffeSpawn.Y) * GiraffeSpawn.X) % WindowWidth</param>
-                            <param id="1" name="Y">(WindowHeight * 1.5 + cos(GiraffeSpawn.Y) * GiraffeSpawn.X) % WindowHeight</param>
+                            <param id="0" name="X">(LayoutWidth * 1.5 + sin(GiraffeSpawn.Y) * GiraffeSpawn.X) % LayoutWidth</param>
+                            <param id="1" name="Y">(LayoutHeight * 1.5 + cos(GiraffeSpawn.Y) * GiraffeSpawn.X) % LayoutHeight</param>
                         </action>
                         <action id="-8" name="Set angle" type="GiraffeSpawn">
                             <param id="0" name="Angle">Random(360)</param>
@@ -116,12 +116,12 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" type="EnemySpawn">
-                                    <param id="0" name="X">random(SAFERADIUS, sqrt(WindowWidth * WindowWidth + WindowHeight * WindowHeight) * 0.5)</param>
+                                    <param id="0" name="X">random(SAFERADIUS, sqrt(LayoutWidth * LayoutWidth + LayoutHeight * LayoutHeight) * 0.5)</param>
                                     <param id="1" name="Y">random(0, 360)</param>
                                 </action>
                                 <action id="-3" name="Set position" type="EnemySpawn">
-                                    <param id="0" name="X">(WindowWidth * 1.5 + sin(EnemySpawn.Y) * EnemySpawn.X) % WindowWidth</param>
-                                    <param id="1" name="Y">(WindowHeight * 1.5 + cos(EnemySpawn.Y) * EnemySpawn.X) % WindowHeight</param>
+                                    <param id="0" name="X">(LayoutWidth * 1.5 + sin(EnemySpawn.Y) * EnemySpawn.X) % LayoutWidth</param>
+                                    <param id="1" name="Y">(LayoutHeight * 1.5 + cos(EnemySpawn.Y) * EnemySpawn.X) % LayoutHeight</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1519,7 +1519,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" title="Border">
+        <event-group description="" title="Border">
             <sub-events>
                 <variable constant="1" name="START_SIZE" static="0" type="number">72</variable>
                 <variable constant="1" name="END_SIZE" static="0" type="number">24</variable>
@@ -1576,7 +1576,7 @@
                                             <param id="0" name="Object to create">Border</param>
                                             <param id="1" name="Layer">GLOW_LAYER</param>
                                             <param id="2" name="X">-START_SIZE * 0.5</param>
-                                            <param id="3" name="Y">WindowHeight * 0.5</param>
+                                            <param id="3" name="Y">LayoutHeight * 0.5</param>
                                         </action>
                                         <action behavior="Sawtooth" id="1" name="Set period" type="Border">
                                             <param id="0" name="Period">thisPeriod</param>
@@ -1608,8 +1608,8 @@
                                         <action id="-3" name="Create object" type="System">
                                             <param id="0" name="Object to create">Border</param>
                                             <param id="1" name="Layer">GLOW_LAYER</param>
-                                            <param id="2" name="X">WindowWidth + START_SIZE * 0.5</param>
-                                            <param id="3" name="Y">WindowHeight * 0.5</param>
+                                            <param id="2" name="X">LayoutWidth + START_SIZE * 0.5</param>
+                                            <param id="3" name="Y">LayoutHeight * 0.5</param>
                                         </action>
                                         <action behavior="Sawtooth" id="1" name="Set period" type="Border">
                                             <param id="0" name="Period">thisPeriod</param>
@@ -1641,7 +1641,7 @@
                                         <action id="-3" name="Create object" type="System">
                                             <param id="0" name="Object to create">Border</param>
                                             <param id="1" name="Layer">GLOW_LAYER</param>
-                                            <param id="2" name="X">WindowWidth * 0.5</param>
+                                            <param id="2" name="X">LayoutWidth * 0.5</param>
                                             <param id="3" name="Y">-START_SIZE * 0.5</param>
                                         </action>
                                         <action behavior="Sawtooth" id="1" name="Set period" type="Border">
@@ -1677,8 +1677,8 @@
                                         <action id="-3" name="Create object" type="System">
                                             <param id="0" name="Object to create">Border</param>
                                             <param id="1" name="Layer">GLOW_LAYER</param>
-                                            <param id="2" name="X">WindowWidth * 0.5</param>
-                                            <param id="3" name="Y">WindowHeight + START_SIZE * 0.5</param>
+                                            <param id="2" name="X">LayoutWidth * 0.5</param>
+                                            <param id="3" name="Y">LayoutHeight + START_SIZE * 0.5</param>
                                         </action>
                                         <action behavior="Sawtooth" id="1" name="Set period" type="Border">
                                             <param id="0" name="Period">thisPeriod</param>
@@ -1838,5 +1838,17 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block>
+            <conditions>
+                <condition id="0" name="On key pressed" type="Keyboard">
+                    <param id="0" name="Key">70 (F)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="10" name="Request fullscreen" type="Browser">
+                    <param id="0" name="Mode">3</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
