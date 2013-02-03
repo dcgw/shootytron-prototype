@@ -15,7 +15,7 @@
                     <param id="3" name="Y">16</param>
                 </action>
                 <action id="5" name="Set web font" type="Score">
-                    <param id="0" name="Family name">&quot;Adore64&quot;</param>
+                    <param id="0" name="Family name">&quot;Orbitron Black&quot;</param>
                     <param id="1" name="CSS URL">&quot;webfont.css&quot;</param>
                 </action>
                 <action id="-3" name="Create object" type="System">
@@ -25,7 +25,7 @@
                     <param id="3" name="Y">-500</param>
                 </action>
                 <action id="5" name="Set web font" type="MultiplierPopup">
-                    <param id="0" name="Family name">&quot;Adore64&quot;</param>
+                    <param id="0" name="Family name">&quot;Orbitron Black&quot;</param>
                     <param id="1" name="CSS URL">&quot;webfont.css&quot;</param>
                 </action>
                 <action id="0" name="Set text" type="MultiplierPopup">
@@ -38,7 +38,7 @@
                     <param id="3" name="Y">240</param>
                 </action>
                 <action id="5" name="Set web font" type="Announcement">
-                    <param id="0" name="Family name">&quot;Adore64&quot;</param>
+                    <param id="0" name="Family name">&quot;Orbitron Black&quot;</param>
                     <param id="1" name="CSS URL">&quot;webfont.css&quot;</param>
                 </action>
                 <action id="0" name="Set text" type="Announcement">
@@ -51,7 +51,7 @@
                     <param id="3" name="Y">80</param>
                 </action>
                 <action id="5" name="Set web font" type="Announcement">
-                    <param id="0" name="Family name">&quot;Adore64&quot;</param>
+                    <param id="0" name="Family name">&quot;Orbitron Black&quot;</param>
                     <param id="1" name="CSS URL">&quot;webfont.css&quot;</param>
                 </action>
                 <action id="0" name="Set text" type="Announcement">
@@ -64,7 +64,7 @@
                     <param id="3" name="Y">140</param>
                 </action>
                 <action id="5" name="Set web font" type="Announcement">
-                    <param id="0" name="Family name">&quot;Adore64&quot;</param>
+                    <param id="0" name="Family name">&quot;Orbitron Black&quot;</param>
                     <param id="1" name="CSS URL">&quot;webfont.css&quot;</param>
                 </action>
                 <action id="0" name="Set text" type="Announcement">
@@ -77,7 +77,7 @@
                     <param id="3" name="Y">200</param>
                 </action>
                 <action id="5" name="Set web font" type="Announcement">
-                    <param id="0" name="Family name">&quot;Adore64&quot;</param>
+                    <param id="0" name="Family name">&quot;Orbitron Black&quot;</param>
                     <param id="1" name="CSS URL">&quot;webfont.css&quot;</param>
                 </action>
                 <action id="0" name="Set text" type="Announcement">
@@ -90,7 +90,7 @@
                     <param id="3" name="Y">260</param>
                 </action>
                 <action id="5" name="Set web font" type="Announcement">
-                    <param id="0" name="Family name">&quot;Adore64&quot;</param>
+                    <param id="0" name="Family name">&quot;Orbitron Black&quot;</param>
                     <param id="1" name="CSS URL">&quot;webfont.css&quot;</param>
                 </action>
                 <action id="0" name="Set text" type="Announcement">
@@ -103,7 +103,7 @@
                     <param id="3" name="Y">340</param>
                 </action>
                 <action id="5" name="Set web font" type="Announcement">
-                    <param id="0" name="Family name">&quot;Adore64&quot;</param>
+                    <param id="0" name="Family name">&quot;Orbitron Black&quot;</param>
                     <param id="1" name="CSS URL">&quot;webfont.css&quot;</param>
                 </action>
                 <action id="0" name="Set text" type="Announcement">

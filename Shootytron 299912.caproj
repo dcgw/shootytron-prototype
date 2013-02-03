@@ -8,9 +8,9 @@
     <saved-with-version>11400</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
-        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
-        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
@@ -716,8 +716,8 @@
         <file name="Ingame.m4a" />
         <file name="Ingame.ogg" />
     </music-folder>
-    <files-folder expanded="0">
-        <file name="Adore64.woff" />
+    <files-folder expanded="1">
         <file name="webfont.css" />
+        <file name="orbitron-black.woff" />
     </files-folder>
 </c2project>
