@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Game</name>
     <events>
+        <variable constant="1" name="PLAYER_SPEED" static="0" type="number">10</variable>
         <variable constant="1" name="GLOW_LAYER" static="0" type="number">0</variable>
         <variable constant="1" name="MAIN_LAYER" static="0" type="number">1</variable>
         <variable constant="1" name="UI_LAYER" static="0" type="number">2</variable>
@@ -345,94 +346,360 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" title="Shooting">
+        <event-group description="" title="Movement">
             <sub-events>
-                <event-block any="1">
+                <variable constant="0" name="velocityX" static="0" type="number">0</variable>
+                <variable constant="0" name="velocityY" static="0" type="number">0</variable>
+                <event-block>
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">velocityX</param>
+                            <param id="1" name="Value">Gamepad.Axis(0, 0) * 0.01</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">velocityY</param>
+                            <param id="1" name="Value">Gamepad.Axis(0, 1) * 0.01</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
                     <conditions>
                         <condition id="2" name="Key is down" type="Keyboard">
-                            <param id="0" name="Key">87 (W)</param>
+                            <param id="0" name="Key">38 (Up arrow)</param>
                         </condition>
-                        <condition id="2" name="Key is down" type="Keyboard">
-                            <param id="0" name="Key">83 (S)</param>
-                        </condition>
-                        <condition id="2" name="Key is down" type="Keyboard">
-                            <param id="0" name="Key">65 (A)</param>
-                        </condition>
-                        <condition id="2" name="Key is down" type="Keyboard">
-                            <param id="0" name="Key">68 (D)</param>
+                        <condition id="2" inverted="1" name="Key is down" type="Keyboard">
+                            <param id="0" name="Key">40 (Down arrow)</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" type="Player">
-                            <param id="0" name="Object">Shot</param>
-                            <param id="1" name="Layer">MAIN_LAYER</param>
-                            <param id="2" name="Image point">0</param>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">velocityX</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">velocityY</param>
+                            <param id="1" name="Value">-1</param>
                         </action>
                     </actions>
                     <sub-events>
                         <event-block>
                             <conditions>
                                 <condition id="2" name="Key is down" type="Keyboard">
-                                    <param id="0" name="Key">87 (W)</param>
+                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Key is down" type="Keyboard">
+                                    <param id="0" name="Key">39 (Right arrow)</param>
                                 </condition>
                             </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block>
-                                    <conditions>
-                                        <condition id="2" name="Key is down" type="Keyboard">
-                                            <param id="0" name="Key">65 (A)</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-8" name="Set angle" type="Shot">
-                                            <param id="0" name="Angle">-135</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block>
-                                    <conditions>
-                                        <condition id="-22" name="Else" type="System" />
-                                        <condition id="2" name="Key is down" type="Keyboard">
-                                            <param id="0" name="Key">68 (D)</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-8" name="Set angle" type="Shot">
-                                            <param id="0" name="Angle">-45</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block>
-                                    <conditions>
-                                        <condition id="-22" name="Else" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-8" name="Set angle" type="Shot">
-                                            <param id="0" name="Angle">-90</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                            <actions>
+                                <action id="-9" name="Set value" type="System">
+                                    <param id="0" name="Variable">velocityX</param>
+                                    <param id="1" name="Value">-0.70710678118</param>
+                                </action>
+                                <action id="-9" name="Set value" type="System">
+                                    <param id="0" name="Variable">velocityY</param>
+                                    <param id="1" name="Value">-0.70710678118</param>
+                                </action>
+                            </actions>
                         </event-block>
                         <event-block>
                             <conditions>
                                 <condition id="-22" name="Else" type="System" />
+                                <condition id="2" name="Key is down" type="Keyboard">
+                                    <param id="0" name="Key">39 (Right arrow)</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Key is down" type="Keyboard">
+                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" type="System">
+                                    <param id="0" name="Variable">velocityX</param>
+                                    <param id="1" name="Value">0.70710678118</param>
+                                </action>
+                                <action id="-9" name="Set value" type="System">
+                                    <param id="0" name="Variable">velocityY</param>
+                                    <param id="1" name="Value">-0.70710678118</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-22" name="Else" type="System" />
+                        <condition id="2" name="Key is down" type="Keyboard">
+                            <param id="0" name="Key">40 (Down arrow)</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Key is down" type="Keyboard">
+                            <param id="0" name="Key">38 (Up arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">velocityX</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">velocityY</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block>
+                            <conditions>
+                                <condition id="2" name="Key is down" type="Keyboard">
+                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Key is down" type="Keyboard">
+                                    <param id="0" name="Key">39 (Right arrow)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" type="System">
+                                    <param id="0" name="Variable">velocityX</param>
+                                    <param id="1" name="Value">-0.70710678118</param>
+                                </action>
+                                <action id="-9" name="Set value" type="System">
+                                    <param id="0" name="Variable">velocityY</param>
+                                    <param id="1" name="Value">0.70710678118</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block>
+                            <conditions>
+                                <condition id="-22" name="Else" type="System" />
+                                <condition id="2" name="Key is down" type="Keyboard">
+                                    <param id="0" name="Key">39 (Right arrow)</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Key is down" type="Keyboard">
+                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" type="System">
+                                    <param id="0" name="Variable">velocityX</param>
+                                    <param id="1" name="Value">0.70710678118</param>
+                                </action>
+                                <action id="-9" name="Set value" type="System">
+                                    <param id="0" name="Variable">velocityY</param>
+                                    <param id="1" name="Value">0.70710678118</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-22" name="Else" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block>
+                            <conditions>
+                                <condition id="2" name="Key is down" type="Keyboard">
+                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Key is down" type="Keyboard">
+                                    <param id="0" name="Key">39 (Right arrow)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" type="System">
+                                    <param id="0" name="Variable">velocityX</param>
+                                    <param id="1" name="Value">-1</param>
+                                </action>
+                                <action id="-9" name="Set value" type="System">
+                                    <param id="0" name="Variable">velocityY</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block>
+                            <conditions>
+                                <condition id="-22" name="Else" type="System" />
+                                <condition id="2" name="Key is down" type="Keyboard">
+                                    <param id="0" name="Key">39 (Right arrow)</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Key is down" type="Keyboard">
+                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" type="System">
+                                    <param id="0" name="Variable">velocityX</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" type="System">
+                                    <param id="0" name="Variable">velocityY</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-17" name="Pick top/bottom" type="Player">
+                            <param id="0" name="Which">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" type="Player">
+                            <param id="0" name="X">Player.X + velocityX * PLAYER_SPEED</param>
+                            <param id="1" name="Y">Player.Y + velocityY * PLAYER_SPEED</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" title="Shooting">
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="-17" name="Pick top/bottom" type="Player">
+                            <param id="0" name="Which">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1">
+                            <conditions>
+                                <condition id="2" name="Key is down" type="Keyboard">
+                                    <param id="0" name="Key">87 (W)</param>
+                                </condition>
                                 <condition id="2" name="Key is down" type="Keyboard">
                                     <param id="0" name="Key">83 (S)</param>
                                 </condition>
+                                <condition id="2" name="Key is down" type="Keyboard">
+                                    <param id="0" name="Key">65 (A)</param>
+                                </condition>
+                                <condition id="2" name="Key is down" type="Keyboard">
+                                    <param id="0" name="Key">68 (D)</param>
+                                </condition>
+                                <condition id="5" name="Compare axis" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">2</param>
+                                    <param id="2" name="Comparison">1</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                                <condition id="5" name="Compare axis" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">3</param>
+                                    <param id="2" name="Comparison">1</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="0" name="Spawn another object" type="Player">
+                                    <param id="0" name="Object">Shot</param>
+                                    <param id="1" name="Layer">MAIN_LAYER</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
                             <sub-events>
                                 <event-block>
                                     <conditions>
+                                        <condition id="2" name="Key is down" type="Keyboard">
+                                            <param id="0" name="Key">87 (W)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block>
+                                            <conditions>
+                                                <condition id="2" name="Key is down" type="Keyboard">
+                                                    <param id="0" name="Key">65 (A)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-8" name="Set angle" type="Shot">
+                                                    <param id="0" name="Angle">-135</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block>
+                                            <conditions>
+                                                <condition id="-22" name="Else" type="System" />
+                                                <condition id="2" name="Key is down" type="Keyboard">
+                                                    <param id="0" name="Key">68 (D)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-8" name="Set angle" type="Shot">
+                                                    <param id="0" name="Angle">-45</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block>
+                                            <conditions>
+                                                <condition id="-22" name="Else" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-8" name="Set angle" type="Shot">
+                                                    <param id="0" name="Angle">-90</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block>
+                                    <conditions>
+                                        <condition id="-22" name="Else" type="System" />
+                                        <condition id="2" name="Key is down" type="Keyboard">
+                                            <param id="0" name="Key">83 (S)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block>
+                                            <conditions>
+                                                <condition id="2" name="Key is down" type="Keyboard">
+                                                    <param id="0" name="Key">65 (A)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-8" name="Set angle" type="Shot">
+                                                    <param id="0" name="Angle">135</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block>
+                                            <conditions>
+                                                <condition id="-22" name="Else" type="System" />
+                                                <condition id="2" name="Key is down" type="Keyboard">
+                                                    <param id="0" name="Key">68 (D)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-8" name="Set angle" type="Shot">
+                                                    <param id="0" name="Angle">45</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block>
+                                            <conditions>
+                                                <condition id="-22" name="Else" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-8" name="Set angle" type="Shot">
+                                                    <param id="0" name="Angle">90</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block>
+                                    <conditions>
+                                        <condition id="-22" name="Else" type="System" />
                                         <condition id="2" name="Key is down" type="Keyboard">
                                             <param id="0" name="Key">65 (A)</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-8" name="Set angle" type="Shot">
-                                            <param id="0" name="Angle">135</param>
+                                            <param id="0" name="Angle">-180</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -445,7 +712,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="-8" name="Set angle" type="Shot">
-                                            <param id="0" name="Angle">45</param>
+                                            <param id="0" name="Angle">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -455,37 +722,11 @@
                                     </conditions>
                                     <actions>
                                         <action id="-8" name="Set angle" type="Shot">
-                                            <param id="0" name="Angle">90</param>
+                                            <param id="0" name="Angle">angle(0, 0, Gamepad.Axis(0, 2), Gamepad.Axis(0, 3))</param>
                                         </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
-                        </event-block>
-                        <event-block>
-                            <conditions>
-                                <condition id="-22" name="Else" type="System" />
-                                <condition id="2" name="Key is down" type="Keyboard">
-                                    <param id="0" name="Key">65 (A)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-8" name="Set angle" type="Shot">
-                                    <param id="0" name="Angle">-180</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block>
-                            <conditions>
-                                <condition id="-22" name="Else" type="System" />
-                                <condition id="2" name="Key is down" type="Keyboard">
-                                    <param id="0" name="Key">68 (D)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-8" name="Set angle" type="Shot">
-                                    <param id="0" name="Angle">0</param>
-                                </action>
-                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -1575,5 +1816,9 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block>
+            <conditions />
+            <actions />
+        </event-block>
     </events>
 </c2eventsheet>

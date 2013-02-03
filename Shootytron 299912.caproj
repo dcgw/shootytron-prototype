@@ -5,18 +5,17 @@
     <version>1.0</version>
     <author></author>
     <unique-id>2853xhfleqhg2</unique-id>
-    <saved-with-version>10802</saved-with-version>
+    <saved-with-version>11400</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
-        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
-        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
-        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
-        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
@@ -51,9 +50,6 @@
         <object-type global="1" name="Player">
             <plugin id="Sprite" />
             <behaviors>
-                <behavior-type name="8Direction">
-                    <behavior id="EightDir" />
-                </behavior-type>
                 <behavior-type name="BoundToLayout">
                     <behavior id="bound" />
                 </behavior-type>
