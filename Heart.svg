@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="286.88062"
+   height="272.89212"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="Heart.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   version="1.0">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.37496"
+     inkscape:cx="97.217538"
+     inkscape:cy="136.44606"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1138"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient5701">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop5703" />
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="1"
+         id="stop5705" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3229">
+      <stop
+         style="stop-color:#ff0000;stop-opacity:1;"
+         offset="0"
+         id="stop3231" />
+      <stop
+         style="stop-color:#a60000;stop-opacity:1;"
+         offset="1"
+         id="stop3233" />
+    </linearGradient>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3165">
+      <path
+         sodipodi:type="star"
+         style="opacity:1;fill:#280b0b;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:21.20000076;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="path3167"
+         sodipodi:sides="5"
+         sodipodi:cx="377.14285"
+         sodipodi:cy="718.07648"
+         sodipodi:r1="108.00604"
+         sodipodi:r2="240.75044"
+         sodipodi:arg1="0.6540827"
+         sodipodi:arg2="1.2824012"
+         inkscape:flatsided="false"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="M 462.85714,783.79076 L 445.61565,948.8843 L 341.13203,819.90243 L 178.79082,854.52152 L 269.17266,715.2941 L 186.08176,571.59632 L 346.42443,614.53091 L 457.41263,491.10173 L 466.12802,656.86418 L 617.8134,724.27852 L 462.85714,783.79076 z"
+         transform="matrix(1.1098364,0,0,1.1240591,-722.3195,-115.03596)" />
+    </clipPath>
+    <filter
+       inkscape:label="filter1"
+       id="filter3668">
+      <feGaussianBlur
+         id="feGaussianBlur3670"
+         stdDeviation="5.8065217391304351" />
+      <feSpecularLighting
+         specularExponent="1.3404825737265416"
+         surfaceScale="-30.470914127423864"
+         specularConstant="0.81743869209809261"
+         id="feSpecularLighting3672">
+        <feDistantLight
+           id="feDistantLight3674" />
+      </feSpecularLighting>
+      <feComposite
+         operator="atop"
+         in2="SourceGraphic"
+         id="feComposite3676" />
+    </filter>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5701"
+       id="radialGradient5707"
+       cx="305.71429"
+       cy="566.64789"
+       fx="305.71429"
+       fy="566.64789"
+       r="284.35715"
+       gradientUnits="userSpaceOnUse"
+       spreadMethod="reflect"
+       gradientTransform="matrix(0.4373273,-5.6360568e-8,5.7655478e-8,0.447375,172.01707,313.14378)" />
+    <filter
+       id="filter5725"
+       inkscape:label="filter1">
+      <feGaussianBlur
+         stdDeviation="2.5019626168224298"
+         id="feGaussianBlur5727" />
+      <feSpecularLighting
+         id="feSpecularLighting5729"
+         specularConstant="1.1799410029498525"
+         surfaceScale="-15.01501501501501"
+         specularExponent="5.4173913043478263"
+         result="result0"
+         lighting-color="rgb(255,255,255)">
+        <feDistantLight
+           id="feDistantLight5731"
+           azimuth="10"
+           elevation="0" />
+      </feSpecularLighting>
+      <feComposite
+         id="feComposite5737"
+         in2="SourceGraphic"
+         operator="atop" />
+    </filter>
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-20.636583,-40.929362)">
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#ff4f5b;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       d="M 474.87477,70.215689 C 423.06001,146.5892 541.61583,233.20821 595.92445,283.8215 651.31891,224.28495 770.21682,138.99489 716.97415,70.215689 682.24821,25.356521 625.95006,32.252009 595.92445,66.022332 565.10553,28.975006 506.68048,23.334947 474.87477,70.215689 z"
+       id="path5722"
+       sodipodi:nodetypes="ccscs"
+       transform="matrix(1.0692166,0,0,1.1040315,-473.41111,0.4736199)" />
+  </g>
+</svg>
