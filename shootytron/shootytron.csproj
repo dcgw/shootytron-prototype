@@ -59,10 +59,14 @@
     <Content Include="shootytron.js">
       <DependentUpon>shootytron.ts</DependentUpon>
     </Content>
+    <Content Include="engine.js">
+      <DependentUpon>engine.ts</DependentUpon>
+    </Content>
     <Content Include="what-if-javascript.jpg" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="shootytron.ts" />
+    <TypeScriptCompile Include="engine.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="web.config" />
