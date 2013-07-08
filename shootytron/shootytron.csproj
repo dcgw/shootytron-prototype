@@ -59,6 +59,7 @@
     <Content Include="shootytron.js">
       <DependentUpon>shootytron.ts</DependentUpon>
     </Content>
+    <Content Include="WebGL.d.ts" />
     <Content Include="what-if-javascript.jpg" />
   </ItemGroup>
   <ItemGroup>
