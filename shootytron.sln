@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2012 for Web
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "shootytron", "shootytron\shootytron.csproj", "{FB351C4F-8767-49AD-B065-1F3382EC5BFE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "shootytron", "shootytron.csproj", "{FB351C4F-8767-49AD-B065-1F3382EC5BFE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

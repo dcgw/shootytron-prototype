@@ -1,6 +1,6 @@
 *.suo
 *.user
 *.js.map
-/*/obj
-/*/bin
-/shootytron/shootytron.js
+/obj
+/bin
+/shootytron.js
