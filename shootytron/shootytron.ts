@@ -12,7 +12,7 @@ try {
     var context: Object;
 
     if (supportedBrowser) {
-        canvas = <HTMLCanvasElement>document.createElement("canvas");
+        canvas = document.createElement("canvas");
         supportedBrowser = !!canvas.getContext;
     }
 
