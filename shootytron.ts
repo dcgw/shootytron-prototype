@@ -1,3 +1,5 @@
+/// <reference path="WebGL.d.ts"/>
+
 var supportedBrowser;
 
 try {
@@ -9,7 +11,7 @@ try {
             !!document.body.removeChild;
 
     var canvas: HTMLCanvasElement;
-    var context: Object;
+    var context: WebGLRenderingContext;
 
     if (supportedBrowser) {
         canvas = document.createElement("canvas");
