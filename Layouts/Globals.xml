@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
     <name>Globals</name>
+    <sid>2561697572039475</sid>
     <event-sheet>Globals</event-sheet>
     <size>
         <width>640</width>
@@ -12,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Glow">
+        <layer name="Glow" sid="4703818509715557">
             <initially-visible>1</initially-visible>
             <background-color>0,0,0</background-color>
             <transparent>0</transparent>
@@ -28,7 +29,7 @@
             <instances />
             <effects />
         </layer>
-        <layer name="Main">
+        <layer name="Main" sid="4846174505923116">
             <initially-visible>1</initially-visible>
             <background-color>0,0,0</background-color>
             <transparent>1</transparent>
@@ -44,7 +45,7 @@
             <instances />
             <effects />
         </layer>
-        <layer name="UI">
+        <layer name="UI" sid="3768524387895757">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>

@@ -3,87 +3,87 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Game</name>
     <events>
-        <variable constant="1" name="PLAYER_SPEED" static="0" type="number">10</variable>
-        <variable constant="1" name="GLOW_LAYER" static="0" type="number">0</variable>
-        <variable constant="1" name="MAIN_LAYER" static="0" type="number">1</variable>
-        <variable constant="1" name="UI_LAYER" static="0" type="number">2</variable>
-        <variable constant="1" name="WALL_THICKNESS" static="0" type="number">8</variable>
-        <variable constant="1" name="MULTIPLIER_INCREMENT" static="0" type="number">1</variable>
-        <variable constant="1" name="SAFERADIUS" static="0" type="number">128</variable>
-        <variable constant="0" name="lastKillTime" static="0" type="number">0</variable>
-        <variable constant="0" name="multiplier" static="0" type="number">1</variable>
-        <variable constant="0" name="score" static="0" type="number">0</variable>
-        <variable constant="0" name="wave" static="0" type="number">1</variable>
-        <variable constant="0" name="playerDead" static="0" type="number">0</variable>
-        <variable constant="0" name="winnerName" static="0" type="text"></variable>
-        <variable constant="0" name="battleEnded" static="0" type="number">0</variable>
-        <event-group collapsed="1" description="" title="Wave start">
+        <variable constant="1" name="PLAYER_SPEED" sid="1798386935557356" static="0" type="number">10</variable>
+        <variable constant="1" name="GLOW_LAYER" sid="2873834576762914" static="0" type="number">0</variable>
+        <variable constant="1" name="MAIN_LAYER" sid="3319416498021344" static="0" type="number">1</variable>
+        <variable constant="1" name="UI_LAYER" sid="5303463244058372" static="0" type="number">2</variable>
+        <variable constant="1" name="WALL_THICKNESS" sid="2161807011458612" static="0" type="number">8</variable>
+        <variable constant="1" name="MULTIPLIER_INCREMENT" sid="1116076052523759" static="0" type="number">1</variable>
+        <variable constant="1" name="SAFERADIUS" sid="4356104579669307" static="0" type="number">128</variable>
+        <variable constant="0" name="lastKillTime" sid="9500736888464991" static="0" type="number">0</variable>
+        <variable constant="0" name="multiplier" sid="8638232859423816" static="0" type="number">1</variable>
+        <variable constant="0" name="score" sid="1639386047304122" static="0" type="number">0</variable>
+        <variable constant="0" name="wave" sid="9978375009394975" static="0" type="number">1</variable>
+        <variable constant="0" name="playerDead" sid="3962970098963689" static="0" type="number">0</variable>
+        <variable constant="0" name="winnerName" sid="2987034306775424" static="0" type="text"></variable>
+        <variable constant="0" name="battleEnded" sid="8715085114584096" static="0" type="number">0</variable>
+        <event-group collapsed="1" description="" sid="7482313049447434" title="Wave start">
             <sub-events>
-                <event-block>
+                <event-block sid="988692768484547">
                     <conditions>
-                        <condition id="-2" name="On start of layout" type="System" />
+                        <condition id="-2" name="On start of layout" sid="9243901147032114" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Play" type="Audio">
+                        <action id="0" name="Play" sid="7051889583111855" type="Audio">
                             <param id="0" name="Audio file">Ingame</param>
                             <param id="2" name="Loop">1</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;Ingame&quot;</param>
                         </action>
-                        <action id="-3" name="Create object" type="System">
+                        <action id="-3" name="Create object" sid="3358756781471408" type="System">
                             <param id="0" name="Object to create">Wall</param>
                             <param id="1" name="Layer">MAIN_LAYER</param>
                             <param id="2" name="X">-WALL_THICKNESS * 0.5 - 1</param>
                             <param id="3" name="Y">LayoutHeight * 0.5</param>
                         </action>
-                        <action id="-7" name="Set size" type="Wall">
+                        <action id="-7" name="Set size" sid="4525540470649343" type="Wall">
                             <param id="0" name="Width">WALL_THICKNESS</param>
                             <param id="1" name="Height">LayoutHeight + WALL_THICKNESS + WALL_THICKNESS</param>
                         </action>
-                        <action id="-3" name="Create object" type="System">
+                        <action id="-3" name="Create object" sid="3897173541330737" type="System">
                             <param id="0" name="Object to create">Wall</param>
                             <param id="1" name="Layer">MAIN_LAYER</param>
                             <param id="2" name="X">LayoutWidth + WALL_THICKNESS * 0.5</param>
                             <param id="3" name="Y">LayoutHeight * 0.5</param>
                         </action>
-                        <action id="-7" name="Set size" type="Wall">
+                        <action id="-7" name="Set size" sid="9202127907379598" type="Wall">
                             <param id="0" name="Width">WALL_THICKNESS</param>
                             <param id="1" name="Height">LayoutHeight + WALL_THICKNESS + WALL_THICKNESS</param>
                         </action>
-                        <action id="-3" name="Create object" type="System">
+                        <action id="-3" name="Create object" sid="6413650733548872" type="System">
                             <param id="0" name="Object to create">Wall</param>
                             <param id="1" name="Layer">MAIN_LAYER</param>
                             <param id="2" name="X">LayoutWidth * 0.5</param>
                             <param id="3" name="Y">-WALL_THICKNESS * 0.5 - 1</param>
                         </action>
-                        <action id="-7" name="Set size" type="Wall">
+                        <action id="-7" name="Set size" sid="5548182153446839" type="Wall">
                             <param id="0" name="Width">LayoutWidth * WALL_THICKNESS + WALL_THICKNESS</param>
                             <param id="1" name="Height">WALL_THICKNESS</param>
                         </action>
-                        <action id="-3" name="Create object" type="System">
+                        <action id="-3" name="Create object" sid="6227399856043133" type="System">
                             <param id="0" name="Object to create">Wall</param>
                             <param id="1" name="Layer">MAIN_LAYER</param>
                             <param id="2" name="X">LayoutWidth * 0.5</param>
                             <param id="3" name="Y">LayoutHeight + WALL_THICKNESS * 0.5</param>
                         </action>
-                        <action id="-7" name="Set size" type="Wall">
+                        <action id="-7" name="Set size" sid="2090882528347958" type="Wall">
                             <param id="0" name="Width">LayoutWidth * WALL_THICKNESS + WALL_THICKNESS</param>
                             <param id="1" name="Height">WALL_THICKNESS</param>
                         </action>
-                        <action id="-3" name="Create object" type="System">
+                        <action id="-3" name="Create object" sid="8666714932033397" type="System">
                             <param id="0" name="Object to create">GiraffeSpawn</param>
                             <param id="1" name="Layer">MAIN_LAYER</param>
                             <param id="2" name="X">random(SAFERADIUS, sqrt(LayoutWidth * LayoutWidth + LayoutHeight * LayoutHeight) * 0.5)</param>
                             <param id="3" name="Y">random(0, 360)</param>
                         </action>
-                        <action id="-3" name="Set position" type="GiraffeSpawn">
+                        <action id="-3" name="Set position" sid="702099446610601" type="GiraffeSpawn">
                             <param id="0" name="X">(LayoutWidth * 1.5 + sin(GiraffeSpawn.Y) * GiraffeSpawn.X) % LayoutWidth</param>
                             <param id="1" name="Y">(LayoutHeight * 1.5 + cos(GiraffeSpawn.Y) * GiraffeSpawn.X) % LayoutHeight</param>
                         </action>
-                        <action id="-8" name="Set angle" type="GiraffeSpawn">
+                        <action id="-8" name="Set angle" sid="2846865755318027" type="GiraffeSpawn">
                             <param id="0" name="Angle">Random(360)</param>
                         </action>
-                        <action id="-3" name="Create object" type="System">
+                        <action id="-3" name="Create object" sid="7831863701001389" type="System">
                             <param id="0" name="Object to create">PlayerSpawn</param>
                             <param id="1" name="Layer">MAIN_LAYER</param>
                             <param id="2" name="X">320</param>
@@ -91,85 +91,85 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block>
+                        <event-block sid="6936041453496004">
                             <conditions>
-                                <condition id="-13" name="Pick nth instance" type="System">
+                                <condition id="-13" name="Pick nth instance" sid="6581290339035455" type="System">
                                     <param id="0" name="Object">Announcement</param>
                                     <param id="1" name="Instance">0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Set text" type="Announcement">
+                                <action id="0" name="Set text" sid="4157778104718284" type="Announcement">
                                     <param id="0" name="Text">&quot;Wave &quot; &amp; wave</param>
                                 </action>
-                                <action id="3" name="Set font size" type="Announcement">
+                                <action id="3" name="Set font size" sid="96792891643816" type="Announcement">
                                     <param id="0" name="Size (pt)">32</param>
                                 </action>
-                                <action behavior="Fade" id="0" name="Restart fade" type="Announcement" />
+                                <action behavior="Fade" id="0" name="Restart fade" sid="940781177968073" type="Announcement" />
                             </actions>
                         </event-block>
-                        <event-block>
+                        <event-block sid="7058663813495139">
                             <conditions>
-                                <condition id="-11" name="For Each" type="System">
+                                <condition id="-11" name="For Each" sid="1025135301475602" type="System">
                                     <param id="0" name="Object">EnemySpawn</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" type="EnemySpawn">
+                                <action id="-3" name="Set position" sid="587971102889427" type="EnemySpawn">
                                     <param id="0" name="X">random(SAFERADIUS, sqrt(LayoutWidth * LayoutWidth + LayoutHeight * LayoutHeight) * 0.5)</param>
                                     <param id="1" name="Y">random(0, 360)</param>
                                 </action>
-                                <action id="-3" name="Set position" type="EnemySpawn">
+                                <action id="-3" name="Set position" sid="7204301972901181" type="EnemySpawn">
                                     <param id="0" name="X">(LayoutWidth * 1.5 + sin(EnemySpawn.Y) * EnemySpawn.X) % LayoutWidth</param>
                                     <param id="1" name="Y">(LayoutHeight * 1.5 + cos(EnemySpawn.Y) * EnemySpawn.X) % LayoutHeight</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block>
+                        <event-block sid="5992264819192696">
                             <conditions>
-                                <condition id="-11" name="For Each" type="System">
+                                <condition id="-11" name="For Each" sid="4450251290136115" type="System">
                                     <param id="0" name="Object">CreepSpawn</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-8" name="Set angle" type="CreepSpawn">
+                                <action id="-8" name="Set angle" sid="2406433482615068" type="CreepSpawn">
                                     <param id="0" name="Angle">Random(360)</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block>
+                        <event-block sid="5976236560288107">
                             <conditions>
-                                <condition id="-11" name="For Each" type="System">
+                                <condition id="-11" name="For Each" sid="3657429095494823" type="System">
                                     <param id="0" name="Object">GruntSpawn</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-22" name="Set angle toward position" type="GruntSpawn">
+                                <action id="-22" name="Set angle toward position" sid="4214499622613584" type="GruntSpawn">
                                     <param id="0" name="X">PlayerSpawn.X</param>
                                     <param id="1" name="Y">PlayerSpawn.Y</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block>
+                        <event-block sid="3266310034871605">
                             <conditions>
-                                <condition id="-11" name="For Each" type="System">
+                                <condition id="-11" name="For Each" sid="1023328701610881" type="System">
                                     <param id="0" name="Object">SpirosnipeSpawn</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-8" name="Set angle" type="SpirosnipeSpawn">
+                                <action id="-8" name="Set angle" sid="4881328825672988" type="SpirosnipeSpawn">
                                     <param id="0" name="Angle">Random(360)</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block>
+                        <event-block sid="4824740695493552">
                             <conditions>
-                                <condition id="-11" name="For Each" type="System">
+                                <condition id="-11" name="For Each" sid="2143087863418827" type="System">
                                     <param id="0" name="Object">WrecksagonSpawn</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-8" name="Set angle" type="WrecksagonSpawn">
+                                <action id="-8" name="Set angle" sid="5186015919230693" type="WrecksagonSpawn">
                                     <param id="0" name="Angle">Random(360)</param>
                                 </action>
                             </actions>
@@ -178,247 +178,247 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" title="Spawners">
+        <event-group collapsed="1" description="" sid="2983995842760178" title="Spawners">
             <sub-events>
-                <event-block>
+                <event-block sid="1863758646409006">
                     <conditions>
-                        <condition id="-8" name="Compare two values" type="System">
+                        <condition id="-8" name="Compare two values" sid="4852691651219722" type="System">
                             <param id="0" name="First value">PlayerSpawn.Clock.Value</param>
                             <param id="1" name="Comparison">5</param>
                             <param id="2" name="Second value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" type="PlayerSpawn">
+                        <action id="0" name="Spawn another object" sid="9813583542460345" type="PlayerSpawn">
                             <param id="0" name="Object">Player</param>
                             <param id="1" name="Layer">MAIN_LAYER</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="-9" name="Destroy" type="PlayerSpawn" />
+                        <action id="-9" name="Destroy" sid="2302703505702993" type="PlayerSpawn" />
                     </actions>
                 </event-block>
-                <event-block>
+                <event-block sid="3830507923887296">
                     <conditions>
-                        <condition id="-11" name="For Each" type="System">
+                        <condition id="-11" name="For Each" sid="5367061295466833" type="System">
                             <param id="0" name="Object">GruntSpawn</param>
                         </condition>
-                        <condition id="-8" name="Compare two values" type="System">
+                        <condition id="-8" name="Compare two values" sid="1998480887398562" type="System">
                             <param id="0" name="First value">GruntSpawn.Clock.Value</param>
                             <param id="1" name="Comparison">5</param>
                             <param id="2" name="Second value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" type="GruntSpawn">
+                        <action id="0" name="Spawn another object" sid="8927078424476901" type="GruntSpawn">
                             <param id="0" name="Object">Grunt</param>
                             <param id="1" name="Layer">MAIN_LAYER</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="-8" name="Set angle" type="Grunt">
+                        <action id="-8" name="Set angle" sid="1166218275487407" type="Grunt">
                             <param id="0" name="Angle">GruntSpawn.Angle</param>
                         </action>
-                        <action id="-10" name="Set value" type="Grunt">
+                        <action id="-10" name="Set value" sid="2260324018838683" type="Grunt">
                             <param id="0" name="Instance variable">value</param>
                             <param id="1" name="Value">8</param>
                         </action>
-                        <action id="-10" name="Set value" type="Grunt">
+                        <action id="-10" name="Set value" sid="1190190604201821" type="Grunt">
                             <param id="0" name="Instance variable">name</param>
                             <param id="1" name="Value">&quot;Grunt&quot;</param>
                         </action>
-                        <action id="-9" name="Destroy" type="GruntSpawn" />
+                        <action id="-9" name="Destroy" sid="6551836423137053" type="GruntSpawn" />
                     </actions>
                 </event-block>
-                <event-block>
+                <event-block sid="6758763144017844">
                     <conditions>
-                        <condition id="-11" name="For Each" type="System">
+                        <condition id="-11" name="For Each" sid="3524804047172182" type="System">
                             <param id="0" name="Object">CreepSpawn</param>
                         </condition>
-                        <condition id="-8" name="Compare two values" type="System">
+                        <condition id="-8" name="Compare two values" sid="9181537303397365" type="System">
                             <param id="0" name="First value">CreepSpawn.Clock.Value</param>
                             <param id="1" name="Comparison">5</param>
                             <param id="2" name="Second value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" type="CreepSpawn">
+                        <action id="0" name="Spawn another object" sid="6732021018921615" type="CreepSpawn">
                             <param id="0" name="Object">Creep</param>
                             <param id="1" name="Layer">MAIN_LAYER</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="-8" name="Set angle" type="CreepSpawn">
+                        <action id="-8" name="Set angle" sid="6785846900395436" type="CreepSpawn">
                             <param id="0" name="Angle">CreepSpawn.Angle</param>
                         </action>
-                        <action id="-10" name="Set value" type="Creep">
+                        <action id="-10" name="Set value" sid="6150137285829285" type="Creep">
                             <param id="0" name="Instance variable">value</param>
                             <param id="1" name="Value">4</param>
                         </action>
-                        <action id="-10" name="Set value" type="Creep">
+                        <action id="-10" name="Set value" sid="984096710337782" type="Creep">
                             <param id="0" name="Instance variable">name</param>
                             <param id="1" name="Value">&quot;Creep&quot;</param>
                         </action>
-                        <action id="-9" name="Destroy" type="CreepSpawn" />
+                        <action id="-9" name="Destroy" sid="4859045128779135" type="CreepSpawn" />
                     </actions>
                 </event-block>
-                <event-block>
+                <event-block sid="621874441309328">
                     <conditions>
-                        <condition id="-11" name="For Each" type="System">
+                        <condition id="-11" name="For Each" sid="9225377073330097" type="System">
                             <param id="0" name="Object">WrecksagonSpawn</param>
                         </condition>
-                        <condition id="-8" name="Compare two values" type="System">
+                        <condition id="-8" name="Compare two values" sid="9004844015004907" type="System">
                             <param id="0" name="First value">WrecksagonSpawn.Clock.Value</param>
                             <param id="1" name="Comparison">5</param>
                             <param id="2" name="Second value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" type="WrecksagonSpawn">
+                        <action id="0" name="Spawn another object" sid="1410244021980805" type="WrecksagonSpawn">
                             <param id="0" name="Object">Wrecksagon</param>
                             <param id="1" name="Layer">MAIN_LAYER</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="-8" name="Set angle" type="Wrecksagon">
+                        <action id="-8" name="Set angle" sid="1058763367723628" type="Wrecksagon">
                             <param id="0" name="Angle">WrecksagonSpawn.Angle</param>
                         </action>
-                        <action id="-10" name="Set value" type="Wrecksagon">
+                        <action id="-10" name="Set value" sid="4686593729625984" type="Wrecksagon">
                             <param id="0" name="Instance variable">value</param>
                             <param id="1" name="Value">12</param>
                         </action>
-                        <action id="-10" name="Set value" type="Wrecksagon">
+                        <action id="-10" name="Set value" sid="4061627274767041" type="Wrecksagon">
                             <param id="0" name="Instance variable">name</param>
                             <param id="1" name="Value">&quot;Wrecksagon&quot;</param>
                         </action>
-                        <action id="-9" name="Destroy" type="WrecksagonSpawn" />
+                        <action id="-9" name="Destroy" sid="3959080795380094" type="WrecksagonSpawn" />
                     </actions>
                 </event-block>
-                <event-block>
+                <event-block sid="7690884088981728">
                     <conditions>
-                        <condition id="-11" name="For Each" type="System">
+                        <condition id="-11" name="For Each" sid="3064092339087103" type="System">
                             <param id="0" name="Object">GiraffeSpawn</param>
                         </condition>
-                        <condition id="-8" name="Compare two values" type="System">
+                        <condition id="-8" name="Compare two values" sid="1603984681480738" type="System">
                             <param id="0" name="First value">GiraffeSpawn.Clock.Value</param>
                             <param id="1" name="Comparison">5</param>
                             <param id="2" name="Second value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" type="GiraffeSpawn">
+                        <action id="0" name="Spawn another object" sid="3365993411907869" type="GiraffeSpawn">
                             <param id="0" name="Object">Giraffe</param>
                             <param id="1" name="Layer">MAIN_LAYER</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="-8" name="Set angle" type="Giraffe">
+                        <action id="-8" name="Set angle" sid="5340914733894343" type="Giraffe">
                             <param id="0" name="Angle">GiraffeSpawn.Angle</param>
                         </action>
-                        <action id="-9" name="Destroy" type="GiraffeSpawn" />
+                        <action id="-9" name="Destroy" sid="4923967299763041" type="GiraffeSpawn" />
                     </actions>
                 </event-block>
-                <event-block>
+                <event-block sid="2354690053593631">
                     <conditions>
-                        <condition id="-11" name="For Each" type="System">
+                        <condition id="-11" name="For Each" sid="7723191121077809" type="System">
                             <param id="0" name="Object">SpirosnipeSpawn</param>
                         </condition>
-                        <condition id="-8" name="Compare two values" type="System">
+                        <condition id="-8" name="Compare two values" sid="6888860190348249" type="System">
                             <param id="0" name="First value">SpirosnipeSpawn.Clock.Value</param>
                             <param id="1" name="Comparison">5</param>
                             <param id="2" name="Second value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" type="SpirosnipeSpawn">
+                        <action id="0" name="Spawn another object" sid="9257878337476675" type="SpirosnipeSpawn">
                             <param id="0" name="Object">Spirosnipe</param>
                             <param id="1" name="Layer">MAIN_LAYER</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="-8" name="Set angle" type="Spirosnipe">
+                        <action id="-8" name="Set angle" sid="5235127014098775" type="Spirosnipe">
                             <param id="0" name="Angle">SpirosnipeSpawn.Angle</param>
                         </action>
-                        <action id="-10" name="Set value" type="Spirosnipe">
+                        <action id="-10" name="Set value" sid="2014467388968378" type="Spirosnipe">
                             <param id="0" name="Instance variable">value</param>
                             <param id="1" name="Value">16</param>
                         </action>
-                        <action id="-10" name="Set value" type="Spirosnipe">
+                        <action id="-10" name="Set value" sid="8605229439951288" type="Spirosnipe">
                             <param id="0" name="Instance variable">name</param>
                             <param id="1" name="Value">&quot;Spirosnipe&quot;</param>
                         </action>
-                        <action id="-9" name="Destroy" type="SpirosnipeSpawn" />
+                        <action id="-9" name="Destroy" sid="8735061006479076" type="SpirosnipeSpawn" />
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" title="Movement">
+        <event-group collapsed="1" description="" sid="9568719376338185" title="Movement">
             <sub-events>
-                <variable constant="0" name="velocityX" static="0" type="number">0</variable>
-                <variable constant="0" name="velocityY" static="0" type="number">0</variable>
-                <event-block>
+                <variable constant="0" name="velocityX" sid="5728750829180034" static="0" type="number">0</variable>
+                <variable constant="0" name="velocityY" sid="314800043126239" static="0" type="number">0</variable>
+                <event-block sid="9328766957897569">
                     <conditions />
                     <actions>
-                        <action id="-9" name="Set value" type="System">
+                        <action id="-9" name="Set value" sid="1371014758079006" type="System">
                             <param id="0" name="Variable">velocityX</param>
                             <param id="1" name="Value">Gamepad.Axis(0, 0) * 0.01</param>
                         </action>
-                        <action id="-9" name="Set value" type="System">
+                        <action id="-9" name="Set value" sid="8462559838731158" type="System">
                             <param id="0" name="Variable">velocityY</param>
                             <param id="1" name="Value">Gamepad.Axis(0, 1) * 0.01</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block>
+                <event-block sid="7152674004626455">
                     <conditions>
-                        <condition id="2" name="Key is down" type="Keyboard">
+                        <condition id="2" name="Key is down" sid="2926678992935448" type="Keyboard">
                             <param id="0" name="Key">38 (Up arrow)</param>
                         </condition>
-                        <condition id="2" inverted="1" name="Key is down" type="Keyboard">
+                        <condition id="2" inverted="1" name="Key is down" sid="8701146811844701" type="Keyboard">
                             <param id="0" name="Key">40 (Down arrow)</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" type="System">
+                        <action id="-9" name="Set value" sid="4741383364757514" type="System">
                             <param id="0" name="Variable">velocityX</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="-9" name="Set value" type="System">
+                        <action id="-9" name="Set value" sid="938076695154853" type="System">
                             <param id="0" name="Variable">velocityY</param>
                             <param id="1" name="Value">-1</param>
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block>
+                        <event-block sid="4226205514905994">
                             <conditions>
-                                <condition id="2" name="Key is down" type="Keyboard">
+                                <condition id="2" name="Key is down" sid="3456597694110818" type="Keyboard">
                                     <param id="0" name="Key">37 (Left arrow)</param>
                                 </condition>
-                                <condition id="2" inverted="1" name="Key is down" type="Keyboard">
+                                <condition id="2" inverted="1" name="Key is down" sid="3309121064349598" type="Keyboard">
                                     <param id="0" name="Key">39 (Right arrow)</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" type="System">
+                                <action id="-9" name="Set value" sid="956754463062812" type="System">
                                     <param id="0" name="Variable">velocityX</param>
                                     <param id="1" name="Value">-0.70710678118</param>
                                 </action>
-                                <action id="-9" name="Set value" type="System">
+                                <action id="-9" name="Set value" sid="3703724831911685" type="System">
                                     <param id="0" name="Variable">velocityY</param>
                                     <param id="1" name="Value">-0.70710678118</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block>
+                        <event-block sid="2979717091083863">
                             <conditions>
-                                <condition id="-22" name="Else" type="System" />
-                                <condition id="2" name="Key is down" type="Keyboard">
+                                <condition id="-22" name="Else" sid="9337475132514323" type="System" />
+                                <condition id="2" name="Key is down" sid="5264768992026055" type="Keyboard">
                                     <param id="0" name="Key">39 (Right arrow)</param>
                                 </condition>
-                                <condition id="2" inverted="1" name="Key is down" type="Keyboard">
+                                <condition id="2" inverted="1" name="Key is down" sid="8879126245924954" type="Keyboard">
                                     <param id="0" name="Key">37 (Left arrow)</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" type="System">
+                                <action id="-9" name="Set value" sid="6951367605231279" type="System">
                                     <param id="0" name="Variable">velocityX</param>
                                     <param id="1" name="Value">0.70710678118</param>
                                 </action>
-                                <action id="-9" name="Set value" type="System">
+                                <action id="-9" name="Set value" sid="1757399898033336" type="System">
                                     <param id="0" name="Variable">velocityY</param>
                                     <param id="1" name="Value">-0.70710678118</param>
                                 </action>
@@ -426,63 +426,63 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block>
+                <event-block sid="6260902251600265">
                     <conditions>
-                        <condition id="-22" name="Else" type="System" />
-                        <condition id="2" name="Key is down" type="Keyboard">
+                        <condition id="-22" name="Else" sid="2710901636008419" type="System" />
+                        <condition id="2" name="Key is down" sid="4196085927030594" type="Keyboard">
                             <param id="0" name="Key">40 (Down arrow)</param>
                         </condition>
-                        <condition id="2" inverted="1" name="Key is down" type="Keyboard">
+                        <condition id="2" inverted="1" name="Key is down" sid="8253828188701249" type="Keyboard">
                             <param id="0" name="Key">38 (Up arrow)</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" type="System">
+                        <action id="-9" name="Set value" sid="9524657933056166" type="System">
                             <param id="0" name="Variable">velocityX</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="-9" name="Set value" type="System">
+                        <action id="-9" name="Set value" sid="2245155210108127" type="System">
                             <param id="0" name="Variable">velocityY</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block>
+                        <event-block sid="6978814890659876">
                             <conditions>
-                                <condition id="2" name="Key is down" type="Keyboard">
+                                <condition id="2" name="Key is down" sid="6496427811754844" type="Keyboard">
                                     <param id="0" name="Key">37 (Left arrow)</param>
                                 </condition>
-                                <condition id="2" inverted="1" name="Key is down" type="Keyboard">
+                                <condition id="2" inverted="1" name="Key is down" sid="6179639825386446" type="Keyboard">
                                     <param id="0" name="Key">39 (Right arrow)</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" type="System">
+                                <action id="-9" name="Set value" sid="6010843546136522" type="System">
                                     <param id="0" name="Variable">velocityX</param>
                                     <param id="1" name="Value">-0.70710678118</param>
                                 </action>
-                                <action id="-9" name="Set value" type="System">
+                                <action id="-9" name="Set value" sid="8589735755220468" type="System">
                                     <param id="0" name="Variable">velocityY</param>
                                     <param id="1" name="Value">0.70710678118</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block>
+                        <event-block sid="2015419931515152">
                             <conditions>
-                                <condition id="-22" name="Else" type="System" />
-                                <condition id="2" name="Key is down" type="Keyboard">
+                                <condition id="-22" name="Else" sid="1638335200962697" type="System" />
+                                <condition id="2" name="Key is down" sid="4901031092188581" type="Keyboard">
                                     <param id="0" name="Key">39 (Right arrow)</param>
                                 </condition>
-                                <condition id="2" inverted="1" name="Key is down" type="Keyboard">
+                                <condition id="2" inverted="1" name="Key is down" sid="6397673128397529" type="Keyboard">
                                     <param id="0" name="Key">37 (Left arrow)</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" type="System">
+                                <action id="-9" name="Set value" sid="9715721529093782" type="System">
                                     <param id="0" name="Variable">velocityX</param>
                                     <param id="1" name="Value">0.70710678118</param>
                                 </action>
-                                <action id="-9" name="Set value" type="System">
+                                <action id="-9" name="Set value" sid="7565574131070306" type="System">
                                     <param id="0" name="Variable">velocityY</param>
                                     <param id="1" name="Value">0.70710678118</param>
                                 </action>
@@ -490,48 +490,48 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block>
+                <event-block sid="3278308416075369">
                     <conditions>
-                        <condition id="-22" name="Else" type="System" />
+                        <condition id="-22" name="Else" sid="9628928646793268" type="System" />
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block>
+                        <event-block sid="2161641957043791">
                             <conditions>
-                                <condition id="2" name="Key is down" type="Keyboard">
+                                <condition id="2" name="Key is down" sid="5242036945318643" type="Keyboard">
                                     <param id="0" name="Key">37 (Left arrow)</param>
                                 </condition>
-                                <condition id="2" inverted="1" name="Key is down" type="Keyboard">
+                                <condition id="2" inverted="1" name="Key is down" sid="2726184169258561" type="Keyboard">
                                     <param id="0" name="Key">39 (Right arrow)</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" type="System">
+                                <action id="-9" name="Set value" sid="8816533615805242" type="System">
                                     <param id="0" name="Variable">velocityX</param>
                                     <param id="1" name="Value">-1</param>
                                 </action>
-                                <action id="-9" name="Set value" type="System">
+                                <action id="-9" name="Set value" sid="250756777893957" type="System">
                                     <param id="0" name="Variable">velocityY</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block>
+                        <event-block sid="8872766252496723">
                             <conditions>
-                                <condition id="-22" name="Else" type="System" />
-                                <condition id="2" name="Key is down" type="Keyboard">
+                                <condition id="-22" name="Else" sid="2669017348368706" type="System" />
+                                <condition id="2" name="Key is down" sid="9244843830077683" type="Keyboard">
                                     <param id="0" name="Key">39 (Right arrow)</param>
                                 </condition>
-                                <condition id="2" inverted="1" name="Key is down" type="Keyboard">
+                                <condition id="2" inverted="1" name="Key is down" sid="9759775864014791" type="Keyboard">
                                     <param id="0" name="Key">37 (Left arrow)</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" type="System">
+                                <action id="-9" name="Set value" sid="5444403039373205" type="System">
                                     <param id="0" name="Variable">velocityX</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-9" name="Set value" type="System">
+                                <action id="-9" name="Set value" sid="1146142119290154" type="System">
                                     <param id="0" name="Variable">velocityY</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
@@ -539,14 +539,14 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block>
+                <event-block sid="3534892843899603">
                     <conditions>
-                        <condition id="-17" name="Pick top/bottom" type="Player">
+                        <condition id="-17" name="Pick top/bottom" sid="5569566526231799" type="Player">
                             <param id="0" name="Which">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Set position" type="Player">
+                        <action id="-3" name="Set position" sid="1911356461005761" type="Player">
                             <param id="0" name="X">Player.X + velocityX * PLAYER_SPEED</param>
                             <param id="1" name="Y">Player.Y + velocityY * PLAYER_SPEED</param>
                         </action>
@@ -554,37 +554,37 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" title="Shooting">
+        <event-group collapsed="1" description="" sid="3067724573982913" title="Shooting">
             <sub-events>
-                <event-block>
+                <event-block sid="1503107396778501">
                     <conditions>
-                        <condition id="-17" name="Pick top/bottom" type="Player">
+                        <condition id="-17" name="Pick top/bottom" sid="4650835685338955" type="Player">
                             <param id="0" name="Which">0</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block any="1">
+                        <event-block any="1" sid="9177111012498918">
                             <conditions>
-                                <condition id="2" name="Key is down" type="Keyboard">
+                                <condition id="2" name="Key is down" sid="2308739180776219" type="Keyboard">
                                     <param id="0" name="Key">87 (W)</param>
                                 </condition>
-                                <condition id="2" name="Key is down" type="Keyboard">
+                                <condition id="2" name="Key is down" sid="8549960566923483" type="Keyboard">
                                     <param id="0" name="Key">83 (S)</param>
                                 </condition>
-                                <condition id="2" name="Key is down" type="Keyboard">
+                                <condition id="2" name="Key is down" sid="793835650877222" type="Keyboard">
                                     <param id="0" name="Key">65 (A)</param>
                                 </condition>
-                                <condition id="2" name="Key is down" type="Keyboard">
+                                <condition id="2" name="Key is down" sid="1992555786667601" type="Keyboard">
                                     <param id="0" name="Key">68 (D)</param>
                                 </condition>
-                                <condition id="5" name="Compare axis" type="Gamepad">
+                                <condition id="5" name="Compare axis" sid="8894567300461356" type="Gamepad">
                                     <param id="0" name="Gamepad">0</param>
                                     <param id="1" name="Axis">2</param>
                                     <param id="2" name="Comparison">1</param>
                                     <param id="3" name="Value">0</param>
                                 </condition>
-                                <condition id="5" name="Compare axis" type="Gamepad">
+                                <condition id="5" name="Compare axis" sid="5712729892302007" type="Gamepad">
                                     <param id="0" name="Gamepad">0</param>
                                     <param id="1" name="Axis">3</param>
                                     <param id="2" name="Comparison">1</param>
@@ -592,136 +592,136 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Spawn another object" type="Player">
+                                <action id="0" name="Spawn another object" sid="7289888956336187" type="Player">
                                     <param id="0" name="Object">Shot</param>
                                     <param id="1" name="Layer">MAIN_LAYER</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
                             </actions>
                             <sub-events>
-                                <event-block>
+                                <event-block sid="8749541696362241">
                                     <conditions>
-                                        <condition id="2" name="Key is down" type="Keyboard">
+                                        <condition id="2" name="Key is down" sid="2469544163829366" type="Keyboard">
                                             <param id="0" name="Key">87 (W)</param>
                                         </condition>
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block>
+                                        <event-block sid="4054118996365078">
                                             <conditions>
-                                                <condition id="2" name="Key is down" type="Keyboard">
+                                                <condition id="2" name="Key is down" sid="9782020524046236" type="Keyboard">
                                                     <param id="0" name="Key">65 (A)</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-8" name="Set angle" type="Shot">
+                                                <action id="-8" name="Set angle" sid="9598830450611636" type="Shot">
                                                     <param id="0" name="Angle">-135</param>
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block>
+                                        <event-block sid="4304452790475422">
                                             <conditions>
-                                                <condition id="-22" name="Else" type="System" />
-                                                <condition id="2" name="Key is down" type="Keyboard">
+                                                <condition id="-22" name="Else" sid="6892025061044504" type="System" />
+                                                <condition id="2" name="Key is down" sid="4768232747651809" type="Keyboard">
                                                     <param id="0" name="Key">68 (D)</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-8" name="Set angle" type="Shot">
+                                                <action id="-8" name="Set angle" sid="3627837175469032" type="Shot">
                                                     <param id="0" name="Angle">-45</param>
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block>
+                                        <event-block sid="2543817654189275">
                                             <conditions>
-                                                <condition id="-22" name="Else" type="System" />
+                                                <condition id="-22" name="Else" sid="4367453604519966" type="System" />
                                             </conditions>
                                             <actions>
-                                                <action id="-8" name="Set angle" type="Shot">
+                                                <action id="-8" name="Set angle" sid="3414309353953309" type="Shot">
                                                     <param id="0" name="Angle">-90</param>
                                                 </action>
                                             </actions>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
-                                <event-block>
+                                <event-block sid="6305639891779754">
                                     <conditions>
-                                        <condition id="-22" name="Else" type="System" />
-                                        <condition id="2" name="Key is down" type="Keyboard">
+                                        <condition id="-22" name="Else" sid="2465851900058055" type="System" />
+                                        <condition id="2" name="Key is down" sid="6535279408434797" type="Keyboard">
                                             <param id="0" name="Key">83 (S)</param>
                                         </condition>
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block>
+                                        <event-block sid="1691276005952158">
                                             <conditions>
-                                                <condition id="2" name="Key is down" type="Keyboard">
+                                                <condition id="2" name="Key is down" sid="7290829350386546" type="Keyboard">
                                                     <param id="0" name="Key">65 (A)</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-8" name="Set angle" type="Shot">
+                                                <action id="-8" name="Set angle" sid="3283462935774638" type="Shot">
                                                     <param id="0" name="Angle">135</param>
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block>
+                                        <event-block sid="4931583588246516">
                                             <conditions>
-                                                <condition id="-22" name="Else" type="System" />
-                                                <condition id="2" name="Key is down" type="Keyboard">
+                                                <condition id="-22" name="Else" sid="7639252427116603" type="System" />
+                                                <condition id="2" name="Key is down" sid="8044042401942209" type="Keyboard">
                                                     <param id="0" name="Key">68 (D)</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-8" name="Set angle" type="Shot">
+                                                <action id="-8" name="Set angle" sid="7007158261459028" type="Shot">
                                                     <param id="0" name="Angle">45</param>
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block>
+                                        <event-block sid="6152634881194847">
                                             <conditions>
-                                                <condition id="-22" name="Else" type="System" />
+                                                <condition id="-22" name="Else" sid="5513095913308887" type="System" />
                                             </conditions>
                                             <actions>
-                                                <action id="-8" name="Set angle" type="Shot">
+                                                <action id="-8" name="Set angle" sid="7050104289214292" type="Shot">
                                                     <param id="0" name="Angle">90</param>
                                                 </action>
                                             </actions>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
-                                <event-block>
+                                <event-block sid="2504248583508341">
                                     <conditions>
-                                        <condition id="-22" name="Else" type="System" />
-                                        <condition id="2" name="Key is down" type="Keyboard">
+                                        <condition id="-22" name="Else" sid="6545707994077128" type="System" />
+                                        <condition id="2" name="Key is down" sid="1452765257074143" type="Keyboard">
                                             <param id="0" name="Key">65 (A)</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-8" name="Set angle" type="Shot">
+                                        <action id="-8" name="Set angle" sid="676017167845345" type="Shot">
                                             <param id="0" name="Angle">-180</param>
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block>
+                                <event-block sid="9175630257188553">
                                     <conditions>
-                                        <condition id="-22" name="Else" type="System" />
-                                        <condition id="2" name="Key is down" type="Keyboard">
+                                        <condition id="-22" name="Else" sid="1762390748330185" type="System" />
+                                        <condition id="2" name="Key is down" sid="4435606704819019" type="Keyboard">
                                             <param id="0" name="Key">68 (D)</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-8" name="Set angle" type="Shot">
+                                        <action id="-8" name="Set angle" sid="9879373694480466" type="Shot">
                                             <param id="0" name="Angle">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block>
+                                <event-block sid="6279744268686707">
                                     <conditions>
-                                        <condition id="-22" name="Else" type="System" />
+                                        <condition id="-22" name="Else" sid="310728352844826" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action id="-8" name="Set angle" type="Shot">
+                                        <action id="-8" name="Set angle" sid="4724507150644578" type="Shot">
                                             <param id="0" name="Angle">angle(0, 0, Gamepad.Axis(0, 2), Gamepad.Axis(0, 3))</param>
                                         </action>
                                     </actions>
@@ -732,93 +732,93 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" title="Enemies">
+        <event-group collapsed="1" description="" sid="113717814162435" title="Enemies">
             <sub-events>
-                <event-block>
+                <event-block sid="136537368702516">
                     <conditions>
-                        <condition id="0" name="On collision with another object" type="Enemy">
+                        <condition id="0" name="On collision with another object" sid="3814700611567629" type="Enemy">
                             <param id="0" name="Object">Shot</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" type="Enemy" />
-                        <action id="-9" name="Destroy" type="Shot" />
-                        <action id="-10" name="Add to" type="System">
+                        <action id="-9" name="Destroy" sid="7673153247071734" type="Enemy" />
+                        <action id="-9" name="Destroy" sid="8446563278286977" type="Shot" />
+                        <action id="-10" name="Add to" sid="1556375855663604" type="System">
                             <param id="0" name="Variable">score</param>
                             <param id="1" name="Value">Enemy.value * multiplier</param>
                         </action>
-                        <action id="-10" name="Add to" type="System">
+                        <action id="-10" name="Add to" sid="9853502534577491" type="System">
                             <param id="0" name="Variable">multiplier</param>
                             <param id="1" name="Value">MULTIPLIER_INCREMENT</param>
                         </action>
-                        <action id="-9" name="Set value" type="System">
+                        <action id="-9" name="Set value" sid="8755757588368181" type="System">
                             <param id="0" name="Variable">lastKillTime</param>
                             <param id="1" name="Value">time</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block>
+                <event-block sid="431853012292164">
                     <conditions>
-                        <condition id="0" name="On collision with another object" type="Enemy">
+                        <condition id="0" name="On collision with another object" sid="5808262757727644" type="Enemy">
                             <param id="0" name="Object">Player</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" type="Player">
+                        <action id="0" name="Spawn another object" sid="7798585951411029" type="Player">
                             <param id="0" name="Object">PlayerDeath</param>
                             <param id="1" name="Layer">MAIN_LAYER</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="-9" name="Destroy" type="Player" />
-                        <action id="-13" name="Set boolean" type="Enemy">
+                        <action id="-9" name="Destroy" sid="2497238006845601" type="Player" />
+                        <action id="-13" name="Set boolean" sid="1729208317237537" type="Enemy">
                             <param id="0" name="Instance variable">winner</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-9" name="Set value" type="System">
+                        <action id="-9" name="Set value" sid="8058056353102389" type="System">
                             <param id="0" name="Variable">playerDead</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-9" name="Set value" type="System">
+                        <action id="-9" name="Set value" sid="93328769975577" type="System">
                             <param id="0" name="Variable">winnerName</param>
                             <param id="1" name="Value">Enemy.name</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block>
+                <event-block sid="1939327648132006">
                     <conditions>
-                        <condition id="0" name="On collision with another object" type="EnemyShot">
+                        <condition id="0" name="On collision with another object" sid="4203730821924082" type="EnemyShot">
                             <param id="0" name="Object">Player</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" type="Player">
+                        <action id="0" name="Spawn another object" sid="6234638879019026" type="Player">
                             <param id="0" name="Object">PlayerDeath</param>
                             <param id="1" name="Layer">MAIN_LAYER</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="-9" name="Destroy" type="Player" />
-                        <action id="-13" name="Set boolean" type="EnemyShot">
+                        <action id="-9" name="Destroy" sid="8913678388997663" type="Player" />
+                        <action id="-13" name="Set boolean" sid="2241664042946299" type="EnemyShot">
                             <param id="0" name="Instance variable">winner</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-9" name="Set value" type="System">
+                        <action id="-9" name="Set value" sid="2983597736772766" type="System">
                             <param id="0" name="Variable">winnerName</param>
                             <param id="1" name="Value">EnemyShot.ownerName</param>
                         </action>
-                        <action id="-9" name="Set value" type="System">
+                        <action id="-9" name="Set value" sid="5165048861509949" type="System">
                             <param id="0" name="Variable">playerDead</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block>
+                        <event-block sid="3780350837031061">
                             <conditions>
-                                <condition id="-14" name="Pick by unique ID" type="Enemy">
+                                <condition id="-14" name="Pick by unique ID" sid="826436157625879" type="Enemy">
                                     <param id="0" name="Unique ID">EnemyShot.owner</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-13" name="Set boolean" type="Enemy">
+                                <action id="-13" name="Set boolean" sid="7787658435533153" type="Enemy">
                                     <param id="0" name="Instance variable">winner</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
@@ -826,224 +826,224 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block>
+                <event-block sid="7120771570580618">
                     <conditions>
-                        <condition id="-14" name="Compare variable" type="System">
+                        <condition id="-14" name="Compare variable" sid="4759446791390177" type="System">
                             <param id="0" name="Variable">playerDead</param>
                             <param id="1" name="Comparison">1</param>
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" type="Giraffe" />
+                        <action id="-9" name="Destroy" sid="5685013704368514" type="Giraffe" />
                     </actions>
                     <sub-events>
-                        <event-block>
+                        <event-block sid="2357768658447283">
                             <conditions>
-                                <condition id="-11" name="For Each" type="System">
+                                <condition id="-11" name="For Each" sid="9099841926222996" type="System">
                                     <param id="0" name="Object">Enemy</param>
                                 </condition>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" type="Enemy">
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5948517162037349" type="Enemy">
                                     <param id="0" name="Instance variable">winner</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Destroy" type="Enemy" />
+                                <action id="-9" name="Destroy" sid="925922028125072" type="Enemy" />
                             </actions>
                         </event-block>
-                        <event-block>
+                        <event-block sid="5303798433860893">
                             <conditions>
-                                <condition id="-11" name="For Each" type="System">
+                                <condition id="-11" name="For Each" sid="2103967686959193" type="System">
                                     <param id="0" name="Object">EnemyShot</param>
                                 </condition>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" type="EnemyShot">
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5861232946581487" type="EnemyShot">
                                     <param id="0" name="Instance variable">winner</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Destroy" type="EnemyShot" />
+                                <action id="-9" name="Destroy" sid="6703689168987793" type="EnemyShot" />
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" title="Grunt">
+        <event-group collapsed="1" description="" sid="6667753853307336" title="Grunt">
             <sub-events>
-                <event-block>
+                <event-block sid="7893075331397563">
                     <conditions>
-                        <condition id="-1" name="Every tick" type="System" />
-                        <condition id="-11" name="For Each" type="System">
+                        <condition id="-1" name="Every tick" sid="6581503250331651" type="System" />
+                        <condition id="-11" name="For Each" sid="8525974301531887" type="System">
                             <param id="0" name="Object">Grunt</param>
                         </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" type="Grunt">
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6101556964828002" type="Grunt">
                             <param id="0" name="Instance variable">winner</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-21" name="Rotate toward position" type="Grunt">
+                        <action id="-21" name="Rotate toward position" sid="3767379417637232" type="Grunt">
                             <param id="0" name="Degrees">Clamp((-Grunt.Sine.Value), 0, 1) * 3</param>
                             <param id="1" name="X">Player.X</param>
                             <param id="2" name="Y">Player.Y</param>
                         </action>
-                        <action behavior="Bullet" id="0" name="Set speed" type="Grunt">
+                        <action behavior="Bullet" id="0" name="Set speed" sid="4339019773719536" type="Grunt">
                             <param id="0" name="Speed">(1 + Grunt.Sine.Value) * 50</param>
                         </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" type="Grunt">
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="2211431984226873" type="Grunt">
                             <param id="0" name="Angle">Grunt.Angle</param>
                         </action>
-                        <action id="-5" name="Set width" type="Grunt">
+                        <action id="-5" name="Set width" sid="5866586394988448" type="Grunt">
                             <param id="0" name="Width">32 + Grunt.Sine.Value * 16</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block>
+                <event-block sid="2573339772214282">
                     <conditions>
-                        <condition id="-19" name="On destroyed" type="Grunt" />
+                        <condition id="-19" name="On destroyed" sid="2609640884933223" type="Grunt" />
                     </conditions>
                     <actions />
                 </event-block>
-                <event-block>
+                <event-block sid="9225326774261829">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" type="Grunt">
+                        <condition id="-8" name="Is boolean instance variable set" sid="5717668157776341" type="Grunt">
                             <param id="0" name="Instance variable">winner</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Sine" id="0" name="Set active" type="Grunt">
+                        <action behavior="Sine" id="0" name="Set active" sid="7108865844874121" type="Grunt">
                             <param id="0" name="State">0</param>
                         </action>
-                        <action behavior="Bullet" id="5" name="Set enabled" type="Grunt">
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="9786799951807506" type="Grunt">
                             <param id="0" name="State">0</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" title="Creep">
+        <event-group collapsed="1" description="" sid="3323953219911438" title="Creep">
             <sub-events>
-                <event-block>
+                <event-block sid="8854543059662299">
                     <conditions>
-                        <condition id="-19" name="On destroyed" type="Creep" />
+                        <condition id="-19" name="On destroyed" sid="9611519290231529" type="Creep" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" type="Creep">
+                        <action id="0" name="Spawn another object" sid="9601817200185566" type="Creep">
                             <param id="0" name="Object">CreepExplosion</param>
                             <param id="1" name="Layer">GLOW_LAYER</param>
                             <param id="2" name="Image point">0</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block>
+                <event-block sid="8391046407422984">
                     <conditions>
-                        <condition id="-6" name="Every X seconds" type="System">
+                        <condition id="-6" name="Every X seconds" sid="3493627388299739" type="System">
                             <param id="0" name="Interval (seconds)">0.2</param>
                         </condition>
-                        <condition id="-11" name="For Each" type="System">
+                        <condition id="-11" name="For Each" sid="403388489343796" type="System">
                             <param id="0" name="Object">Sprite</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" type="Sprite">
+                        <action id="0" name="Spawn another object" sid="8469566438937236" type="Sprite">
                             <param id="0" name="Object">Creep</param>
                             <param id="1" name="Layer">MAIN_LAYER</param>
                             <param id="2" name="Image point">0</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block>
+                <event-block sid="4924493507858671">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" type="Creep">
+                        <condition id="-8" name="Is boolean instance variable set" sid="6635320775805566" type="Creep">
                             <param id="0" name="Instance variable">winner</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Bullet" id="5" name="Set enabled" type="Creep">
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="5042358378336916" type="Creep">
                             <param id="0" name="State">0</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" title="Spirosnipe">
+        <event-group collapsed="1" description="" sid="9166905036699035" title="Spirosnipe">
             <sub-events>
-                <event-block>
+                <event-block sid="307442389622668">
                     <conditions>
-                        <condition id="-11" name="For Each" type="System">
+                        <condition id="-11" name="For Each" sid="8065074171924224" type="System">
                             <param id="0" name="Object">Spirosnipe</param>
                         </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" type="Spirosnipe">
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4529097362543641" type="Spirosnipe">
                             <param id="0" name="Instance variable">winner</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-22" name="Set angle toward position" type="Spirosnipe">
+                        <action id="-22" name="Set angle toward position" sid="3897247268220999" type="Spirosnipe">
                             <param id="0" name="X">Player.X</param>
                             <param id="1" name="Y">Player.Y</param>
                         </action>
-                        <action behavior="Aroundment" id="3" name="Set angle of motion" type="Spirosnipe">
+                        <action behavior="Aroundment" id="3" name="Set angle of motion" sid="4074254417758383" type="Spirosnipe">
                             <param id="0" name="Angle">SpiroSnipe.Angle + 90</param>
                         </action>
-                        <action behavior="Inment" id="0" name="Set speed" type="Spirosnipe">
+                        <action behavior="Inment" id="0" name="Set speed" sid="6898901068414555" type="Spirosnipe">
                             <param id="0" name="Speed">distance(Player.X, Player.Y, Spirosnipe.X, Spirosnipe.Y) * 0.5</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block>
+                <event-block sid="7315548870527797">
                     <conditions>
-                        <condition id="-11" name="For Each" type="System">
+                        <condition id="-11" name="For Each" sid="2902808756205004" type="System">
                             <param id="0" name="Object">Spirosnipe</param>
                         </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" type="Spirosnipe">
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3327243709220921" type="Spirosnipe">
                             <param id="0" name="Instance variable">winner</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block>
+                        <event-block sid="6607091303989438">
                             <conditions>
-                                <condition id="-8" name="Compare two values" type="System">
+                                <condition id="-8" name="Compare two values" sid="606509104367276" type="System">
                                     <param id="0" name="First value">Spirosnipe.Clock.Value</param>
                                     <param id="1" name="Comparison">4</param>
                                     <param id="2" name="Second value">0</param>
                                 </condition>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" type="Spirosnipe">
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3158540851404886" type="Spirosnipe">
                                     <param id="0" name="Instance variable">hasShot</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Spawn another object" type="Spirosnipe">
+                                <action id="0" name="Spawn another object" sid="3732388591943482" type="Spirosnipe">
                                     <param id="0" name="Object">Spiroshot</param>
                                     <param id="1" name="Layer">MAIN_LAYER</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" type="Spiroshot">
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="9197248279191241" type="Spiroshot">
                                     <param id="0" name="Angle">Spirosnipe.Angle</param>
                                 </action>
-                                <action id="-10" name="Set value" type="Spiroshot">
+                                <action id="-10" name="Set value" sid="6639420298033493" type="Spiroshot">
                                     <param id="0" name="Instance variable">owner</param>
                                     <param id="1" name="Value">Spirosnipe.UID</param>
                                 </action>
-                                <action id="-10" name="Set value" type="Spiroshot">
+                                <action id="-10" name="Set value" sid="9002575871604828" type="Spiroshot">
                                     <param id="0" name="Instance variable">ownerName</param>
                                     <param id="1" name="Value">Spirosnipe.name</param>
                                 </action>
-                                <action id="-13" name="Set boolean" type="Spirosnipe">
+                                <action id="-13" name="Set boolean" sid="6404531215105751" type="Spirosnipe">
                                     <param id="0" name="Instance variable">hasShot</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block>
+                        <event-block sid="3675093363968738">
                             <conditions>
-                                <condition id="-8" name="Compare two values" type="System">
+                                <condition id="-8" name="Compare two values" sid="18560024479982" type="System">
                                     <param id="0" name="First value">Spirosnipe.Clock.Value</param>
                                     <param id="1" name="Comparison">2</param>
                                     <param id="2" name="Second value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-13" name="Set boolean" type="Spirosnipe">
+                                <action id="-13" name="Set boolean" sid="4452490038986135" type="Spirosnipe">
                                     <param id="0" name="Instance variable">hasShot</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
@@ -1051,666 +1051,666 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block>
+                <event-block sid="8310844580285097">
                     <conditions>
-                        <condition id="-19" name="On destroyed" type="Spirosnipe" />
+                        <condition id="-19" name="On destroyed" sid="6161838944728433" type="Spirosnipe" />
                     </conditions>
                     <actions />
                 </event-block>
-                <event-block>
+                <event-block sid="4636754908190999">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" type="Spirosnipe">
+                        <condition id="-8" name="Is boolean instance variable set" sid="9022464892181408" type="Spirosnipe">
                             <param id="0" name="Instance variable">winner</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Aroundment" id="5" name="Set enabled" type="Spirosnipe">
+                        <action behavior="Aroundment" id="5" name="Set enabled" sid="6840171317290037" type="Spirosnipe">
                             <param id="0" name="State">0</param>
                         </action>
-                        <action behavior="Clock" id="0" name="Set active" type="Spirosnipe">
+                        <action behavior="Clock" id="0" name="Set active" sid="7555208840823849" type="Spirosnipe">
                             <param id="0" name="State">0</param>
                         </action>
-                        <action behavior="Inment" id="5" name="Set enabled" type="Spirosnipe">
+                        <action behavior="Inment" id="5" name="Set enabled" sid="1224121953937399" type="Spirosnipe">
                             <param id="0" name="State">0</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block>
+                <event-block sid="6299486872026048">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" type="Spiroshot">
+                        <condition id="-8" name="Is boolean instance variable set" sid="838626027354134" type="Spiroshot">
                             <param id="0" name="Instance variable">winner</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Bullet" id="5" name="Set enabled" type="Spiroshot">
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="3928344251443709" type="Spiroshot">
                             <param id="0" name="State">0</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" title="Wrecksagon">
+        <event-group collapsed="1" description="" sid="3362321007375626" title="Wrecksagon">
             <sub-events>
-                <event-block>
+                <event-block sid="4438931419651836">
                     <conditions>
-                        <condition id="-19" name="On destroyed" type="Wrecksagon" />
+                        <condition id="-19" name="On destroyed" sid="6860415118936396" type="Wrecksagon" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" type="Wrecksagon">
+                        <action id="0" name="Spawn another object" sid="7293049300736364" type="Wrecksagon">
                             <param id="0" name="Object">Wrecksagon_Petal</param>
                             <param id="1" name="Layer">MAIN_LAYER</param>
                             <param id="2" name="Image point">1</param>
                         </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" type="Wrecksagon_Petal">
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="9854477662171926" type="Wrecksagon_Petal">
                             <param id="0" name="Angle">Wrecksagon.Bullet.AngleOfMotion - 90</param>
                         </action>
-                        <action id="-10" name="Set value" type="Wrecksagon_Petal">
+                        <action id="-10" name="Set value" sid="4081276676565568" type="Wrecksagon_Petal">
                             <param id="0" name="Instance variable">value</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-10" name="Set value" type="Wrecksagon_Petal">
+                        <action id="-10" name="Set value" sid="3362785675467006" type="Wrecksagon_Petal">
                             <param id="0" name="Instance variable">name</param>
                             <param id="1" name="Value">&quot;Wrecksagon&quot;</param>
                         </action>
-                        <action id="0" name="Spawn another object" type="Wrecksagon">
+                        <action id="0" name="Spawn another object" sid="4339241491805663" type="Wrecksagon">
                             <param id="0" name="Object">Wrecksagon_Petal</param>
                             <param id="1" name="Layer">MAIN_LAYER</param>
                             <param id="2" name="Image point">2</param>
                         </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" type="Wrecksagon_Petal">
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="7732075857157242" type="Wrecksagon_Petal">
                             <param id="0" name="Angle">Wrecksagon.Bullet.AngleOfMotion - 30</param>
                         </action>
-                        <action id="-10" name="Set value" type="Wrecksagon_Petal">
+                        <action id="-10" name="Set value" sid="8472226898590212" type="Wrecksagon_Petal">
                             <param id="0" name="Instance variable">value</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-10" name="Set value" type="Wrecksagon_Petal">
+                        <action id="-10" name="Set value" sid="9037727466870486" type="Wrecksagon_Petal">
                             <param id="0" name="Instance variable">name</param>
                             <param id="1" name="Value">&quot;Wrecksagon&quot;</param>
                         </action>
-                        <action id="0" name="Spawn another object" type="Wrecksagon">
+                        <action id="0" name="Spawn another object" sid="7756157526733312" type="Wrecksagon">
                             <param id="0" name="Object">Wrecksagon_Petal</param>
                             <param id="1" name="Layer">MAIN_LAYER</param>
                             <param id="2" name="Image point">3</param>
                         </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" type="Wrecksagon_Petal">
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="6418698956141027" type="Wrecksagon_Petal">
                             <param id="0" name="Angle">Wrecksagon.Bullet.AngleOfMotion + 30</param>
                         </action>
-                        <action id="-10" name="Set value" type="Wrecksagon_Petal">
+                        <action id="-10" name="Set value" sid="96719340538447" type="Wrecksagon_Petal">
                             <param id="0" name="Instance variable">value</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-10" name="Set value" type="Wrecksagon_Petal">
+                        <action id="-10" name="Set value" sid="9990798991883443" type="Wrecksagon_Petal">
                             <param id="0" name="Instance variable">name</param>
                             <param id="1" name="Value">&quot;Wrecksagon&quot;</param>
                         </action>
-                        <action id="0" name="Spawn another object" type="Wrecksagon">
+                        <action id="0" name="Spawn another object" sid="9675053468568572" type="Wrecksagon">
                             <param id="0" name="Object">Wrecksagon_Petal</param>
                             <param id="1" name="Layer">MAIN_LAYER</param>
                             <param id="2" name="Image point">4</param>
                         </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" type="Wrecksagon_Petal">
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="5149665706092352" type="Wrecksagon_Petal">
                             <param id="0" name="Angle">Wrecksagon.Bullet.AngleOfMotion + 90</param>
                         </action>
-                        <action id="-10" name="Set value" type="Wrecksagon_Petal">
+                        <action id="-10" name="Set value" sid="2430351103556484" type="Wrecksagon_Petal">
                             <param id="0" name="Instance variable">value</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-10" name="Set value" type="Wrecksagon_Petal">
+                        <action id="-10" name="Set value" sid="5515558081629201" type="Wrecksagon_Petal">
                             <param id="0" name="Instance variable">name</param>
                             <param id="1" name="Value">&quot;Wrecksagon&quot;</param>
                         </action>
-                        <action id="0" name="Spawn another object" type="Wrecksagon">
+                        <action id="0" name="Spawn another object" sid="7649461004418451" type="Wrecksagon">
                             <param id="0" name="Object">Wrecksagon_Petal</param>
                             <param id="1" name="Layer">MAIN_LAYER</param>
                             <param id="2" name="Image point">5</param>
                         </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" type="Wrecksagon_Petal">
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="6950391772454997" type="Wrecksagon_Petal">
                             <param id="0" name="Angle">Wrecksagon.Bullet.AngleOfMotion + 120</param>
                         </action>
-                        <action id="-10" name="Set value" type="Wrecksagon_Petal">
+                        <action id="-10" name="Set value" sid="3258402379442623" type="Wrecksagon_Petal">
                             <param id="0" name="Instance variable">value</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-10" name="Set value" type="Wrecksagon_Petal">
+                        <action id="-10" name="Set value" sid="3337036715595097" type="Wrecksagon_Petal">
                             <param id="0" name="Instance variable">name</param>
                             <param id="1" name="Value">&quot;Wrecksagon&quot;</param>
                         </action>
-                        <action id="0" name="Spawn another object" type="Wrecksagon">
+                        <action id="0" name="Spawn another object" sid="4026010863789898" type="Wrecksagon">
                             <param id="0" name="Object">Wrecksagon_Petal</param>
                             <param id="1" name="Layer">MAIN_LAYER</param>
                             <param id="2" name="Image point">6</param>
                         </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" type="Wrecksagon_Petal">
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="6776512193458604" type="Wrecksagon_Petal">
                             <param id="0" name="Angle">Wrecksagon.Bullet.AngleOfMotion - 120</param>
                         </action>
-                        <action id="-10" name="Set value" type="Wrecksagon_Petal">
+                        <action id="-10" name="Set value" sid="1082032572241153" type="Wrecksagon_Petal">
                             <param id="0" name="Instance variable">value</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-10" name="Set value" type="Wrecksagon_Petal">
+                        <action id="-10" name="Set value" sid="2067214799844085" type="Wrecksagon_Petal">
                             <param id="0" name="Instance variable">name</param>
                             <param id="1" name="Value">&quot;Wrecksagon&quot;</param>
                         </action>
-                        <action id="0" name="Spawn another object" type="Wrecksagon">
+                        <action id="0" name="Spawn another object" sid="4901711927772526" type="Wrecksagon">
                             <param id="0" name="Object">Wrecksagon_Flower</param>
                             <param id="1" name="Layer">MAIN_LAYER</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="-10" name="Set value" type="Wrecksagon_Flower">
+                        <action id="-10" name="Set value" sid="5759479463040527" type="Wrecksagon_Flower">
                             <param id="0" name="Instance variable">value</param>
                             <param id="1" name="Value">2</param>
                         </action>
-                        <action id="-10" name="Set value" type="Wrecksagon_Flower">
+                        <action id="-10" name="Set value" sid="8977884852841736" type="Wrecksagon_Flower">
                             <param id="0" name="Instance variable">name</param>
                             <param id="1" name="Value">&quot;Wrecksagon&quot;</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block>
+                <event-block sid="2541533479464779">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" type="Wrecksagon">
+                        <condition id="-8" name="Is boolean instance variable set" sid="1694187587840299" type="Wrecksagon">
                             <param id="0" name="Instance variable">winner</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Bullet" id="5" name="Set enabled" type="Wrecksagon">
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="4053744093160735" type="Wrecksagon">
                             <param id="0" name="State">0</param>
                         </action>
-                        <action behavior="Rotate" id="1" name="Set acceleration" type="Wrecksagon">
+                        <action behavior="Rotate" id="1" name="Set acceleration" sid="4355238464591761" type="Wrecksagon">
                             <param id="0" name="Acceleration">0</param>
                         </action>
-                        <action behavior="Rotate" id="0" name="Set speed" type="Wrecksagon">
+                        <action behavior="Rotate" id="0" name="Set speed" sid="7074729056242372" type="Wrecksagon">
                             <param id="0" name="Speed">0</param>
                         </action>
-                        <action behavior="Solid" id="0" name="Set enabled" type="Wrecksagon">
+                        <action behavior="Solid" id="0" name="Set enabled" sid="5736206447533115" type="Wrecksagon">
                             <param id="0" name="State">0</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block>
+                <event-block sid="3029729271853153">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" type="Wrecksagon_Flower">
+                        <condition id="-8" name="Is boolean instance variable set" sid="175424016109627" type="Wrecksagon_Flower">
                             <param id="0" name="Instance variable">winner</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Bullet" id="5" name="Set enabled" type="Wrecksagon_Flower">
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="5986937322813265" type="Wrecksagon_Flower">
                             <param id="0" name="State">0</param>
                         </action>
-                        <action behavior="Rotate" id="1" name="Set acceleration" type="Wrecksagon_Flower">
+                        <action behavior="Rotate" id="1" name="Set acceleration" sid="4485570886192814" type="Wrecksagon_Flower">
                             <param id="0" name="Acceleration">0</param>
                         </action>
-                        <action behavior="Rotate" id="0" name="Set speed" type="Wrecksagon_Flower">
+                        <action behavior="Rotate" id="0" name="Set speed" sid="7881219400384599" type="Wrecksagon_Flower">
                             <param id="0" name="Speed">0</param>
                         </action>
-                        <action behavior="Solid" id="0" name="Set enabled" type="Wrecksagon_Flower">
+                        <action behavior="Solid" id="0" name="Set enabled" sid="4017299690662021" type="Wrecksagon_Flower">
                             <param id="0" name="State">0</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block>
+                <event-block sid="6875398368886087">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" type="Wrecksagon_Petal">
+                        <condition id="-8" name="Is boolean instance variable set" sid="906760955633527" type="Wrecksagon_Petal">
                             <param id="0" name="Instance variable">winner</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Bullet" id="5" name="Set enabled" type="Wrecksagon_Petal">
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="4459685661692767" type="Wrecksagon_Petal">
                             <param id="0" name="State">0</param>
                         </action>
-                        <action behavior="Rotate" id="1" name="Set acceleration" type="Wrecksagon_Petal">
+                        <action behavior="Rotate" id="1" name="Set acceleration" sid="7107390839542319" type="Wrecksagon_Petal">
                             <param id="0" name="Acceleration">0</param>
                         </action>
-                        <action behavior="Rotate" id="0" name="Set speed" type="Wrecksagon_Petal">
+                        <action behavior="Rotate" id="0" name="Set speed" sid="323863862620347" type="Wrecksagon_Petal">
                             <param id="0" name="Speed">0</param>
                         </action>
-                        <action behavior="Solid" id="0" name="Set enabled" type="Wrecksagon_Petal">
+                        <action behavior="Solid" id="0" name="Set enabled" sid="2202924746323857" type="Wrecksagon_Petal">
                             <param id="0" name="State">0</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" title="Giraffe">
+        <event-group collapsed="1" description="" sid="714211854617038" title="Giraffe">
             <sub-events>
-                <event-block>
+                <event-block sid="6196948675433685">
                     <conditions>
-                        <condition id="-11" name="For Each" type="System">
+                        <condition id="-11" name="For Each" sid="4228080623008763" type="System">
                             <param id="0" name="Object">Giraffe</param>
                         </condition>
-                        <condition id="-15" name="Pick nearest/furthest" type="Enemy">
+                        <condition id="-15" name="Pick nearest/furthest" sid="1138596218749473" type="Enemy">
                             <param id="0" name="Which">0</param>
                             <param id="1" name="X">Giraffe.X</param>
                             <param id="2" name="Y">Giraffe.Y</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-21" name="Rotate toward position" type="Giraffe">
+                        <action id="-21" name="Rotate toward position" sid="827372985905316" type="Giraffe">
                             <param id="0" name="Degrees">2</param>
                             <param id="1" name="X">Giraffe.X + Giraffe.X - Enemy.X</param>
                             <param id="2" name="Y">Giraffe.Y + Giraffe.Y - Enemy.Y</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block>
+                <event-block sid="2652901284129368">
                     <conditions>
-                        <condition id="-6" name="Every X seconds" type="System">
+                        <condition id="-6" name="Every X seconds" sid="4658721718099064" type="System">
                             <param id="0" name="Interval (seconds)">1</param>
                         </condition>
-                        <condition id="-11" name="For Each" type="System">
+                        <condition id="-11" name="For Each" sid="2130301328101029" type="System">
                             <param id="0" name="Object">Giraffe</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" type="Giraffe">
+                        <action id="0" name="Spawn another object" sid="1046646595634813" type="Giraffe">
                             <param id="0" name="Object">Help</param>
                             <param id="1" name="Layer">MAIN_LAYER</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="-8" name="Set angle" type="Help">
+                        <action id="-8" name="Set angle" sid="3102547203774395" type="Help">
                             <param id="0" name="Angle">Random(360)</param>
                         </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" type="Help">
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="1829704874155395" type="Help">
                             <param id="0" name="Angle">Random(360)</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block>
+                <event-block sid="1385379600958472">
                     <conditions>
-                        <condition id="0" name="On collision with another object" type="Player">
+                        <condition id="0" name="On collision with another object" sid="4858084519988145" type="Player">
                             <param id="0" name="Object">Giraffe</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" type="System">
+                        <action id="-9" name="Set value" sid="1212250317592454" type="System">
                             <param id="0" name="Variable">multiplier</param>
                             <param id="1" name="Value">multiplier + 10</param>
                         </action>
-                        <action id="-9" name="Set value" type="System">
+                        <action id="-9" name="Set value" sid="3065979173195149" type="System">
                             <param id="0" name="Variable">lastKillTime</param>
                             <param id="1" name="Value">time</param>
                         </action>
-                        <action id="-9" name="Destroy" type="Giraffe" />
+                        <action id="-9" name="Destroy" sid="5817150343095769" type="Giraffe" />
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" title="Score and Announcements">
+        <event-group collapsed="1" description="" sid="5578748992968188" title="Score and Announcements">
             <sub-events>
-                <event-block>
+                <event-block sid="6499250388574228">
                     <conditions>
-                        <condition id="-1" name="Every tick" type="System" />
+                        <condition id="-1" name="Every tick" sid="556583174278023" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" type="Score">
+                        <action id="0" name="Set text" sid="3801632827457433" type="Score">
                             <param id="0" name="Text">zeropad(floor(score), 8)</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block>
+                <event-block sid="5708010114765042">
                     <conditions>
-                        <condition id="-10" name="Compare opacity" type="Announcement">
+                        <condition id="-10" name="Compare opacity" sid="842353216670911" type="Announcement">
                             <param id="0" name="Comparison">1</param>
                             <param id="1" name="Opacity">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="3" name="Set font size" type="Announcement">
+                        <action id="3" name="Set font size" sid="9959298231064978" type="Announcement">
                             <param id="0" name="Size (pt)">Announcement.FaceSize+1</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block>
+                <event-block sid="7793337227336709">
                     <conditions>
-                        <condition id="-8" name="Compare two values" type="System">
+                        <condition id="-8" name="Compare two values" sid="4569776414676372" type="System">
                             <param id="0" name="First value">time</param>
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Second value">lastKillTime + 1</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" type="System">
+                        <action id="-9" name="Set value" sid="7398294328518186" type="System">
                             <param id="0" name="Variable">multiplier</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-10" name="Set value" type="MultiplierPopup">
+                        <action id="-10" name="Set value" sid="1703399100338627" type="MultiplierPopup">
                             <param id="0" name="Instance variable">lastShown</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block>
+                <event-block sid="1650146589262753">
                     <conditions>
-                        <condition id="-8" name="Compare two values" type="System">
+                        <condition id="-8" name="Compare two values" sid="1281663335989097" type="System">
                             <param id="0" name="First value">floor(multiplier-1)</param>
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Second value">MultiplierPopup.lastShown</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" type="MultiplierPopup">
+                        <action id="-10" name="Set value" sid="9375667500605271" type="MultiplierPopup">
                             <param id="0" name="Instance variable">lastShown</param>
                             <param id="1" name="Value">floor(multiplier-1)</param>
                         </action>
-                        <action id="0" name="Set text" type="MultiplierPopup">
+                        <action id="0" name="Set text" sid="5183350792764987" type="MultiplierPopup">
                             <param id="0" name="Text">&quot;x&quot; &amp; MultiplierPopup.lastShown</param>
                         </action>
-                        <action behavior="Fade" id="0" name="Restart fade" type="MultiplierPopup" />
-                        <action id="-15" name="Set visible" type="MultiplierPopup">
+                        <action behavior="Fade" id="0" name="Restart fade" sid="4287958459286037" type="MultiplierPopup" />
+                        <action id="-15" name="Set visible" sid="6148111074637315" type="MultiplierPopup">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="3" name="Set font size" type="MultiplierPopup">
+                        <action id="3" name="Set font size" sid="677306861061288" type="MultiplierPopup">
                             <param id="0" name="Size (pt)">Clamp(20 + (floor(multiplier) * 2), 0, 160)</param>
                         </action>
-                        <action id="-28" name="Set effect parameter" type="MultiplierPopup">
+                        <action id="-28" name="Set effect parameter" sid="1194465729433591" type="MultiplierPopup">
                             <param id="0" name="Effect">&quot;Pulse&quot;</param>
                             <param id="1" name="Parameter index">0</param>
                             <param id="2" name="Value">Clamp(multiplier - 40, 0, 100)</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block>
+                <event-block sid="4141324838621652">
                     <conditions>
-                        <condition id="-14" name="Compare variable" type="System">
+                        <condition id="-14" name="Compare variable" sid="372664513847675" type="System">
                             <param id="0" name="Variable">playerDead</param>
                             <param id="1" name="Comparison">1</param>
                             <param id="2" name="Value">0</param>
                         </condition>
-                        <condition id="-14" name="Compare variable" type="System">
+                        <condition id="-14" name="Compare variable" sid="7086020130607291" type="System">
                             <param id="0" name="Variable">battleEnded</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" type="System">
+                        <action id="-9" name="Set value" sid="6813205928802993" type="System">
                             <param id="0" name="Variable">battleEnded</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block>
+                        <event-block sid="9487632954565546">
                             <conditions>
-                                <condition id="-13" name="Pick nth instance" type="System">
+                                <condition id="-13" name="Pick nth instance" sid="2591898990783067" type="System">
                                     <param id="0" name="Object">Announcement</param>
                                     <param id="1" name="Instance">1</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="3" name="Set font size" type="Announcement">
+                                <action id="3" name="Set font size" sid="3848079025079254" type="Announcement">
                                     <param id="0" name="Size (pt)">12</param>
                                 </action>
-                                <action id="0" name="Set text" type="Announcement">
+                                <action id="0" name="Set text" sid="9305899672518972" type="Announcement">
                                     <param id="0" name="Text">&quot;The gruelling&quot;</param>
                                 </action>
-                                <action behavior="Fade" id="0" name="Restart fade" type="Announcement" />
+                                <action behavior="Fade" id="0" name="Restart fade" sid="7411103722478864" type="Announcement" />
                             </actions>
                         </event-block>
-                        <event-block>
+                        <event-block sid="1317209184117864">
                             <conditions>
-                                <condition id="-13" name="Pick nth instance" type="System">
+                                <condition id="-13" name="Pick nth instance" sid="6091767525229931" type="System">
                                     <param id="0" name="Object">Announcement</param>
                                     <param id="1" name="Instance">2</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="3" name="Set font size" type="Announcement">
+                                <action id="3" name="Set font size" sid="9568858188656377" type="Announcement">
                                     <param id="0" name="Size (pt)">12</param>
                                 </action>
-                                <action id="0" name="Set text" type="Announcement">
+                                <action id="0" name="Set text" sid="3216189601463375" type="Announcement">
                                     <param id="0" name="Text">&quot;battle ended&quot;</param>
                                 </action>
-                                <action behavior="Fade" id="0" name="Restart fade" type="Announcement" />
+                                <action behavior="Fade" id="0" name="Restart fade" sid="8084072176658913" type="Announcement" />
                             </actions>
                         </event-block>
-                        <event-block>
+                        <event-block sid="5251925853646487">
                             <conditions>
-                                <condition id="-13" name="Pick nth instance" type="System">
+                                <condition id="-13" name="Pick nth instance" sid="2571232450464184" type="System">
                                     <param id="0" name="Object">Announcement</param>
                                     <param id="1" name="Instance">3</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="3" name="Set font size" type="Announcement">
+                                <action id="3" name="Set font size" sid="5148522881148068" type="Announcement">
                                     <param id="0" name="Size (pt)">12</param>
                                 </action>
-                                <action id="0" name="Set text" type="Announcement">
+                                <action id="0" name="Set text" sid="1962236162706187" type="Announcement">
                                     <param id="0" name="Text">&quot;with the&quot;</param>
                                 </action>
-                                <action behavior="Fade" id="0" name="Restart fade" type="Announcement" />
+                                <action behavior="Fade" id="0" name="Restart fade" sid="6628154751774404" type="Announcement" />
                             </actions>
                         </event-block>
-                        <event-block>
+                        <event-block sid="7011627355438587">
                             <conditions>
-                                <condition id="-13" name="Pick nth instance" type="System">
+                                <condition id="-13" name="Pick nth instance" sid="9834787035067633" type="System">
                                     <param id="0" name="Object">Announcement</param>
                                     <param id="1" name="Instance">4</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="3" name="Set font size" type="Announcement">
+                                <action id="3" name="Set font size" sid="4228777822955295" type="Announcement">
                                     <param id="0" name="Size (pt)">12</param>
                                 </action>
-                                <action id="0" name="Set text" type="Announcement">
+                                <action id="0" name="Set text" sid="1121782920066279" type="Announcement">
                                     <param id="0" name="Text">&quot;victory of&quot;</param>
                                 </action>
-                                <action behavior="Fade" id="0" name="Restart fade" type="Announcement" />
+                                <action behavior="Fade" id="0" name="Restart fade" sid="1762798054633146" type="Announcement" />
                             </actions>
                         </event-block>
-                        <event-block>
+                        <event-block sid="6948645561414951">
                             <conditions>
-                                <condition id="-13" name="Pick nth instance" type="System">
+                                <condition id="-13" name="Pick nth instance" sid="5663583804217151" type="System">
                                     <param id="0" name="Object">Announcement</param>
                                     <param id="1" name="Instance">5</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="3" name="Set font size" type="Announcement">
+                                <action id="3" name="Set font size" sid="3942081076883383" type="Announcement">
                                     <param id="0" name="Size (pt)">32</param>
                                 </action>
-                                <action id="0" name="Set text" type="Announcement">
+                                <action id="0" name="Set text" sid="6293885936539676" type="Announcement">
                                     <param id="0" name="Text">winnerName</param>
                                 </action>
-                                <action behavior="Fade" id="0" name="Restart fade" type="Announcement" />
+                                <action behavior="Fade" id="0" name="Restart fade" sid="5109939772886984" type="Announcement" />
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" title="Border">
+        <event-group description="" sid="7076897818864697" title="Border">
             <sub-events>
-                <variable constant="1" name="START_SIZE" static="0" type="number">72</variable>
-                <variable constant="1" name="END_SIZE" static="0" type="number">24</variable>
-                <variable constant="1" name="TRAVEL" static="0" type="number">128</variable>
-                <variable constant="1" name="PERIOD" static="0" type="number">8</variable>
-                <variable constant="0" name="thisTravel" static="0" type="number">0</variable>
-                <event-block>
+                <variable constant="1" name="START_SIZE" sid="4265645518868736" static="0" type="number">72</variable>
+                <variable constant="1" name="END_SIZE" sid="3987456031380399" static="0" type="number">24</variable>
+                <variable constant="1" name="TRAVEL" sid="6121564203639364" static="0" type="number">128</variable>
+                <variable constant="1" name="PERIOD" sid="1320535721440344" static="0" type="number">8</variable>
+                <variable constant="0" name="thisTravel" sid="636695464631189" static="0" type="number">0</variable>
+                <event-block sid="9748042934273496">
                     <conditions>
-                        <condition id="-2" name="On start of layout" type="System" />
+                        <condition id="-2" name="On start of layout" sid="6120725139045125" type="System" />
                     </conditions>
                     <actions />
                     <sub-events>
-                        <variable constant="0" name="thisPeriod" static="0" type="number">0</variable>
-                        <variable constant="0" name="thisColour" static="0" type="number">0</variable>
-                        <variable constant="0" name="numOffsets" static="0" type="number">0</variable>
-                        <event-block>
+                        <variable constant="0" name="thisPeriod" sid="2079087571132372" static="0" type="number">0</variable>
+                        <variable constant="0" name="thisColour" sid="2145368927047233" static="0" type="number">0</variable>
+                        <variable constant="0" name="numOffsets" sid="4112835480992269" static="0" type="number">0</variable>
+                        <event-block sid="3008026099147929">
                             <conditions>
-                                <condition id="-10" name="For" type="System">
+                                <condition id="-10" name="For" sid="4678247128377241" type="System">
                                     <param id="0" name="Name">&quot;&quot;</param>
                                     <param id="1" name="Start index">2</param>
                                     <param id="2" name="End index">3</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" type="System">
+                                <action id="-9" name="Set value" sid="5292768066195354" type="System">
                                     <param id="0" name="Variable">numOffsets</param>
                                     <param id="1" name="Value">2 ^ (loopIndex - 1)</param>
                                 </action>
-                                <action id="-9" name="Set value" type="System">
+                                <action id="-9" name="Set value" sid="4080033171574734" type="System">
                                     <param id="0" name="Variable">thisPeriod</param>
                                     <param id="1" name="Value">PERIOD / numOffsets</param>
                                 </action>
-                                <action id="-9" name="Set value" type="System">
+                                <action id="-9" name="Set value" sid="3708114769824743" type="System">
                                     <param id="0" name="Variable">thisColour</param>
                                     <param id="1" name="Value">loopindex % Border.AnimationFrameCount</param>
                                 </action>
                             </actions>
                             <sub-events>
-                                <variable constant="0" name="thisOffset" static="0" type="number">0</variable>
-                                <event-block>
+                                <variable constant="0" name="thisOffset" sid="4883122980502639" static="0" type="number">0</variable>
+                                <event-block sid="4676109975146376">
                                     <conditions>
-                                        <condition id="-10" name="For" type="System">
+                                        <condition id="-10" name="For" sid="8057229593309149" type="System">
                                             <param id="0" name="Name">&quot;offset&quot;</param>
                                             <param id="1" name="Start index">1</param>
                                             <param id="2" name="End index">numOffsets</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-9" name="Set value" type="System">
+                                        <action id="-9" name="Set value" sid="3036682509096652" type="System">
                                             <param id="0" name="Variable">thisOffset</param>
                                             <param id="1" name="Value">loopIndex / numOffsets</param>
                                         </action>
-                                        <action id="-3" name="Create object" type="System">
+                                        <action id="-3" name="Create object" sid="4946332182898295" type="System">
                                             <param id="0" name="Object to create">Border</param>
                                             <param id="1" name="Layer">GLOW_LAYER</param>
                                             <param id="2" name="X">-START_SIZE * 0.5</param>
                                             <param id="3" name="Y">LayoutHeight * 0.5</param>
                                         </action>
-                                        <action behavior="Sawtooth" id="1" name="Set period" type="Border">
+                                        <action behavior="Sawtooth" id="1" name="Set period" sid="1866376304004667" type="Border">
                                             <param id="0" name="Period">thisPeriod</param>
                                         </action>
-                                        <action id="2" name="Stop" type="Border" />
-                                        <action id="5" name="Set frame" type="Border">
+                                        <action id="2" name="Stop" sid="9002725397339687" type="Border" />
+                                        <action id="5" name="Set frame" sid="5867029905973598" type="Border">
                                             <param id="0" name="Frame number">thisColour</param>
                                         </action>
-                                        <action id="-10" name="Set value" type="Border">
+                                        <action id="-10" name="Set value" sid="3674658636348078" type="Border">
                                             <param id="0" name="Instance variable">offset</param>
                                             <param id="1" name="Value">thisOffset</param>
                                         </action>
-                                        <action id="-10" name="Set value" type="Border">
+                                        <action id="-10" name="Set value" sid="4400878705127741" type="Border">
                                             <param id="0" name="Instance variable">startX</param>
                                             <param id="1" name="Value">Border.X</param>
                                         </action>
-                                        <action id="-10" name="Set value" type="Border">
+                                        <action id="-10" name="Set value" sid="4758195857947292" type="Border">
                                             <param id="0" name="Instance variable">startY</param>
                                             <param id="1" name="Value">Border.Y</param>
                                         </action>
-                                        <action id="-10" name="Set value" type="Border">
+                                        <action id="-10" name="Set value" sid="8621037332804858" type="Border">
                                             <param id="0" name="Instance variable">travelX</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
-                                        <action id="-10" name="Set value" type="Border">
+                                        <action id="-10" name="Set value" sid="7425890446161267" type="Border">
                                             <param id="0" name="Instance variable">travelY</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
-                                        <action id="-3" name="Create object" type="System">
+                                        <action id="-3" name="Create object" sid="9776076376368124" type="System">
                                             <param id="0" name="Object to create">Border</param>
                                             <param id="1" name="Layer">GLOW_LAYER</param>
                                             <param id="2" name="X">LayoutWidth + START_SIZE * 0.5</param>
                                             <param id="3" name="Y">LayoutHeight * 0.5</param>
                                         </action>
-                                        <action behavior="Sawtooth" id="1" name="Set period" type="Border">
+                                        <action behavior="Sawtooth" id="1" name="Set period" sid="1483685826878803" type="Border">
                                             <param id="0" name="Period">thisPeriod</param>
                                         </action>
-                                        <action id="2" name="Stop" type="Border" />
-                                        <action id="5" name="Set frame" type="Border">
+                                        <action id="2" name="Stop" sid="250105553473122" type="Border" />
+                                        <action id="5" name="Set frame" sid="4153653272301217" type="Border">
                                             <param id="0" name="Frame number">thisColour</param>
                                         </action>
-                                        <action id="-10" name="Set value" type="Border">
+                                        <action id="-10" name="Set value" sid="7675570615405201" type="Border">
                                             <param id="0" name="Instance variable">offset</param>
                                             <param id="1" name="Value">thisOffset</param>
                                         </action>
-                                        <action id="-10" name="Set value" type="Border">
+                                        <action id="-10" name="Set value" sid="5472604257635273" type="Border">
                                             <param id="0" name="Instance variable">startX</param>
                                             <param id="1" name="Value">Border.X</param>
                                         </action>
-                                        <action id="-10" name="Set value" type="Border">
+                                        <action id="-10" name="Set value" sid="9921944071230361" type="Border">
                                             <param id="0" name="Instance variable">startY</param>
                                             <param id="1" name="Value">Border.Y</param>
                                         </action>
-                                        <action id="-10" name="Set value" type="Border">
+                                        <action id="-10" name="Set value" sid="4960121441751616" type="Border">
                                             <param id="0" name="Instance variable">travelX</param>
                                             <param id="1" name="Value">-1</param>
                                         </action>
-                                        <action id="-10" name="Set value" type="Border">
+                                        <action id="-10" name="Set value" sid="770247668878979" type="Border">
                                             <param id="0" name="Instance variable">travelY</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
-                                        <action id="-3" name="Create object" type="System">
+                                        <action id="-3" name="Create object" sid="6221967896984251" type="System">
                                             <param id="0" name="Object to create">Border</param>
                                             <param id="1" name="Layer">GLOW_LAYER</param>
                                             <param id="2" name="X">LayoutWidth * 0.5</param>
                                             <param id="3" name="Y">-START_SIZE * 0.5</param>
                                         </action>
-                                        <action behavior="Sawtooth" id="1" name="Set period" type="Border">
+                                        <action behavior="Sawtooth" id="1" name="Set period" sid="1984236475624572" type="Border">
                                             <param id="0" name="Period">thisPeriod</param>
                                         </action>
-                                        <action id="-8" name="Set angle" type="Border">
+                                        <action id="-8" name="Set angle" sid="7203289560822464" type="Border">
                                             <param id="0" name="Angle">90</param>
                                         </action>
-                                        <action id="2" name="Stop" type="Border" />
-                                        <action id="5" name="Set frame" type="Border">
+                                        <action id="2" name="Stop" sid="4624849868859574" type="Border" />
+                                        <action id="5" name="Set frame" sid="1599425456204289" type="Border">
                                             <param id="0" name="Frame number">thisColour</param>
                                         </action>
-                                        <action id="-10" name="Set value" type="Border">
+                                        <action id="-10" name="Set value" sid="8134638893228825" type="Border">
                                             <param id="0" name="Instance variable">offset</param>
                                             <param id="1" name="Value">thisOffset</param>
                                         </action>
-                                        <action id="-10" name="Set value" type="Border">
+                                        <action id="-10" name="Set value" sid="8837589009119723" type="Border">
                                             <param id="0" name="Instance variable">startX</param>
                                             <param id="1" name="Value">Border.X</param>
                                         </action>
-                                        <action id="-10" name="Set value" type="Border">
+                                        <action id="-10" name="Set value" sid="5681716073364056" type="Border">
                                             <param id="0" name="Instance variable">startY</param>
                                             <param id="1" name="Value">Border.Y</param>
                                         </action>
-                                        <action id="-10" name="Set value" type="Border">
+                                        <action id="-10" name="Set value" sid="86641838513598" type="Border">
                                             <param id="0" name="Instance variable">travelX</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
-                                        <action id="-10" name="Set value" type="Border">
+                                        <action id="-10" name="Set value" sid="6226313685973569" type="Border">
                                             <param id="0" name="Instance variable">travelY</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
-                                        <action id="-3" name="Create object" type="System">
+                                        <action id="-3" name="Create object" sid="4083281549546609" type="System">
                                             <param id="0" name="Object to create">Border</param>
                                             <param id="1" name="Layer">GLOW_LAYER</param>
                                             <param id="2" name="X">LayoutWidth * 0.5</param>
                                             <param id="3" name="Y">LayoutHeight + START_SIZE * 0.5</param>
                                         </action>
-                                        <action behavior="Sawtooth" id="1" name="Set period" type="Border">
+                                        <action behavior="Sawtooth" id="1" name="Set period" sid="8986959043993216" type="Border">
                                             <param id="0" name="Period">thisPeriod</param>
                                         </action>
-                                        <action id="-8" name="Set angle" type="Border">
+                                        <action id="-8" name="Set angle" sid="2480047129738479" type="Border">
                                             <param id="0" name="Angle">90</param>
                                         </action>
-                                        <action id="2" name="Stop" type="Border" />
-                                        <action id="5" name="Set frame" type="Border">
+                                        <action id="2" name="Stop" sid="820244385195461" type="Border" />
+                                        <action id="5" name="Set frame" sid="3239126937294923" type="Border">
                                             <param id="0" name="Frame number">thisColour</param>
                                         </action>
-                                        <action id="-10" name="Set value" type="Border">
+                                        <action id="-10" name="Set value" sid="385598193712468" type="Border">
                                             <param id="0" name="Instance variable">offset</param>
                                             <param id="1" name="Value">thisOffset</param>
                                         </action>
-                                        <action id="-10" name="Set value" type="Border">
+                                        <action id="-10" name="Set value" sid="804791271143181" type="Border">
                                             <param id="0" name="Instance variable">startX</param>
                                             <param id="1" name="Value">Border.X</param>
                                         </action>
-                                        <action id="-10" name="Set value" type="Border">
+                                        <action id="-10" name="Set value" sid="5808714977249935" type="Border">
                                             <param id="0" name="Instance variable">startY</param>
                                             <param id="1" name="Value">Border.Y</param>
                                         </action>
-                                        <action id="-10" name="Set value" type="Border">
+                                        <action id="-10" name="Set value" sid="3225543708737132" type="Border">
                                             <param id="0" name="Instance variable">travelX</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
-                                        <action id="-10" name="Set value" type="Border">
+                                        <action id="-10" name="Set value" sid="6061022682599256" type="Border">
                                             <param id="0" name="Instance variable">travelY</param>
                                             <param id="1" name="Value">-1</param>
                                         </action>
-                                        <action id="-9" name="Set value" type="System">
+                                        <action id="-9" name="Set value" sid="978259765297965" type="System">
                                             <param id="0" name="Variable">thisColour</param>
                                             <param id="1" name="Value">(thisColour + 1) % Border.AnimationFrameCount</param>
                                         </action>
@@ -1720,56 +1720,56 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block>
+                <event-block sid="3747919693977573">
                     <conditions>
-                        <condition id="-11" name="For Each" type="System">
+                        <condition id="-11" name="For Each" sid="3672088184694187" type="System">
                             <param id="0" name="Object">Border</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" type="System">
+                        <action id="-9" name="Set value" sid="3355692030096586" type="System">
                             <param id="0" name="Variable">thisTravel</param>
                             <param id="1" name="Value">((0.5 + Border.offset + Border.Sawtooth.Value) % 1) * TRAVEL</param>
                         </action>
-                        <action id="-3" name="Set position" type="Border">
+                        <action id="-3" name="Set position" sid="7264382376407186" type="Border">
                             <param id="0" name="X">Border.startX + Border.TravelX * thisTravel</param>
                             <param id="1" name="Y">Border.startY + Border.travelY * thisTravel</param>
                         </action>
-                        <action id="-5" name="Set width" type="Border">
+                        <action id="-5" name="Set width" sid="4462424779140524" type="Border">
                             <param id="0" name="Width">END_SIZE + ((1.5 - Border.offset - Border.Sawtooth.Value) % 1) * (START_SIZE - END_SIZE)</param>
                         </action>
-                        <action id="-16" name="Set opacity" type="Border">
+                        <action id="-16" name="Set opacity" sid="4011090497638806" type="Border">
                             <param id="0" name="Opacity">((1.5 - Border.offset - Border.Sawtooth.Value) % 1) * 100</param>
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block>
+                        <event-block sid="5965607478198435">
                             <conditions>
-                                <condition id="-8" name="Compare two values" type="System">
+                                <condition id="-8" name="Compare two values" sid="6242548827165114" type="System">
                                     <param id="0" name="First value">(0.5 + (Border.Sawtooth.Value + Border.offset)) % 1</param>
                                     <param id="1" name="Comparison">4</param>
                                     <param id="2" name="Second value">0.5</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-13" name="Set boolean" type="Border">
+                                <action id="-13" name="Set boolean" sid="3549559351553609" type="Border">
                                     <param id="0" name="Instance variable">colourChange</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block>
+                        <event-block sid="6427738043002995">
                             <conditions>
-                                <condition id="-22" name="Else" type="System" />
-                                <condition id="-8" name="Is boolean instance variable set" type="Border">
+                                <condition id="-22" name="Else" sid="2615178869626911" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="2026089598152262" type="Border">
                                     <param id="0" name="Instance variable">colourChange</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="5" name="Set frame" type="Border">
+                                <action id="5" name="Set frame" sid="2203700694514288" type="Border">
                                     <param id="0" name="Frame number">(Border.AnimationFrame + 1) % Border.AnimationFrameCount</param>
                                 </action>
-                                <action id="-13" name="Set boolean" type="Border">
+                                <action id="-13" name="Set boolean" sid="9608391854934817" type="Border">
                                     <param id="0" name="Instance variable">colourChange</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
@@ -1779,73 +1779,73 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" title="Wave end">
+        <event-group collapsed="1" description="" sid="2460788361298582" title="Wave end">
             <sub-events>
-                <event-block>
+                <event-block sid="6768924390218211">
                     <conditions>
-                        <condition id="-8" name="Compare two values" type="System">
+                        <condition id="-8" name="Compare two values" sid="7196524591528722" type="System">
                             <param id="0" name="First value">Enemy.Count + EnemySpawn.Count</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Second value">0</param>
                         </condition>
-                        <condition id="-14" name="Compare variable" type="System">
+                        <condition id="-14" name="Compare variable" sid="7422350318132163" type="System">
                             <param id="0" name="Variable">playerDead</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" type="Player">
+                        <action id="0" name="Spawn another object" sid="3164563765275828" type="Player">
                             <param id="0" name="Object">PlayerExit</param>
                             <param id="1" name="Layer">MAIN_LAYER</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="-9" name="Destroy" type="Player" />
-                        <action id="-10" name="Add to" type="System">
+                        <action id="-9" name="Destroy" sid="943990622419009" type="Player" />
+                        <action id="-10" name="Add to" sid="4657179105860862" type="System">
                             <param id="0" name="Variable">lastKillTime</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-10" name="Add to" type="System">
+                        <action id="-10" name="Add to" sid="6041771511122623" type="System">
                             <param id="0" name="Variable">wave</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-25" name="Go to layout (by name)" type="System">
+                        <action id="-25" name="Go to layout (by name)" sid="7335198674847093" type="System">
                             <param id="0" name="Layout">&quot;Wave &quot; &amp; Clamp(wave, 1, 4)</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" title="Restart">
+        <event-group collapsed="1" description="" sid="8515350612397362" title="Restart">
             <sub-events>
-                <event-block any="1">
+                <event-block any="1" sid="8871160324253955">
                     <conditions>
-                        <condition id="7" name="On button released" type="Gamepad">
+                        <condition id="7" name="On button released" sid="9908396618883615" type="Gamepad">
                             <param id="0" name="Gamepad">0</param>
                             <param id="1" name="Button">9</param>
                         </condition>
-                        <condition id="2" name="Key is down" type="Keyboard">
+                        <condition id="2" name="Key is down" sid="3805759824495501" type="Keyboard">
                             <param id="0" name="Key">82 (R)</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-21" name="Reset global variables" type="System" />
-                        <action id="-9" name="Destroy" type="Player" />
-                        <action id="-2" name="Go to layout" type="System">
+                        <action id="-21" name="Reset global variables" sid="4064305404432692" type="System" />
+                        <action id="-9" name="Destroy" sid="2876290384406581" type="Player" />
+                        <action id="-2" name="Go to layout" sid="4768245397804817" type="System">
                             <param id="0" name="Layout">Wave 1</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block>
+        <event-block sid="3494130434918332">
             <conditions>
-                <condition id="0" name="On key pressed" type="Keyboard">
+                <condition id="0" name="On key pressed" sid="704810641514105" type="Keyboard">
                     <param id="0" name="Key">70 (F)</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="10" name="Request fullscreen" type="Browser">
+                <action id="10" name="Request fullscreen" sid="4601501673910113" type="Browser">
                     <param id="0" name="Mode">3</param>
                 </action>
             </actions>

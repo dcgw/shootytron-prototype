@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
     <name>Wave 2</name>
+    <sid>8392513615818337</sid>
     <event-sheet>Game</event-sheet>
     <size>
         <width>640</width>
@@ -12,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Glow">
+        <layer name="Glow" sid="3646529927615035">
             <initially-visible>1</initially-visible>
             <background-color>0,0,0</background-color>
             <transparent>0</transparent>
@@ -28,7 +29,7 @@
             <instances />
             <effects />
         </layer>
-        <layer name="Main">
+        <layer name="Main" sid="4178426247890005">
             <initially-visible>1</initially-visible>
             <background-color>0,0,0</background-color>
             <transparent>1</transparent>
@@ -42,9 +43,10 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="CreepSpawn">
+                <instance type="CreepSpawn" uid="3">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -100,9 +102,10 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CreepSpawn">
+                <instance type="CreepSpawn" uid="4">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -158,9 +161,10 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CreepSpawn">
+                <instance type="CreepSpawn" uid="5">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -216,9 +220,10 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CreepSpawn">
+                <instance type="CreepSpawn" uid="6">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -274,9 +279,10 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CreepSpawn">
+                <instance type="CreepSpawn" uid="7">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -335,7 +341,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="UI">
+        <layer name="UI" sid="2241496007569105">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>

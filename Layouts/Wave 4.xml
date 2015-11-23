@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
     <name>Wave 4</name>
+    <sid>4244597288743942</sid>
     <event-sheet>Game</event-sheet>
     <size>
         <width>640</width>
@@ -12,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Glow">
+        <layer name="Glow" sid="741298596990735">
             <initially-visible>1</initially-visible>
             <background-color>0,0,0</background-color>
             <transparent>0</transparent>
@@ -28,7 +29,7 @@
             <instances />
             <effects />
         </layer>
-        <layer name="Main">
+        <layer name="Main" sid="8332591961407227">
             <initially-visible>1</initially-visible>
             <background-color>0,0,0</background-color>
             <transparent>1</transparent>
@@ -42,9 +43,10 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="GruntSpawn">
+                <instance type="GruntSpawn" uid="18">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -100,9 +102,10 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="GruntSpawn">
+                <instance type="GruntSpawn" uid="19">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -158,9 +161,10 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="GruntSpawn">
+                <instance type="GruntSpawn" uid="20">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -216,9 +220,10 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CreepSpawn">
+                <instance type="CreepSpawn" uid="21">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -274,9 +279,10 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CreepSpawn">
+                <instance type="CreepSpawn" uid="22">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -332,9 +338,10 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CreepSpawn">
+                <instance type="CreepSpawn" uid="23">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -390,9 +397,10 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CreepSpawn">
+                <instance type="CreepSpawn" uid="24">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -448,9 +456,10 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CreepSpawn">
+                <instance type="CreepSpawn" uid="25">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -506,9 +515,10 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CreepSpawn">
+                <instance type="CreepSpawn" uid="26">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -564,9 +574,10 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="WrecksagonSpawn">
+                <instance type="WrecksagonSpawn" uid="27">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -622,9 +633,10 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="WrecksagonSpawn">
+                <instance type="WrecksagonSpawn" uid="28">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -680,9 +692,10 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SpirosnipeSpawn">
+                <instance type="SpirosnipeSpawn" uid="29">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -738,9 +751,10 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SpirosnipeSpawn">
+                <instance type="SpirosnipeSpawn" uid="30">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -796,9 +810,10 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SpirosnipeSpawn">
+                <instance type="SpirosnipeSpawn" uid="31">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -857,7 +872,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="UI">
+        <layer name="UI" sid="9919747277904763">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
